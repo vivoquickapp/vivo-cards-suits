@@ -1,0 +1,36 @@
+<import name="v-button" src="../../components/button/index"></import>
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div class="page">
+    <text>my vivo card</text>
+    <v-button></v-button>
+  </div>
+</template>
+
+<style lang="less">
+.page {
+  flex-direction: column;
+  border-bottom-left-radius: ~"theme.borderBottomRadius";
+  border-bottom-right-radius: ~"theme.borderBottomRadius";
+  background-color: ~"theme.backgroundColor";
+}
+</style>
+<script>
+import router from "@system.router";
+import hostconnection from "@system.hostconnection";
+// 为使用async/await语法注入
+const injectRef = Object.getPrototypeOf(global) || global;
+injectRef.regeneratorRuntime = require("@babel/runtime/regenerator");
+
+export default {
+  public: {},
+  private: {
+    text: "这是一个卡片demo"
+  },
+  onInit() {},
+  onShow() {},
+  onHide() {
+    console.log(`onHide`);
+  }
+};
+</script>

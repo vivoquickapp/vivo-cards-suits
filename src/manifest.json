@@ -1,0 +1,55 @@
+{
+  "package": "com.vivo.card.sample",
+  "name": "快应用卡片",
+  "versionName": "1.0.0",
+  "versionCode": "1",
+  "config": {
+    "logLevel": "debug",
+    "designWidth": 720
+  },
+  "router": {
+    "widgets": {
+      "button": {
+        "name": "按钮",
+        "description": "按钮类组件示例",
+        "component": "index",
+        "path": "/button",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": [
+            "poiListUrl",
+            "poiListData"
+          ]
+        },
+        "minPlatformVersion": 1041,
+        "targetManufactorys": [
+          "vivo"
+        ]
+      }
+    }
+  }
+}
