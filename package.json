@@ -11,7 +11,7 @@
     "debug": "hap debug",
     "docs": "vuepress dev docs",
     "build:docs": "vuepress build docs",
-    "prettier": "prettier --write '**/*.ux'"
+    "prettier": "prettier --write \"**/*.ux\""
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
