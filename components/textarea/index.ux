@@ -1,0 +1,74 @@
+<template>
+  <div class="wrap">
+    <text
+      class="textarea {{fontSizeClass}} {{colorClass}}"
+      style="lines: {{lines}};"
+    >
+      <slot></slot>
+    </text>
+  </div>
+</template>
+<style lang="less">
+@import "../common/styles/base.less";
+.wrap {
+  flex-direction: column;
+  width: 100%;
+  padding: 4px * @ratio 16px * @ratio;
+  .textarea {
+    font-family: HYQiHei-FES;
+    font-weight: 550;
+    line-height: 19px * @ratio;
+    text-overflow: ellipsis;
+  }
+}
+.color-666 {
+  color: #666666;
+}
+.color-b2b2b2 {
+  color: #b2b2b2;
+}
+.font-size-12 {
+  font-size: 12px * @ratio;
+}
+.font-size-14 {
+  font-size: 14px * @ratio;
+}
+</style>
+<script>
+export default {
+  props: {
+    lines: {
+      default: 1
+    },
+    fontSize: {
+      default: 14
+    },
+    color: {
+      default: "#666666"
+    }
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    fontSizeClass() {
+      switch (this.fontSize) {
+        case "12":
+          return "font-size-12";
+          break;
+        default:
+          return "font-size-14";
+      }
+    },
+    colorClass() {
+      switch (this.color) {
+        case "#b2b2b2":
+          return "color-b2b2b2";
+          break;
+        default:
+          return "color-666";
+      }
+    }
+  }
+};
+</script>
