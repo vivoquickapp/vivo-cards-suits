@@ -1,15 +1,31 @@
 <template>
-  <div
-    class="wrap"
-    style="
-  height: {{height}}px;
-  width: {{width}};
-  opacity: {{opacity}};
-  background-color: {{bgColor}};
-  justify-content: {{myJustify}};
-  align-items: {{myAlign}};"
-  >
-    <slot></slot>
+  <div>
+    <div
+      if="{{!stack}}"
+      class="wrap"
+      style="
+        height: {{height}}px;
+        width: {{width}};
+        opacity: {{opacity}};
+        background-color: {{bgColor}};
+        justify-content: {{myJustify}};
+        align-items: {{myAlign}};"
+    >
+      <slot></slot>
+    </div>
+    <stack
+      if="{{stack}}"
+      class="wrap"
+      style="
+        height: {{height}}px;
+        width: {{width}};
+        opacity: {{opacity}};
+        background-color: {{bgColor}};
+        justify-content: {{myJustify}};
+        align-items: {{myAlign}};"
+    >
+      <slot></slot>
+    </stack>
   </div>
 </template>
 <style lang="less">
@@ -37,6 +53,9 @@ export default {
     },
     align: {
       default: "left" // left center right
+    },
+    stack: {
+      default: false
     }
   },
   computed: {

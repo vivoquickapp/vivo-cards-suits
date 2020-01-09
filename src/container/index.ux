@@ -9,11 +9,12 @@
       <v-container
         height="100"
         opacity="0.5"
-        justify="space-around"
-        align="left"
+        justify="top"
+        align="center"
+        stack="{{true}}"
       >
-        <text style="color: coral;">container111</text>
-        <text>container222</text>
+        <text style="color: coral;">底部文字</text>
+        <text>上面文字</text>
       </v-container>
     </v-container>
   </div>
