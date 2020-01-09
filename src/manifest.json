@@ -45,7 +45,48 @@
             "poiListData"
           ]
         },
-        "minPlatformVersion": 1041,
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
+      },
+      "container": {
+        "name": "普通容器",
+        "description": "普通容器组件示例",
+        "component": "index",
+        "path": "/container",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": [
+            "poiListUrl",
+            "poiListData"
+          ]
+        },
+        "minPlatformVersion": 1050,
         "targetManufactorys": [
           "vivo"
         ]
