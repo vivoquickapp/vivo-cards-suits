@@ -90,6 +90,47 @@
         "targetManufactorys": [
           "vivo"
         ]
+      },
+      "textarea": {
+        "name": "多文本组件",
+        "description": "多文本组件示例",
+        "component": "index",
+        "path": "/textarea",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": [
+            "poiListUrl",
+            "poiListData"
+          ]
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
       }
     }
   }
