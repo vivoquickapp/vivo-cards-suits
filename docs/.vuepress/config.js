@@ -41,6 +41,13 @@ module.exports = {
                     // '/guide/container',
                 ]
             },
+            {
+                title: '文本组件',
+                collapsable: false,
+                children: [
+                    '/guide/textarea',
+                ]
+            },
         ]
     }
 }
