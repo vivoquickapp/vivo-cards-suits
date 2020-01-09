@@ -1,0 +1,48 @@
+<import name="v-container" src="../../components/container/index"></import>
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div class="page">
+    <v-container height="300" opacity="1" justify="space-between" align="right">
+      <text>container111</text>
+      <text>container222</text>
+      <text>container333</text>
+      <v-container
+        height="100"
+        opacity="0.5"
+        justify="space-around"
+        align="left"
+      >
+        <text style="color: coral;">container111</text>
+        <text>container222</text>
+      </v-container>
+    </v-container>
+  </div>
+</template>
+
+<style lang="less">
+.page {
+  flex-direction: column;
+  border-bottom-left-radius: ~"theme.borderBottomRadius";
+  border-bottom-right-radius: ~"theme.borderBottomRadius";
+  background-color: ~"theme.backgroundColor";
+}
+</style>
+<script>
+import router from "@system.router";
+import hostconnection from "@system.hostconnection";
+// 为使用async/await语法注入
+const injectRef = Object.getPrototypeOf(global) || global;
+injectRef.regeneratorRuntime = require("@babel/runtime/regenerator");
+
+export default {
+  public: {},
+  private: {
+    text: "这是一个卡片demo"
+  },
+  onInit() {},
+  onShow() {},
+  onHide() {
+    console.log(`onHide`);
+  }
+};
+</script>

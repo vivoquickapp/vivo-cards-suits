@@ -38,7 +38,7 @@ module.exports = {
                 title: '容器组件',
                 collapsable: false,
                 children: [
-                    // '/guide/container',
+                    '/guide/container',
                 ]
             },
         ]
