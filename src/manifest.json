@@ -9,11 +9,11 @@
   },
   "router": {
     "widgets": {
-      "voice-list-a": {
+      "voice/card-list-a": {
         "name": "jovi语音",
-        "description": "Jovi语音模板A",
+        "description": "jovi语音卡片模板-list-a",
         "component": "index",
-        "path": "/voice/list-a",
+        "path": "/voice/card-list-a",
         "features": [
           {
             "name": "system.router"
@@ -40,10 +40,7 @@
           "cardType": 5,
           "distributeType": 2,
           "service_id": "",
-          "param_keys": [
-            "poiListUrl",
-            "poiListData"
-          ]
+          "param_keys": []
         },
         "minPlatformVersion": 1050,
         "targetManufactorys": [
