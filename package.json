@@ -33,7 +33,7 @@
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "prettier-plugin-quickapp": "0.1.0",
-    "vivo-hap-toolkit": "^0.4.6",
+    "vivo-hap-toolkit": "^0.6.4",
     "vuepress": "^1.0.0-rc.1"
   },
   "dependencies": {
