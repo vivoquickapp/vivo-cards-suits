@@ -11,16 +11,29 @@
     "debug": "hap debug",
     "docs": "vuepress dev docs",
     "build:docs": "vuepress build docs",
-    "prettier": "prettier --write \"**/*.ux\""
+    "prettier": "prettier --write \"**/*.ux\" \"**/*.md\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ux,js,less,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "vivo-hap-toolkit": "^0.4.6",
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "prettier-plugin-quickapp": "0.1.0",
+    "vivo-hap-toolkit": "^0.6.4",
     "vuepress": "^1.0.0-rc.1"
   },
   "dependencies": {
