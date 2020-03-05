@@ -1,0 +1,65 @@
+<import name="card-list-a" src="vivo-cards-suits/voice/card-list-a"></import>
+
+<template>
+  <div class="card">
+    <card-list-a
+      data="{{cardData}}"
+      onclickmore="handleClickMore"
+    ></card-list-a>
+  </div>
+</template>
+
+<script>
+export default {
+  public: {
+    cardData: {
+      listData: [
+        {
+          title: "标题",
+          description:
+            "文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。",
+          imgUrl: ""
+        },
+        {
+          title: "标题",
+          description:
+            "文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。",
+          imgUrl: ""
+        },
+        {
+          title: "标题",
+          description:
+            "文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。",
+          imgUrl: ""
+        },
+        {
+          title: "标题",
+          description:
+            "文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。",
+          imgUrl: ""
+        }
+      ],
+      signName: "来源名称",
+      signUrl: "",
+      skipLink: "https://www.quickapp.cn/",
+      imgResizeMode: "cover",
+      imgObjectFit: "cover"
+    }
+  },
+  handleClickMore() {
+    console.log("点击查看更多");
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+  border-bottom-left-radius: ~"theme.borderBottomRadius";
+  border-bottom-right-radius: ~"theme.borderBottomRadius";
+  border-top-left-radius: ~"theme.borderTopRadius";
+  border-top-right-radius: ~"theme.borderTopRadius";
+  background-color: rgba(255, 255, 255, 0.85);
+}
+</style>

@@ -1,0 +1,56 @@
+<template>
+  <stack class="image-wrap">
+    <image
+      class="default"
+      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}};"
+      src="{{alt}}"
+      show="{{!isImageComplete}}"
+    ></image>
+    <image
+      class="image"
+      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}};"
+      src="{{src}}"
+      oncomplete="oncomplete"
+      onerror="onerror"
+    ></image>
+  </stack>
+</template>
+
+<script>
+export default {
+  props: {
+    src: {
+      default: ""
+    },
+    alt: {
+      default: ""
+    },
+    resizeMode: {
+      default: "cover"
+    },
+    objectFit: {
+      default: "cover"
+    }
+  },
+  data() {
+    return {
+      isImageComplete: false
+    };
+  },
+  oncomplete() {
+    this.isImageComplete = true;
+  },
+  onerror() {
+    this.isImageComplete = false;
+  }
+};
+</script>
+
+<style lang="less">
+.image-wrap {
+  image {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
