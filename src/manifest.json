@@ -242,6 +242,44 @@
         "targetManufactorys": [
           "vivo"
         ]
+      },
+      "voice/card-list-b": {
+        "name": "jovi语音/card-list-b",
+        "description": "jovi语音左图右文列表模板B",
+        "component": "index",
+        "path": "/voice/card-list-b",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": []
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
       }
     }
   }
