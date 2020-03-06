@@ -1,4 +1,7 @@
-<import name="card-a" src="../../../components/screen/card-template-a/index"></import>
+<import
+  name="card-a"
+  src="vivo-cards-suits/screen/card-template-a/index"
+></import>
 <template>
   <card-a
     cover-url="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
