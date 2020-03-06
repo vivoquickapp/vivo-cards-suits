@@ -1,0 +1,179 @@
+<template>
+  <div class="wrap" style="height: {{logoUrl ? '960px' : '900px'}}">
+    <div class="content-wrap">
+      <image class="title-image"
+             src="{{coverUrl}}"></image>
+      <stack>
+        <list class="content">
+          <list-item class="item" type="scroll">
+            <text class="title">{{title}}</text>
+            <text class="sub-title">{{subTitle}}</text>
+            <text class="info">{{info}}</text>
+            <text class="description">{{description}}</text>
+          </list-item>
+        </list>
+        <div class="button-wrap">
+          <div class="gradient"></div>
+          <div class="buttons">
+            <text class="button" style="width: {{300/(buttons.length)}}px;" onclick="clickHandler(button.url)" for="{{button in buttons.slice(0, 3)}}">{{button.text}}</text>
+          </div>
+        </div>
+      </stack>
+    </div>
+    <div class="cp" if="{{logoUrl}}">
+      <image class="logo" src="{{logoUrl}}"></image>
+    </div>
+  </div>
+</template>
+<script>
+    import router from "@system.router";
+
+    export default {
+        props: {
+            coverUrl: {
+                default: ''
+            },
+            title: {
+                default: ''
+            },
+            subTitle: {
+                default: ''
+            },
+            info: {
+                default: ''
+            },
+            description: {
+                default: ''
+            },
+            logoUrl: {
+                default: ''
+            },
+            buttons: {
+                default: [
+                    {
+                        text: '按钮',
+                        url: ''
+                    }
+                ]
+            }
+        },
+        clickHandler: (url) => {
+            router.push({
+                uri: url
+            })
+        }
+    }
+</script>
+<style lang="less">
+  .wrap {
+    height: 960px;
+    width: 600px;
+    flex-direction: column;
+    background-color: #EFEFEF;
+    border-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+
+    .content-wrap {
+      height: 900px;
+      width: 600px;
+      flex-direction: column;
+      background-color: #FFFFFF;
+      border-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+
+      .title-image {
+        object-fit: cover;
+        height: 400px;
+        width: 600px;
+        flex-shrink: 0;
+        border-top-left-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+        border-top-right-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+      }
+
+      stack {
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .content {
+          padding: 32px 48px 120px 32px;
+          flex-direction: column;
+
+          .item {
+            flex-direction: column;
+
+            .title {
+              font-size: 40px;
+              color: #000000;
+              line-height: 48px;
+              font-weight: bold;
+            }
+
+            .sub-title {
+              font-size: 24px;
+              color: #000000;
+              line-height: 30px;
+            }
+
+            .info {
+              font-size: 24px;
+              color: #999999;
+              line-height: 30px;
+            }
+
+            .description {
+              margin-top: 24px;
+              font-size: 28px;
+              color: #666666;
+              line-height: 40px;
+            }
+          }
+        }
+
+        .button-wrap {
+          height: 168px;
+          width: 600px;
+          flex-direction: column;
+
+          .gradient {
+            height: 48px;
+            width: 600px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.79) 29%, #FFFFFF);;
+          }
+
+          .buttons {
+            background-color: #FFFFFF;
+            border-bottom-left-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+            border-bottom-right-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+            height: 120px;
+            width: 600px;
+            padding: 0 32px;
+
+            .button {
+              height: 72px;
+              margin: 0 8px;
+              text-align: center;
+              font-size: 28px;
+              flex-grow: 1;
+              color: #456FFF;
+              border: 2px solid #456FFF;
+              background-color: #FFFFFF;
+              border-radius: 36px;
+              font-weight: bold;
+              text-overflow: ellipsis;
+              lines: 1;
+            }
+          }
+        }
+      }
+
+    }
+
+    .cp {
+      height: 60px;
+      width: 600px;
+      padding: 16px 48px;
+
+      .logo {
+        height: 28px;
+      }
+    }
+  }
+</style>
