@@ -1,0 +1,123 @@
+<template>
+  <div class="rating-wrap" onclick="handleClickRating">
+    <image
+      class="star-grey"
+      src="{{this[$item]}}"
+      onclick="handleClickRating($idx)"
+      for="{{ratingArr}}"
+    ></image>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    currentImg: {
+      default:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA4CAYAAAChbZtkAAAABGdBTUEAALGPC/xhBQAABTxJREFUaAXdml2IG1UUx8+ZhJVuCz5ZaEUf1C2IigjLWhTbZLe72ibx46EqFGwRFB+E1edWiCi+atEHqSD1oSAVFDa7LWzYZlvfqi8+CMrWvogtfjxuq67JHP/3JpmdNcnM3DsfSR3Izs25557z/825uXeSWaIhHLI4U1SvIaSm/DCSEjWrnbyNrPM7WSeUc9PTJLRPvXQ7YwGZA5PbqnqM/rZnTLeRKbAsFg6gsk94SGhrm2dIv5EpMHCqfZD62fq4JWPKDFiWZmZJ5PEe2bDpvp6OdAyZAZN4K3MvSVBfr3csSybAWI3n8Nl9bKBS9GmfgQ7JdWQCTC337VDJUXxCg4Q7pA4sS4WniGRvuBTZ2/YN94zjkTowpnI1skAT38hBtzqmCozP5UGszI9uTRnwDr56TIBL3K5UgbfcVUVVmvLdV2rAslgsYTpPReX0/DBGasVD3vuEG6kBY6GqWmtlCV/VLYOnAozVtozP7qSlJlwrmdQxrAMMHpgKsNHKPEhbSis2D8oX1S4iTPW5XdRsTpAr96E8UwB+Ner4QD+mU0R8mRy+Qvn8Gs0uX2dmCRwT0hkJWEMtzuymHIBEJgCkwDpn1abxkDxJdd9EoCvEeBGv6TPj3MIFKa9ci3IxPGAPitwJcrYAKbB7M4SyvTg3cQF+wuD2hVAXxFUXxlnzXwzG4nACVXu+XTXaZpttxMf92ZkNZx0ay38I2HUI/r/Cqlps04xg1VNaGoUddEMWYCyOeKXs5DE1aDs/zcXVdb0tqQYM6u7mvF3EkR51XrFpRsj09mEY/qJ7dj6Luf7lSMs3EadYwKTZOuO8VbobR+RwjpZ+/wwL2ZGu7ZY8M5+h0h1Hmb9o+fV7Fe4atUOp8BKx80nXdsudlXYw/BdWcfRU2A+HLesD3D3N+20j33b4JJdW3xiks6fCfkc9kOk9v22k29AaBKu0BwIrBy5fPI7pfVy1R/qARq01RGTglPaPlVphnljex14deYx/fGpthiLhN7myejJKDiPxUtv/CoJ+jFfozIiSPAEfFzFe48rFyAusEbASiEofQY1PY9vKJyDYPgRzE7U9hsqeMQliDKyCS236OaLW52iOmSRL0HeDKPciVy58ZRrTClglaf/Q5i6ZJkzG3ylxpXHOJpb9ZzHHP9okTGRMjNz2wCIPJiLeJkiM3PbAJA/ZaE1mjH1ue2CxTxobOkZue2Ci4U3pGLmtgOX7w9iOeE/sSlkH4D1tDeYBrIDp6h/3D/XGQ930KA0Whx0wDXGF9iDtNNgBMw1xhe4QW2qwAx7qltQtsd0uYQcsMSvMtIAvIAtd6VZnsdsljIGlfuB2CLzLSiTRMh6KTeGL+jPqpdqIs2wZ6+6OFqPhxsD0T8t8/2W6RJzfh++tT/LBlW+6ClVb2VQfKn6pa498ttBiDmxyl8OER535OVRzP5dXvh4EovqUj/IF+OVBfj12Ey2dweZf4t0Inx3m78hx3uJDF2o9IgMMXFqpo7uO/+SpkOu+g73+4QB3wtNB49lmXmEOWh35B4C+QKXGI6awfjA9FjF0LELMQUeglv6DzIH73ccyXcXPXEepXHiAS42zUR5M95ezaVUxVCwVU8fWOTb7Oy3jChv94iHLs7vp741ffGl/xk+479J2+RTPb5o+e+JNPOHM0w1+mcQ9geCbu8RtY3fyXP1a1IRmFd5odu6w+FdMt3nKjU9wuXEqbVgFo3KoXCqnzk3QoA5Pk34X+seswkuFY+TyTtq14yOerKn/txjaId9Wxun6+uvkyG942nA6qpB/AS+mmWSyRdhjAAAAAElFTkSuQmCC"
+    },
+    halfImg: {
+      default:
+        "data:image/png;base64,UklGRngCAABXRUJQVlA4TGwCAAAvO8ANEJfjKJJkK8qZF8EdR/gXgAgMwP6mz+vAQdtIkuTpAbH8Uf53cRtJkqTkzKwETmEF/qtY8DPtOLJtJcLdJQfiIATy31Kz8vn+3/s3ESH+I+XBPTlJL9fk9sB4CpIGIIEDA2ITghNKBGwAUqGiFjJVjSRtfSIABCDk/iwMAU0UzR+XeFFRYHVG5tfCP5xIi4jEWh2DVkgAHhsUpl5FXBKXxKKjkygobKUI0LqouZxQ1XtCa2JN9hr98lvLbHb137XP3s4+z9Xfl7/zG982zu6D4bz9Xfz33+Xejo893AJkCQCbtpXcbguVuepYY2ZmZubtMTPc/y+JbdkXiOj/BADvswMWL5QseiB07JknLFlzS4To2DIXKllyTyF07ZiNKltxR1Ho2jAeV7bgkeLQNW9UpmzcO5JB17QRubJhVySHrlljKmWjrkkFXZMm1cqGNL6/Pt0iNcwFTlIwNH68PtldG+4jeYlwvVLIBE5SSDV+/Dz5tDbTR1oVYuuVQiZwkgLg40wvceqJr6S/LpI15QR8W7KllACA9mU7igLCbWs2FAREt26YlxcQ/3/TtJwA6W2zsqC6Z1IG1PfNSYPOwy5DUqD3uNuIAHRfdBrgg/6XHjYPOC+5XGD9w9XE84rL4/nIleZZ5yrwTHFVWNo6uVBw/Ca2Zo4LPp9jly/DscJX5BhUWi0qVRm+kuKXtwAtRQVM6Hsjt/ALIp2SnKPvg8zIPUi6ZZlA307cxA0oupW4nL6FqOn3DVAWXiWqpK8/NHT+H7QKvxqqa/tORINH/0C7CGqImNT1RAMHHcAqUjV0dZ19/gvsibQvBQ=="
+    },
+    defaultImg: {
+      default:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA4CAYAAAChbZtkAAAABGdBTUEAALGPC/xhBQAABRBJREFUaAXdmk9oHFUcx3c3SxJLILeAMckh2Q0IehAkEaWVilZtpaKHqihSBEsPQvWqgi2oVxE9iIL0oChFFCpa0EOh3vTUW81uDCRxxdwCiyalu+vnu8yE3XV2973f7MymGZh9/36/9/t+3nvzZnZ2M5khHOVy+ajOIYTO5IcRtF6vnw/iXk07fi7tgMzsI8Q8ojPIpyohdeCW2c205tOiThV4dXX1UcAOt8AdDupaqpLNpgocNaNRdUkipwa8srLyWKPReKgTRnVq66xPqpwacDabPd8NoldbNx9rfSrApVLpGDP5YDeRapNNt/ZB1qcCjOALDqJdbBy66W2SODD32ieYwQd6y8hkZCPbfnZx2xMH9tmFfWyt4IkCM2NPImzZQ9xy4OPh4meaKLBlxiw+PsiJAfMEdQIhSz5iAtslfI8b/JxcEgOOM1P4JrZjJwLMk9NT7Lr3Ow15hJF81UdEU+yqRIAH8eQ0iD6iRicbVelTx2xkNzY27tzd3S3iV6Cs6/aMTx89bD8F/Ffay2NjY6XZ2dm/KDd62PdtcgIW1Obm5vTOzk6BHkOwZooAQR7qG2kABsT6h1hluiqTLynlLI2Pj5dnZmYqLoOxB9wCFYIU2TwKdKLyQlpQxDIdGgwcV9FZyuVyZaWUywxGqXUwstzo36bxFI2aqTtM0fa5E4Pxr+BJL+X4+IhC9aDCai4CtqpYm0t6a2trYnt7+zINR2Vw0A5Ar05OTp6cmpqqNm9LyuTz+eM0XDmAsFfEJkax7W1aKjDDo3wR/4rssyofgOPbYrH4AhN5M2Rpe/BQAwanSL8MDW7XVAwByx6sWNqAVYFhrVAovEz6mcq34yHtAUOtU///gGWAQ53ROcP97MNOh/1elmZpF0OU1kjg0JBReh3H98Pyfk+lVZp76WzbtLoZspG9yYb2Xrf2/VAP7FvMbN/JcQIWEF/XztHpB4A7+6QxEGhCUuONxcVFp8vPSzyPoa/S+SecPS+FNEAVA9g651mWsfMG6wWsICzvFwG+SHYovy1LQ3DcAvY0y9jrFuoNrGDM9DN8k/qa7GgQPO3kJrvx88zsd76BTcAKohdttVrtB9+Ag7AfGRk5sbCw8KOlL/O1yAz/bgk4CJ84sc3ACL9nEOKNfZhjm4HZMO41io3tFie2GZidemjAcWKbgZkm87KKPcUxYpuAGeFRzsUBCDd1odjSYHE2Aa+trd1NsGE+eOQDDd7MJmDuv8Nczk1IqwYTMBGHtmG1TKlJgwmY68cUrEVs7KxVgwk4zn1QpPhf1hmHGn/TZeUNzDP0JKM7axGLyJ94Dl7iG87TOpVXnaUvNMxJi6+vNzCBLCN7jXfDR4B8nIf+30KRyqtObdRdC+tdU4sWb2Ae3H2uX/3UeYy3EQ/Pz8//0g1EbbKRLad8nA5PLc0+vYEdr53r2J0EYpnzZyf1GMlWPvKleL2fn6OWtm68gVlGvWb4BiKeY5nex/l9WySPgnzVh/rC7UY31z5aIt0sT0tR1/AfvIG4wDX5BSIj3wdHRu9RST/6pf8SUN+wOb3E8n2H8nyHS5SWDpP2otcbj/X1df0L4M+wC0RtcL4L6Oekt8L6JFLA84C/Qqrfs/fuEvzgfdfc3FzFNabXkuZ/HM3lDNzfzOg5ghR5r6T/YSQKKxjFUCzFVGxpUH2oSXmXw2uGeXl3mqU1NTEx8fH09LT+YjC0o1KpHKpWq68Bv8VAXHQV8h9Nk+zBFCIzfwAAAABJRU5ErkJggg=="
+    },
+    numstars: {
+      default: 5
+    },
+    rating: {
+      default: 3.5
+    },
+    stepsize: {
+      default: 0.5 // 0.5 或 1
+    },
+    indicator: {
+      default: false
+    }
+  },
+  data() {
+    return {
+      ratingArr: [
+        "defaultImg",
+        "defaultImg",
+        "defaultImg",
+        "defaultImg",
+        "defaultImg"
+      ]
+    };
+  },
+  onInit() {
+    this.$watch("numstars", "calNumber");
+    this.$watch("rating", "calNumber");
+    this.$watch("stepsize", "calNumber");
+    this.calNumber();
+  },
+  calNumber() {
+    let numstars = Number(this.numstars);
+    let rating = Number(this.rating);
+    let stepsize = Number(this.stepsize);
+    let currentNumber = 0;
+    let halfNumber = 0;
+    let defaultNumber = 0;
+
+    if (stepsize == 0.5) {
+      if (rating > numstars) {
+        rating = numstars;
+      } else if (this.rating < 0) {
+        rating = 0;
+      } else if (this.rating > 0 && this.rating < 0.5) {
+        rating = 0.5;
+      }
+
+      let _rating = Math.round(rating / 0.5);
+
+      if (_rating % 2 == 0) {
+        currentNumber = _rating / 2;
+      } else {
+        currentNumber = Math.floor(_rating / 2);
+        halfNumber = 1;
+      }
+      defaultNumber = numstars - currentNumber - halfNumber;
+    } else {
+      if (rating > numstars) {
+        rating = numstars;
+      } else if (this.rating < 0) {
+        rating = 0;
+      } else {
+        rating = Math.round(rating);
+      }
+      currentNumber = rating;
+      defaultNumber = numstars - currentNumber;
+    }
+
+    for (let i = 0; i < currentNumber; i++) {
+      this.ratingArr.splice(i, 1, "currentImg");
+    }
+    for (let i = 0; i < halfNumber; i++) {
+      this.ratingArr.splice(currentNumber + i, 1, "halfImg");
+    }
+    for (let i = 0; i < defaultNumber; i++) {
+      this.ratingArr.splice(currentNumber + halfNumber + i, 1, "defaultImg");
+    }
+  },
+  handleClickRating(index) {
+    if (!this.indicator) return;
+
+    this.$emit("change", {
+      rating: index + 1
+    });
+  }
+};
+</script>
+
+<style lang="less">
+.rating-wrap {
+  width: 100%;
+  height: 100%;
+  image {
+    height: 100%;
+  }
+}
+</style>
