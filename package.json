@@ -5,7 +5,7 @@
   "scripts": {
     "server": "hap server --port 56841",
     "postinstall": "hap postinstall",
-    "build": "hap build",
+    "build": "hap build --devtool source-map",
     "release": "hap release",
     "watch": "hap watch",
     "debug": "hap debug",
