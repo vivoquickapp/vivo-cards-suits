@@ -10,8 +10,8 @@
   "router": {
     "widgets": {
       "voice/card-list-a": {
-        "name": "jovi语音",
-        "description": "jovi语音卡片模板-list-a",
+        "name": "jovi语音/card-list-a",
+        "description": "jovi语音左文右图列表模板A",
         "component": "index",
         "path": "/voice/card-list-a",
         "features": [
