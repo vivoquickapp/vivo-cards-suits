@@ -1,0 +1,3 @@
+{
+    "theme.borderBottomRadius": "32px"
+}
