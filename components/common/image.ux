@@ -1,11 +1,5 @@
 <template>
-  <stack class="image-wrap">
-    <image
-      class="default"
-      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}};"
-      src="{{alt}}"
-      show="{{!isImageComplete}}"
-    ></image>
+  <stack class="image-wrap" style="width: {{width}}px;height: {{height}}px;">
     <image
       class="image"
       style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}};"
@@ -13,12 +7,24 @@
       oncomplete="oncomplete"
       onerror="onerror"
     ></image>
+    <image
+      class="default"
+      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}};"
+      src="{{alt}}"
+      show="{{!isImageComplete}}"
+    ></image>
   </stack>
 </template>
 
 <script>
 export default {
   props: {
+    width: {
+      default: ""
+    },
+    height: {
+      default: ""
+    },
     src: {
       default: ""
     },
