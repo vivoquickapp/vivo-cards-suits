@@ -1,0 +1,135 @@
+<import name="my-image" src="../../common/image.ux"></import>
+<import name="footer-sign" src="../sign/index.ux"></import>
+
+<template>
+  <div class="card">
+    <div class="content">
+      <my-image
+        class="image"
+        width="128"
+        height="128"
+        resize-mode="{{imgResizeMode}}"
+        object-fit="{{imgObjectFit}}"
+        src="{{imgUrl}}"
+        alt="data:image/png;base64,UklGRq4FAABXRUJQVlA4TKEFAAAvH8E1EA8GN5IkQUr2PzIW4L+BqARXET9OMGzbNgzTFtgT+/+7nbDKbSRJQtMLWMRA/hnK1I/jSLaVqtEEWJEECXj+ibBzhy8CkmRAYDegShH8fr9LkCBIICKIQEQSiFDCQRQiAgmCeToEOVgiiuAmSYTy4Z2ykohABvEgEPGRXheCYea5IXeR3ERiqIiwSCrkfFzqCGJI7ie5O0YhoUKCGJhHlGMkRDAcgVmQQAKjDElgxEBO+fN+tmZ474dhYDY8l+/nzTvrrXmvi9mOrxGOP2buYzVs7TK6YTDzfw9Nsv7F3wi+/jt/zSlbyx4CjoK2bZiaP+xdCBExAXlVS5BKKHe4kSQ3khqQ4b8PI4BD5LYt1a6fIqL/E0Dt1h5FbpSlikur9ISZmanDzMzMzMzMxjYqsYxTZrbzNRXwz5vxdI+3TlcvR/R/AnBT9VmSNx+/T2V2hRdlOUNEt+SJHtaQ0Q59S7IhZJYbLRpKxnoh0ZAyyonOhpZZH4Yh5gAglhlWgGWouaAcN5zqhpx9smMWdpTEjuTZ4c32//b/9v+f4dLYdgCye+SkyWaeNGGwlOFPDFp+8bVXbGYv+8nuKRJCnp59TykmY3NN3q4YhDo9530tmb28do8DIU4Pf1ZBxldrRIiDTTVkfn4zBkIbjH6hkrCpk5DaK0Kbnl9GSW+fOmniU+fecZI7DoS1jI0qgY87GoysZ2UyEfGLThnW5PbahI/uL2jo7usq4fU4Hfq+mSp2JdmEvxcAaKmlgKgCdL/x81auXz6784eIJABnHn7NSil6vn2CgOhBDj5CtUyJqjZzM0LUAEMv1DL1zOV7uyMGcE4pSpnj9TJa0OuYfLI361uUoIc+V35InXeihG9zmX1x1nQdHYDcW0v+1Yb0AdhT7GwgR2Sa9PLN3WBNA66oAGpPY1pBuF58O4I1XQzkVHp0axZz2RYHLAmP1gagdv+aDumWMBGVH0CwIuy7Uvnjj0u/BQfCzWZKVNsdsCI9JY/9PR+tg9NuNlNS5q0O2BDgGeVLbf6KgWvXY+o5fgDBglBPzmQf6t5QCOxLU7aiFLliG4IFoVxawCnVvJ3aF4MW7blMKZfyDgQLQmjLrE1BPZusMWCQbjGT3/gBBAv6LmdcJlVRzuUVKvfIaIFBi0WZinxzfIsj7QdRxuYeu/fy1fOb+6aAxIBBNOUzBVjKOxEsCFGL/sNGDHW0xqBBrPKYglWHYmBDiKC1BgxeuB5TwFx+CMGK0gvC9ZiCj+/tB7Yn3BymNHLZVgS7k24xU3qr9yPYE4Cv76I9X1GaP6kdCNaEMfAjWnOZ0s68oxssSa6/NEqmJhZ6TL1RHURpQyBXFtTeGv5bKsLNVtQrOb7VybAfkGuKiNT1Tt0DCDefqZeW8o6Y9QCsISYi9aBTJwGxtpip95a3Cdv50khMierW8IwE4XqV1JuWWQ7oNR5TcnWrUyCIpmymXtVkObrFY+pZXRkidEsmU4QgV3tMqarrw90CpugAoNFjSj3+5EMVRQh6TQGTX2aKEGTDJ6Y/vsWAbCxkijBANJIZ7UWuKeNIQ64mpggD5Foypp0AriSONgbcVhRtDLrxr3e369iYaomVDLxalmvMkmYbQWfCFIMORRtBMCnaiYH/PrD4FzB09+1kE8PbGpXAN8YOGGzkoSs8SnjSBWFNzCGmxNdPnxj5uccJ6gKGdhh2vyYJm5qSqpXfQhvq5XFOMHv5o6EY3mHA5VrjlefNEyEO9dg7tWw2VbBM/h7mUHce82oVm7pCqceLJWC413LatmsPnxj67okFgzWGftDSGfDZ0DHUgP/7f/t/+/8/lJ4dIbEjFXaUyY7Z2dGV44ZTWNxYgFhmWAEwmDEAQGdeZH2ARFZEwXmLnIgV15IZkQV39bBssEPjoSzHBLcEL6o+S/Kfn09ldoWbAA=="
+      ></my-image>
+      <div class="info-wrap">
+        <text class="title">{{ title }}</text>
+        <text class="description">{{ description }}</text>
+      </div>
+      <div class="btn-wrap">
+        <my-image
+          class="btn-stop"
+          width="48"
+          height="48"
+          src="data:image/png;base64,UklGRmwAAABXRUJQVlA4TF8AAAAvX8AXEC8QEUQCJCSq1SVOc3/Qz4BRG0mOdhlEBqslEA7AUbhT8acz4XlBEf0nk7bpDPTsLIRHYWn2KHORc0KTuci5YMhc5NxwyFzkAMhc/iex72T7DrfvfIcf8SQsAAA="
+          onclick="handleClickStop"
+          if="{{isPlay}}"
+        ></my-image>
+        <my-image
+          class="btn-play"
+          width="48"
+          height="48"
+          src="data:image/png;base64,UklGRnwBAABXRUJQVlA4THABAAAvX8AXEG8REWwaSXKcvZqz7+MPn8FHyThqNeWNHT88euv9hC9RtTq3mIBk224aScXM0FzMVdr/BjuSbL9hDSL678ZtJEdSR2c40ax9grxrT+Nzf/nqCneaN1XV56Iu1PnW/3OeCHSuWp1NR5Cj1jzndXiq5zE4LqqsayNk9eXTRMREujsbEROZOIiYeIiYSGdrI2I+4hVAuEIIVggt6qiCaMIpBXFKQZSSEKQktO0iSkaA0hExkc7GRmXLhYhJfeGgcmVGRcqNSpQVDcqUFb1GRcqLjrUSZUYdavNqPfqHE/Mvv1qdx5C40Mxa6NIXXmPzuF7VgeelPzVmV+S8lFVNRUqUVbGvazvgda0+D6gyZVJF7yuy7NbC90X5VMlSFeG+NFEhngsSFaEUBXmuSVGc58o0RSiolqjn4tg9NOy9REjBCihcngK+13Lu/OHv5ZZ1IeYoYI4C5ijg3G2FnB/8e/XWpaqw0/44nNZdeX8fEQ=="
+          onclick="handleClickPlay"
+          else
+        ></my-image>
+        <my-image
+          class="btn-next"
+          width="48"
+          height="48"
+          src="data:image/png;base64,UklGRvQBAABXRUJQVlA4TOgBAAAvX8AXEEcTEQrbtm1Dpd0dQxCUWqazvO3bHGFhTSxkBQuPFhebL8Wd0SmxqBUaAbAlSTZt9bF5bdu2bdue//+Ge2ftNdGvNyKi/47cSFKkyGXMSzQ9Af81kxjbP5nMgTfpSxGRp84QrBKbvr+fjsEw8/I7R1UwyrSIyDQMc/MH+ZxOwiT3IiL3MIxouW0w7GmKnu0SO/I2GCHlRXlwXsNJcUu5/CznGAHqr5UHz50hRhCf+lAeHFUyAlTsiUNCPoD2R4eEhCCz+O2QkA+g+lSTcCjCCMIDqoS1jAAFh4SMAHUOCRlBfFKVsIoQl4RfMylGgDZNwrvGAD39Y9Izs6BJuFNy9rSIR08PCR09TWLRM9zvkFDvaROTnoVNTcKVnNrTKiY96640CVu0nmYJ2NNDwp8epadZAvYMKKG+QIBhAvb0kpCXh7+wP3nl/Mi48pHvDvYfamb0el2UX17LE45Lvdq4dFHLPa6+j0QJ54V5bV7YLTPOaw/avNZEPi/PUczLHqrJMcm6wkO17hDoKGxoqq0SruvCfW7VSPBQjQYP1bhoDaAaEU7VZlOgIz4RYCnNRQDVyHCpRn4uUQvQoeZtOAJqdkjPhRy7Fz4eVdU4z+WW6M8Vs2e/VOviPRdFZvTgcCSH/68BAA=="
+          onclick="handleClickNext"
+        ></my-image>
+      </div>
+    </div>
+    <footer-sign sign-data="{{signData}}"></footer-sign>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    imgUrl: {
+      default: ""
+    },
+    title: {
+      default: "标题"
+    },
+    description: {
+      default: "描述"
+    },
+    signData: {
+      default: {
+        signName: "来源名称",
+        signUrl: ""
+      }
+    },
+    imgResizeMode: {
+      default: "cover"
+    },
+    imgObjectFit: {
+      default: "cover"
+    }
+  },
+  data() {
+    return {
+      isPlay: false
+    };
+  },
+  handleClickPlay() {
+    this.isPlay = true;
+    this.$emit("clickPlay");
+  },
+  handleClickStop(index) {
+    this.isPlay = false;
+    this.$emit("clickStop");
+  },
+  handleClickNext() {
+    this.isPlay = true;
+    this.$emit("clickNext");
+  }
+};
+</script>
+
+<style lang="less">
+.border-top {
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  width: 100%;
+  flex-direction: column;
+  .content {
+    padding: 24px 32px;
+    .image {
+      margin-right: 20px;
+    }
+    .info-wrap {
+      flex-direction: column;
+      align-self: center;
+      flex: 1;
+      .title {
+        font-size: 32px;
+        color: #000;
+        line-height: 40px;
+      }
+      .description {
+        font-size: 24px;
+        color: #818181;
+        line-height: 30px;
+        margin-top: 12px;
+        lines: 1;
+        text-overflow: ellipsis;
+      }
+    }
+    .btn-wrap {
+      margin-left: 20px;
+      align-self: center;
+      .btn-next {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+</style>
