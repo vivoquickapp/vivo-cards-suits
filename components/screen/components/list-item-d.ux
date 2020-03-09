@@ -1,0 +1,95 @@
+<template>
+  <div class="wrap" onclick="clickHandler">
+    <div class="list-item">
+      <div class="content">
+        <text class="title">{{ title }}</text>
+        <text class="sub-title">{{ subTitle }}</text>
+        <text class="info">{{ info1 }}</text>
+      </div>
+      <text class="button" onclick="clickHandler">{{ button.text }}</text>
+    </div>
+  </div>
+</template>
+<script>
+import router from "@system.router";
+
+export default {
+  props: {
+    title: {
+      default: "标题"
+    },
+    subTitle: {
+      default: "副标题"
+    },
+    info1: {
+      default: "辅助信息"
+    },
+    button: {
+      default: {
+        text: "按钮",
+        url: ""
+      }
+    }
+  },
+  clickHandler(e) {
+    router.push({
+      uri: this.button.url
+    });
+  }
+};
+</script>
+<style lang="less">
+.wrap:active {
+  background-color: rgba(69, 111, 255, 0.1);
+}
+
+.list-item {
+  height: 160px;
+  width: 504px;
+  margin: 0 48px;
+  border-bottom: 2px solid #f2f2f2;
+  align-items: center;
+
+  .content {
+    flex-direction: column;
+    width: 416px;
+
+    .title {
+      font-size: 32px;
+      color: #000000;
+      line-height: 40px;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+
+    .sub-title {
+      font-size: 24px;
+      color: #000000;
+      line-height: 30px;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+
+    .info {
+      font-size: 24px;
+      color: #999999;
+      line-height: 30px;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .button {
+    background-color: #ffffff;
+    border: 2px solid #456fff;
+    border-radius: 36px;
+    height: 44px;
+    width: 88px;
+    color: #456fff;
+    font-size: 24px;
+    text-align: center;
+    lines: 1;
+    text-overflow: ellipsis;
+  }
+}
+</style>

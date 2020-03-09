@@ -1,6 +1,6 @@
 <import
   name="card-a"
-  src="vivo-cards-suits/screen/card-template-a/index"
+  src="../../../components/screen/card-template-a/index"
 ></import>
 <template>
   <card-a
@@ -14,31 +14,33 @@
   ></card-a>
 </template>
 <script>
-  export default {
-      data() {
-          return {
-              buttons: [
-                  {
-                      text: '马上观看',
-                      url: 'https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia'
-                  },
-                  {
-                      text: '查看详情',
-                      url: 'https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia'
-                  },
-                  {
-                      text: '评分',
-                      url: 'https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia'
-                  },
-                  {
-                      text: '马上观看4',
-                      url: 'https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia'
-                  }
-              ]
-          }
-      }
+export default {
+  data() {
+    return {
+      buttons: [
+        {
+          text: "马上观看",
+          url:
+            "https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia"
+        },
+        {
+          text: "查看详情",
+          url:
+            "https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia"
+        },
+        {
+          text: "评分",
+          url:
+            "https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia"
+        },
+        {
+          text: "马上观看4",
+          url:
+            "https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia"
+        }
+      ]
+    };
   }
+};
 </script>
-<style>
-
-</style>
+<style></style>
