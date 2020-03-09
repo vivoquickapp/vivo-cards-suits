@@ -1,14 +1,44 @@
+<import name="list-item-a" src="../components/list-item-a"></import>
+<import name="list-item-b" src="../components/list-item-b"></import>
+<import name="list-item-c" src="../components/list-item-c"></import>
+<import name="list-item-d" src="../components/list-item-d"></import>
 <template>
   <div class="wrap" style="height: {{logoUrl ? '960px' : '900px'}}">
     <div class="content-wrap">
-      <image class="title-image" if="{{!!coverUrl}}" src="{{coverUrl}}"></image>
       <stack>
         <list class="content">
-          <list-item class="item" type="scroll">
+          <list-item class="title-item" type="scroll">
             <text class="title">{{ title }}</text>
-            <text class="sub-title">{{ subTitle }}</text>
             <text class="info">{{ info }}</text>
-            <text class="description">{{ description }}</text>
+          </list-item>
+          <list-item class="list-item" type="list" for="{{item in listData}}">
+            <list-item-a
+              if="{{listType === 'A'}}"
+              title="{{item.title}}"
+              info1="{{item.info1}}"
+              info2="{{item.info2}}"
+              image-url="{{item.image}}"
+              button="{{item.button}}"
+            ></list-item-a>
+            <list-item-b
+              if="{{listType === 'B'}}"
+              title="{{item.title}}"
+              sub-title="{{item.subTitle}}"
+              button="{{item.button}}"
+            ></list-item-b>
+            <list-item-c
+              if="{{listType === 'C'}}"
+              info1="{{item.info1}}"
+              info2="{{item.info2}}"
+              button="{{item.button}}"
+            ></list-item-c>
+            <list-item-d
+              if="{{listType === 'D'}}"
+              title="{{item.title}}"
+              sub-title="{{item.subTitle}}"
+              info1="{{item.info1}}"
+              button="{{item.button}}"
+            ></list-item-d>
           </list-item>
         </list>
         <div class="button-wrap">
@@ -19,8 +49,8 @@
               style="width: {{300/(buttons.length)}}px;"
               onclick="clickHandler(button.url)"
               for="{{button in buttons.slice(0, 3)}}"
-              >{{ button.text }}</text
-            >
+              >{{ button.text }}
+            </text>
           </div>
         </div>
       </stack>
@@ -35,20 +65,29 @@ import router from "@system.router";
 
 export default {
   props: {
-    coverUrl: {
-      default: ""
-    },
     title: {
-      default: ""
-    },
-    subTitle: {
       default: ""
     },
     info: {
       default: ""
     },
-    description: {
-      default: ""
+    listData: {
+      default: [
+        {
+          image: "",
+          title: "标题",
+          subTitle: "副标题",
+          info1: "辅助信息",
+          info2: "辅助信息",
+          button: {
+            text: "按钮",
+            url: ""
+          }
+        }
+      ]
+    },
+    listType: {
+      default: "D"
     },
     logoUrl: {
       default: ""
@@ -98,10 +137,11 @@ export default {
       justify-content: flex-end;
 
       .content {
-        padding: 32px 48px 120px 32px;
+        padding: 32px 0 120px 0;
         flex-direction: column;
 
-        .item {
+        .title-item {
+          padding: 0 48px 32px 48px;
           flex-direction: column;
 
           .title {
@@ -111,24 +151,15 @@ export default {
             font-weight: bold;
           }
 
-          .sub-title {
-            font-size: 24px;
-            color: #000000;
-            line-height: 30px;
-          }
-
           .info {
             font-size: 24px;
             color: #999999;
             line-height: 30px;
           }
+        }
 
-          .description {
-            margin-top: 24px;
-            font-size: 28px;
-            color: #666666;
-            line-height: 40px;
-          }
+        .list-item {
+          flex-direction: column;
         }
       }
 
