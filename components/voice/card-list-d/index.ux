@@ -1,0 +1,97 @@
+<import name="my-image" src="../../common/image.ux"></import>
+<import name="footer-sign" src="../sign/index.ux"></import>
+
+<template>
+  <div class="card">
+    <div class="content-list">
+      <div
+        class="content-list-item {{$idx!==0?'border-top':''}}"
+        for="{{listData}}"
+      >
+        <text class="title">{{ $item.title }}</text>
+        <text class="description" show="{{!!$item.description}}">{{
+          $item.description
+        }}</text>
+      </div>
+    </div>
+    <footer-sign
+      sign-data="{{signData}}"
+      onclickmore="handleClickMore"
+    ></footer-sign>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    listData: {
+      default: [
+        {
+          title: "标题",
+          description:
+            "只需输入文字，列表高度将自动匹配只需输入文字，列表高度将自动匹配"
+        },
+        {
+          title: "标题",
+          description:
+            "只需输入文字，列表高度将自动匹配只需输入文字，列表高度将自动匹配"
+        },
+        {
+          title: "标题",
+          description:
+            "只需输入文字，列表高度将自动匹配只需输入文字，列表高度将自动匹配"
+        },
+        {
+          title: "标题",
+          description:
+            "只需输入文字，列表高度将自动匹配只需输入文字，列表高度将自动匹配"
+        }
+      ]
+    },
+    signData: {
+      default: {
+        signName: "来源名称",
+        signUrl: "",
+        skipName: "查看更多",
+        skipLink: ""
+      }
+    }
+  },
+  data() {
+    return {};
+  },
+  handleClickMore() {
+    this.$emit("clickmore");
+  }
+};
+</script>
+
+<style lang="less">
+.border-top {
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  width: 100%;
+  flex-direction: column;
+  .content-list {
+    flex-direction: column;
+    padding: 0 32px;
+    &-item {
+      flex-direction: column;
+      padding: 24px 0;
+      .title {
+        font-size: 32px;
+        color: #000;
+        line-height: 40px;
+      }
+      .description {
+        font-size: 24px;
+        color: #666;
+        line-height: 36px;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+</style>
