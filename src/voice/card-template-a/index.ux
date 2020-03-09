@@ -1,0 +1,64 @@
+<import
+  name="card-template-a"
+  src="vivo-cards-suits/voice/card-template-a"
+></import>
+
+<template>
+  <div class="card">
+    <card-template-a
+      title="{{title}}"
+      subtitle="{{subtitle}}"
+      content="{{content}}"
+      sign-data="{{signData}}"
+      onclickmore="handleClickMore"
+    ></card-template-a>
+  </div>
+</template>
+
+<script>
+import router from "@system.router";
+
+export default {
+  data() {
+    return {
+      // 状态一
+      content:
+        "纯文本，14sp 55s #000000，卡片内容无限折行，不超过最大卡片高度，内容行数2行以上",
+
+      // 状态二
+      // title: '标题',
+      // subtitle: '副标题，只需要输入文字，列表高度将自动适配',
+
+      // 状态三
+      // title: '标题',
+      // content: '纯文本，12sp 55s #000000，卡片内容无限折行，不超过最大卡片高度，内容行数2行以上',
+
+      signData: {
+        signName: "来源名称",
+        signUrl: "",
+        skipName: "查看详情",
+        skipLink: "https://www.quickapp.cn/"
+      }
+    };
+  },
+  handleClickMore() {
+    console.log(`点击查看详情 url: ${this.signData.skipLink}`);
+
+    router.push({
+      uri: this.signData.skipLink
+    });
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+  border-bottom-left-radius: ~"theme.borderBottomRadius";
+  border-bottom-right-radius: ~"theme.borderBottomRadius";
+  border-top-left-radius: ~"theme.borderTopRadius";
+  border-top-right-radius: ~"theme.borderTopRadius";
+  background-color: rgba(255, 255, 255, 0.85);
+}
+</style>

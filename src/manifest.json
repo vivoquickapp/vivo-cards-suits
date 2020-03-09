@@ -128,6 +128,44 @@
         "targetManufactorys": [
           "vivo"
         ]
+      },
+      "voice/card-template-a": {
+        "name": "jovi语音/card-template-a",
+        "description": "jovi语音纯文本卡片模板A",
+        "component": "index",
+        "path": "/voice/card-template-a",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": []
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
       }
     }
   }
