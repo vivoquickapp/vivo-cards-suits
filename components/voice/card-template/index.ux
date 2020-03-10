@@ -1,0 +1,133 @@
+<import name="voice-sign" src="../components/sign.ux"></import>
+<import name="template-a" src="../components/template-a.ux"></import>
+<import name="template-b" src="../components/template-b.ux"></import>
+<import name="template-c" src="../components/template-c.ux"></import>
+<import name="template-d" src="../components/template-d.ux"></import>
+<import name="template-e" src="../components/template-e.ux"></import>
+<import name="template-f" src="../components/template-f.ux"></import>
+<import name="template-g" src="../components/template-g.ux"></import>
+<import name="template-h" src="../components/template-h.ux"></import>
+
+<template>
+  <div class="card">
+    <template-a
+      if="{{templateType==='A'}}"
+      content="{{templateData.content}}"
+    ></template-a>
+    <template-b
+      if="{{templateType==='B'}}"
+      title="{{templateData.title}}"
+      subtitle="{{templateData.subtitle}}"
+    ></template-b>
+    <template-c
+      if="{{templateType==='C'}}"
+      title="{{templateData.title}}"
+      content="{{templateData.content}}"
+    ></template-c>
+    <template-d
+      if="{{templateType==='D'}}"
+      title="{{templateData.title}}"
+      content="{{templateData.content}}"
+      img-url="{{templateData.imgUrl}}"
+      img-resize-mode="{{imgResizeMode}}"
+      img-object-fit="{{imgObjectFit}}"
+    ></template-d>
+    <template-e
+      if="{{templateType==='E'}}"
+      title="{{templateData.title}}"
+      info1="{{templateData.info1}}"
+      info2="{{templateData.info2}}"
+      img-url="{{templateData.imgUrl}}"
+      img-resize-mode="{{imgResizeMode}}"
+      img-object-fit="{{imgObjectFit}}"
+    ></template-e>
+    <template-f
+      if="{{templateType==='F'}}"
+      title="{{templateData.title}}"
+      params="{{templateData.params}}"
+      img-url="{{templateData.imgUrl}}"
+      img-resize-mode="{{imgResizeMode}}"
+      img-object-fit="{{imgObjectFit}}"
+    ></template-f>
+    <template-g
+      if="{{templateType==='G'}}"
+      title="{{templateData.title}}"
+      content="{{templateData.content}}"
+      params="{{templateData.params}}"
+      img-url="{{templateData.imgUrl}}"
+      img-resize-mode="{{imgResizeMode}}"
+      img-object-fit="{{imgObjectFit}}"
+    ></template-g>
+    <template-h
+      if="{{templateType==='H'}}"
+      song="{{templateData.song}}"
+      singer="{{templateData.singer}}"
+      img-url="{{templateData.imgUrl}}"
+      img-resize-mode="{{imgResizeMode}}"
+      img-object-fit="{{imgObjectFit}}"
+      onclick-play="handleClickPlay"
+      onclick-stop="handleClickStop"
+      onclick-next="handleClickNext"
+    ></template-h>
+    <voice-sign
+      sign-name="{{signName}}"
+      sign-url="{{signUrl}}"
+      skip-name="{{skipName}}"
+      skip-link="{{skipLink}}"
+      onclickmore="handleClickMore"
+    ></voice-sign>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    templateType: {
+      default: "A"
+    },
+    templateData: {
+      default: {}
+    },
+    signName: {
+      default: "来源名称"
+    },
+    signUrl: {
+      default: ""
+    },
+    skipName: {
+      default: "查看详情"
+    },
+    skipLink: {
+      default: ""
+    },
+    imgResizeMode: {
+      default: "cover"
+    },
+    imgObjectFit: {
+      default: "cover"
+    }
+  },
+  data() {
+    return {};
+  },
+  handleClickPlay() {
+    this.$emit("clickPlay");
+  },
+  handleClickStop() {
+    this.$emit("clickStop");
+  },
+  handleClickNext() {
+    this.$emit("clickNext");
+  },
+  handleClickMore() {
+    this.$emit("clickmore");
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>

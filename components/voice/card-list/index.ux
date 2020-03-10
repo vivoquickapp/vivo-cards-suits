@@ -1,0 +1,183 @@
+<import name="voice-sign" src="../components/sign.ux"></import>
+<import name="list-item-a" src="../components/list-item-a.ux"></import>
+<import name="list-item-b" src="../components/list-item-b.ux"></import>
+<import name="list-item-c" src="../components/list-item-c.ux"></import>
+<import name="list-item-d" src="../components/list-item-d.ux"></import>
+<import name="list-item-e" src="../components/list-item-e.ux"></import>
+<import name="list-item-f" src="../components/list-item-f.ux"></import>
+<import name="list-item-g" src="../components/list-item-g.ux"></import>
+<import name="list-item-h" src="../components/list-item-h.ux"></import>
+<import name="list-item-i" src="../components/list-item-i.ux"></import>
+
+<template>
+  <div class="card">
+    <div class="list">
+      <div
+        class="list-item-wrap {{$idx!==0?'border-top':''}}"
+        for="{{listData.slice(0,listDataLength)}}"
+      >
+        <list-item-a
+          if="{{listType==='A'}}"
+          title="{{$item.title}}"
+          content="{{$item.content}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-a>
+        <list-item-b
+          if="{{listType==='B'}}"
+          title="{{$item.title}}"
+          content="{{$item.content}}"
+          tips="{{$item.tips}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-b>
+        <list-item-c
+          if="{{listType==='C'}}"
+          title="{{$item.title}}"
+          content="{{$item.content}}"
+          record="{{$item.record}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-c>
+        <list-item-d
+          if="{{listType==='D'}}"
+          title="{{$item.title}}"
+          params="{{$item.params}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-d>
+        <list-item-e
+          if="{{listType==='E'}}"
+          title="{{$item.title}}"
+          info1-lines="{{$item.info1Lines}}"
+          info1="{{$item.info1}}"
+          info2="{{$item.info2}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-e>
+        <list-item-f
+          if="{{listType==='F'}}"
+          title="{{$item.title}}"
+          content="{{$item.content}}"
+          record="{{$item.record}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-f>
+        <list-item-g
+          if="{{listType==='G'}}"
+          title="{{$item.title}}"
+          gradeNumber="{{$item.gradeNumber}}"
+          info1="{{$item.content}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-g>
+        <list-item-h
+          if="{{listType==='H'}}"
+          title="{{$item.title}}"
+          gradeNumber="{{$item.gradeNumber}}"
+          info1="{{$item.info1}}"
+          info2Icon="{{$item.info2Icon}}"
+          info2="{{$item.info2}}"
+          img-url="{{$item.imgUrl}}"
+          img-resize-mode="{{imgResizeMode}}"
+          img-object-fit="{{imgObjectFit}}"
+        ></list-item-h>
+        <list-item-i
+          if="{{listType==='I'}}"
+          title="{{$item.title}}"
+          content="{{$item.content}}"
+        ></list-item-i>
+      </div>
+    </div>
+    <voice-sign
+      sign-name="{{signName}}"
+      sign-url="{{signUrl}}"
+      skip-name="{{skipName}}"
+      skip-link="{{skipLink}}"
+      onclickmore="handleClickMore"
+    ></voice-sign>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    listType: {
+      default: "A"
+    },
+    listData: {
+      default: []
+    },
+    signName: {
+      default: "来源名称"
+    },
+    signUrl: {
+      default: ""
+    },
+    skipName: {
+      default: "查看更多"
+    },
+    skipLink: {
+      default: ""
+    },
+    imgResizeMode: {
+      default: "cover"
+    },
+    imgObjectFit: {
+      default: "cover"
+    }
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    listDataLength() {
+      let length = 1;
+      switch (this.listType) {
+        case "A":
+        case "B":
+        case "C":
+        case "D":
+        case "H":
+          length = 4;
+          break;
+        case "E":
+        case "F":
+        case "G":
+          length = 5;
+          break;
+        case "I":
+          length = 6;
+          break;
+      }
+
+      return length;
+    }
+  },
+  handleClickMore() {
+    this.$emit("clickmore");
+  }
+};
+</script>
+
+<style lang="less">
+.border-top {
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  width: 100%;
+  flex-direction: column;
+  .list {
+    flex-direction: column;
+    padding: 0 32px;
+  }
+}
+</style>

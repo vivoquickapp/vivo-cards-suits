@@ -1,0 +1,42 @@
+<template>
+  <div class="list-item">
+    <text class="title">{{ title }}</text>
+    <text class="content">{{ content }}</text>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    title: {
+      default: "标题"
+    },
+    content: {
+      default:
+        "只需要输入文字，列表高度将自动匹配。只需要输入文字，列表高度将自动匹配。"
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.list-item {
+  flex: 1;
+  flex-direction: column;
+  padding: 24px 0;
+  .title {
+    font-size: 32px;
+    color: #000;
+    line-height: 40px;
+  }
+  .content {
+    font-size: 24px;
+    color: #666;
+    line-height: 36px;
+    margin-top: 12px;
+  }
+}
+</style>

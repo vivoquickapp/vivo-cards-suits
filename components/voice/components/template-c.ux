@@ -1,0 +1,44 @@
+<template>
+  <div class="template-item">
+    <text class="title">{{ title }}</text>
+    <text class="content">{{ content }}</text>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    title: {
+      default: "标题"
+    },
+    content: {
+      default:
+        "卡片内容，卡片内容无限折行，不超过最大卡片高度，内容行数2行以上。"
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.template-item {
+  flex: 1;
+  flex-direction: column;
+  padding: 0 32px;
+  .title {
+    font-size: 32px;
+    color: #000;
+    line-height: 40px;
+    padding: 32px 0 24px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  .content {
+    font-size: 24px;
+    color: #000;
+    line-height: 36px;
+    padding: 24px 0;
+  }
+}
+</style>
