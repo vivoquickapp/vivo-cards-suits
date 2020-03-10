@@ -1,16 +1,21 @@
 <import
-  name="card-b"
-  src="../../../components/screen/card-template-b/index"
+  name="card-c"
+  src="../../../components/screen/card-template-c/index"
 ></import>
 <template>
-  <card-b
-    title="豆瓣电影TOP100"
-    info="豆瓣电影排行榜"
-    list-type="{{listType}}"
-    list-data="{{listData}}"
-    logo-url="https://www.baidu.com/img/baidu_resultlogo@2.png"
+  <card-c
+    image-url="http://posters.imdb.cn/upload/2016/08/22/zZYTGWIlI_1471858567.jpg"
+    title="豆瓣电影"
+    info1="豆瓣电影排行榜"
+    info2="豆瓣电影排行榜"
+    description="内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍"
     buttons="{{buttons}}"
-  ></card-b>
+    list-title="电影榜单"
+    list-type="A"
+    list-data="{{listData}}"
+    bottom="{{bottom}}"
+    logo-url="https://www.baidu.com/img/baidu_resultlogo@2.png"
+  ></card-c>
 </template>
 <script>
 export default {
@@ -28,7 +33,6 @@ export default {
             "https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia"
         }
       ],
-      listType: "A",
       listData: [
         {
           image:
@@ -85,7 +89,11 @@ export default {
             url: "http://www.imdb.cn/title/tt0111161"
           }
         }
-      ]
+      ],
+      bottom: {
+        text: "查看完整榜单",
+        url: "https://www.google.com"
+      }
     };
   }
 };
