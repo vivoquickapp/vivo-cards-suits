@@ -1,0 +1,36 @@
+<import
+  name="card-c"
+  src="../../../components/desktop/card-template-c/index"
+></import>
+<template>
+  <card-c icons="{{icons}}" url="hap://app/com.vivo.shop"></card-c>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      icons: [
+        {
+          imageUrl:
+            "https://statres.quickapp.cn/quickapp/icon/201803/dd5f359e/f4e9449535a1e2141eda5a063c028bff.png",
+          text: "网易新闻",
+          url: "hap://app/com.vivo.shop"
+        },
+        {
+          imageUrl:
+            "https://statres.quickapp.cn/quickapp/icon/201909/72f02942/e3a0e7c80c26eff2765e74450585a0dc.png",
+          text: "看漫画",
+          url: "http://www.baidu.com"
+        },
+        {
+          imageUrl:
+            "https://statres.quickapp.cn/quickapp/icon/202001/a05bd0fb/d60d379bcba70a33119e9f74079f37c0.png",
+          text: "百度地图打车",
+          url: "http://www.baidu.com"
+        }
+      ]
+    };
+  }
+};
+</script>
+<style></style>

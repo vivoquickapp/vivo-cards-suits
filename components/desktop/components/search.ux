@@ -1,0 +1,50 @@
+<template>
+  <div>
+    <div class="wrap" onclick="clickHandler">
+      <image class="icon" src=""></image>
+      <text class="placeholder">{{ placeholder }}</text>
+    </div>
+  </div>
+</template>
+<script>
+import router from "@system.router";
+
+export default {
+  props: {
+    placeholder: {
+      default: "搜索"
+    },
+    url: {
+      default: ""
+    }
+  },
+  clickHandler() {
+    if (!this.url) return;
+    router.push({
+      uri: this.url
+    });
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  align-self: center;
+  width: 624px;
+  height: 64px;
+  border-radius: 32px;
+  background-color: #f2f2f2;
+  align-items: center;
+
+  .icon {
+    height: 48px;
+    width: 48px;
+    margin: 8px 8px 8px 16px;
+  }
+
+  .placeholder {
+    font-size: 28px;
+    color: #cccccc;
+    line-height: 36px;
+  }
+}
+</style>

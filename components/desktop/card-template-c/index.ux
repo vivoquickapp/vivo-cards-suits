@@ -1,0 +1,68 @@
+<import name="icons" src="../components/icons"></import>
+<import name="search" src="../components/search"></import>
+
+<template>
+  <div class="wrap">
+    <search placeholder="{{placehoder}}" url="{{url}}" class="search"></search>
+    <icons icons="{{icons}}" icon-type="{{iconType}}" class="icons"></icons>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    placehoder: {
+      default: "搜索"
+    },
+    url: {
+      default: ""
+    },
+    iconType: {
+      default: "square"
+    },
+    icons: {
+      default: [
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        }
+      ]
+    }
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  width: 688px;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-bottom-left-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+  border-bottom-right-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+
+  .search {
+    margin-top: 32px;
+    align-self: center;
+  }
+
+  .icons {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    align-self: center;
+  }
+}
+</style>
