@@ -1,0 +1,80 @@
+<import
+  name="card-a"
+  src="../../../components/desktop/card-template-a/index"
+></import>
+<template>
+  <card-a icons="{{icons}}" images="{{images}}" buttons="{{buttons}}"></card-a>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      icons: [
+        {
+          imageUrl:
+            "https://statres.quickapp.cn/quickapp/icon/201803/dd5f359e/f4e9449535a1e2141eda5a063c028bff.png",
+          text: "网易新闻",
+          url: "http://www.baidu.com"
+        },
+        {
+          imageUrl:
+            "https://statres.quickapp.cn/quickapp/icon/201909/72f02942/e3a0e7c80c26eff2765e74450585a0dc.png",
+          text: "看漫画",
+          url: "http://www.baidu.com"
+        },
+        {
+          imageUrl:
+            "https://statres.quickapp.cn/quickapp/icon/202001/a05bd0fb/d60d379bcba70a33119e9f74079f37c0.png",
+          text: "百度地图打车",
+          url: "http://www.baidu.com"
+        },
+        {
+          imageUrl:
+            "https://statres.quickapp.cn/quickapp/icon/201911/fc3f343a/55892ef474922a4996bf2b7fe759e983.png",
+          text: "菜鸟裹裹",
+          url: "http://www.baidu.com"
+        }
+      ],
+      images: [
+        {
+          imageUrl:
+            "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2575325937.jpg",
+          text: "小妇人",
+          url: "hap://app/com.vivo.shop"
+        },
+        {
+          imageUrl:
+            "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2569332465.jpg",
+          text: "譬如朝露",
+          url: "hap://app/com.vivo.shop"
+        },
+        {
+          imageUrl:
+            "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561439800.jpg",
+          text: "寄生虫",
+          url: "hap://app/com.vivo.shop"
+        },
+        {
+          imageUrl:
+            "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2568902055.jpg",
+          text: "爱尔兰人",
+          url: "hap://app/com.vivo.shop"
+        }
+      ],
+      buttons: [
+        {
+          text: "马上观看",
+          url:
+            "https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia"
+        },
+        {
+          text: "查看详情",
+          url:
+            "https://movie.douban.com/subject/27119724/?tag=%E7%83%AD%E9%97%A8&from=gaia"
+        }
+      ]
+    };
+  }
+};
+</script>
+<style></style>

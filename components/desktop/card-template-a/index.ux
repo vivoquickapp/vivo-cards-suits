@@ -1,0 +1,88 @@
+<import name="icons" src="../components/icons"></import>
+<import name="images" src="../components/images"></import>
+<import name="buttons" src="../components/buttons"></import>
+
+<template>
+  <div class="wrap">
+    <icons icons="{{icons}}" icon-type="{{iconType}}" class="icons"></icons>
+    <images class="images" images="{{images}}"></images>
+    <buttons buttons="{{buttons}}"></buttons>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    iconType: {
+      default: "square"
+    },
+    icons: {
+      default: [
+        {
+          imageUrl: "",
+          text: "文字模板"
+        },
+        {
+          imageUrl: "",
+          text: "文字模板"
+        },
+        {
+          imageUrl: "",
+          text: "文字模板"
+        },
+        {
+          imageUrl: "",
+          text: "文字模板"
+        }
+      ]
+    },
+    images: {
+      default: [
+        {
+          imageUrl: "",
+          text: "文字模板"
+        },
+        {
+          imageUrl: "",
+          text: "文字模板"
+        },
+        {
+          imageUrl: "",
+          text: "文字模板"
+        },
+        {
+          imageUrl: "",
+          text: "文字模板"
+        }
+      ]
+    },
+    buttons: {
+      default: [
+        {
+          text: "按钮",
+          url: ""
+        }
+      ]
+    }
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  width: 688px;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-bottom-left-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+  border-bottom-right-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+
+  .icons {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    align-self: center;
+  }
+
+  .images {
+    margin-bottom: 24px;
+    align-self: center;
+  }
+}
+</style>

@@ -1,0 +1,89 @@
+<template>
+  <div class="wrap">
+    <div
+      class="icon"
+      for="{{icons.slice(0, 5)}}"
+      onclick="clickHandler($item.url)"
+    >
+      <image class="image {{iconType}}" src="{{$item.imageUrl}}"></image>
+      <text style="width:{{624/icons.length}}px;" class="text">{{
+        $item.text
+      }}</text>
+    </div>
+  </div>
+</template>
+<script>
+import router from "@system.router";
+
+export default {
+  props: {
+    iconType: {
+      default: "square" // 'square' 'round'
+    },
+    icons: {
+      default: [
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        }
+      ]
+    }
+  },
+  clickHandler(url) {
+    if (!url) return;
+    router.push({
+      uri: url
+    });
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  align-self: center;
+  width: 624px;
+  justify-content: space-between;
+
+  .icon {
+    flex-direction: column;
+    align-items: center;
+
+    .image {
+      height: 80px;
+      width: 80px;
+      background-color: #d8d8d8;
+    }
+
+    .text {
+      margin-top: 16px;
+      lines: 1;
+      text-overflow: ellipsis;
+      font-size: 20px;
+      color: #000000;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+}
+.square {
+  border-radius: 20px;
+}
+.round {
+  border-radius: 40px;
+}
+</style>
