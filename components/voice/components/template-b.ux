@@ -1,0 +1,41 @@
+<template>
+  <div class="template-item">
+    <text class="title">{{ title }}</text>
+    <text class="subtitle">{{ subtitle }}</text>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    title: {
+      default: "标题"
+    },
+    subtitle: {
+      default: "只需要输入文字，列表高度将自动匹配。"
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.template-item {
+  flex: 1;
+  flex-direction: column;
+  padding: 28px 32px 26px;
+  .title {
+    font-size: 32px;
+    color: #000;
+    line-height: 40px;
+  }
+  .subtitle {
+    font-size: 24px;
+    color: #666;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+}
+</style>

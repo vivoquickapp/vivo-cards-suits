@@ -1,0 +1,76 @@
+<import name="my-image" src="../../common/image.ux"></import>
+
+<template>
+  <div class="list-item">
+    <text class="title">{{ title }}</text>
+    <div>
+      <div class="content-wrap">
+        <text class="content">{{ content }}</text>
+      </div>
+      <div class="image-wrap">
+        <my-image
+          width="142"
+          height="108"
+          resize-mode="{{imgResizeMode}}"
+          object-fit="{{imgObjectFit}}"
+          src="{{imgUrl}}"
+          alt="data:image/png;base64,UklGRq4FAABXRUJQVlA4TKEFAAAvH8E1EA8GN5IkQUr2PzIW4L+BqARXET9OMGzbNgzTFtgT+/+7nbDKbSRJQtMLWMRA/hnK1I/jSLaVqtEEWJEECXj+ibBzhy8CkmRAYDegShH8fr9LkCBIICKIQEQSiFDCQRQiAgmCeToEOVgiiuAmSYTy4Z2ykohABvEgEPGRXheCYea5IXeR3ERiqIiwSCrkfFzqCGJI7ie5O0YhoUKCGJhHlGMkRDAcgVmQQAKjDElgxEBO+fN+tmZ474dhYDY8l+/nzTvrrXmvi9mOrxGOP2buYzVs7TK6YTDzfw9Nsv7F3wi+/jt/zSlbyx4CjoK2bZiaP+xdCBExAXlVS5BKKHe4kSQ3khqQ4b8PI4BD5LYt1a6fIqL/E0Dt1h5FbpSlikur9ISZmanDzMzMzMzMxjYqsYxTZrbzNRXwz5vxdI+3TlcvR/R/AnBT9VmSNx+/T2V2hRdlOUNEt+SJHtaQ0Q59S7IhZJYbLRpKxnoh0ZAyyonOhpZZH4Yh5gAglhlWgGWouaAcN5zqhpx9smMWdpTEjuTZ4c32//b/9v+f4dLYdgCye+SkyWaeNGGwlOFPDFp+8bVXbGYv+8nuKRJCnp59TykmY3NN3q4YhDo9530tmb28do8DIU4Pf1ZBxldrRIiDTTVkfn4zBkIbjH6hkrCpk5DaK0Kbnl9GSW+fOmniU+fecZI7DoS1jI0qgY87GoysZ2UyEfGLThnW5PbahI/uL2jo7usq4fU4Hfq+mSp2JdmEvxcAaKmlgKgCdL/x81auXz6784eIJABnHn7NSil6vn2CgOhBDj5CtUyJqjZzM0LUAEMv1DL1zOV7uyMGcE4pSpnj9TJa0OuYfLI361uUoIc+V35InXeihG9zmX1x1nQdHYDcW0v+1Yb0AdhT7GwgR2Sa9PLN3WBNA66oAGpPY1pBuF58O4I1XQzkVHp0axZz2RYHLAmP1gagdv+aDumWMBGVH0CwIuy7Uvnjj0u/BQfCzWZKVNsdsCI9JY/9PR+tg9NuNlNS5q0O2BDgGeVLbf6KgWvXY+o5fgDBglBPzmQf6t5QCOxLU7aiFLliG4IFoVxawCnVvJ3aF4MW7blMKZfyDgQLQmjLrE1BPZusMWCQbjGT3/gBBAv6LmdcJlVRzuUVKvfIaIFBi0WZinxzfIsj7QdRxuYeu/fy1fOb+6aAxIBBNOUzBVjKOxEsCFGL/sNGDHW0xqBBrPKYglWHYmBDiKC1BgxeuB5TwFx+CMGK0gvC9ZiCj+/tB7Yn3BymNHLZVgS7k24xU3qr9yPYE4Cv76I9X1GaP6kdCNaEMfAjWnOZ0s68oxssSa6/NEqmJhZ6TL1RHURpQyBXFtTeGv5bKsLNVtQrOb7VybAfkGuKiNT1Tt0DCDefqZeW8o6Y9QCsISYi9aBTJwGxtpip95a3Cdv50khMierW8IwE4XqV1JuWWQ7oNR5TcnWrUyCIpmymXtVkObrFY+pZXRkidEsmU4QgV3tMqarrw90CpugAoNFjSj3+5EMVRQh6TQGTX2aKEGTDJ6Y/vsWAbCxkijBANJIZ7UWuKeNIQ64mpggD5Foypp0AriSONgbcVhRtDLrxr3e369iYaomVDLxalmvMkmYbQWfCFIMORRtBMCnaiYH/PrD4FzB09+1kE8PbGpXAN8YOGGzkoSs8SnjSBWFNzCGmxNdPnxj5uccJ6gKGdhh2vyYJm5qSqpXfQhvq5XFOMHv5o6EY3mHA5VrjlefNEyEO9dg7tWw2VbBM/h7mUHce82oVm7pCqceLJWC413LatmsPnxj67okFgzWGftDSGfDZ0DHUgP/7f/t/+/8/lJ4dIbEjFXaUyY7Z2dGV44ZTWNxYgFhmWAEwmDEAQGdeZH2ARFZEwXmLnIgV15IZkQV39bBssEPjoSzHBLcEL6o+S/Kfn09ldoWbAA=="
+        ></my-image>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    title: {
+      default: "标题"
+    },
+    content: {
+      default:
+        "文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。"
+    },
+    imgUrl: {
+      default: ""
+    },
+    imgResizeMode: {
+      default: "cover"
+    },
+    imgObjectFit: {
+      default: "cover"
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.list-item {
+  flex: 1;
+  flex-direction: column;
+  padding: 24px 0;
+  .title {
+    font-size: 32px;
+    color: #000;
+    line-height: 40px;
+    margin-bottom: 12px;
+  }
+  .content-wrap {
+    flex: 1;
+    flex-direction: column;
+    .content {
+      font-size: 24px;
+      color: #333;
+      line-height: 36px;
+      lines: 3;
+      text-overflow: ellipsis;
+    }
+  }
+  .image-wrap {
+    margin-left: 20px;
+  }
+}
+</style>

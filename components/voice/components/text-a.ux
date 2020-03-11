@@ -1,0 +1,54 @@
+<template>
+  <div class="text-item">
+    <text class="index">{{ index }}.</text>
+    <div class="content-wrap">
+      <text class="title">{{ title }}</text>
+      <text class="content">{{ content }}</text>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    index: {
+      default: 1
+    },
+    title: {
+      default: "标题"
+    },
+    content: {
+      default: "只需要输入文字，高度自动匹配"
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.text-item {
+  flex: 1;
+  padding: 20px 32px 12px;
+  .index {
+    width: 44px;
+    margin-right: 4px;
+  }
+  .content-wrap {
+    flex: 1;
+    flex-direction: column;
+    .title {
+      font-size: 32px;
+      color: #000;
+      line-height: 40px;
+    }
+    .content {
+      font-size: 24px;
+      color: #666;
+      line-height: 30px;
+      margin-top: 2px;
+    }
+  }
+}
+</style>

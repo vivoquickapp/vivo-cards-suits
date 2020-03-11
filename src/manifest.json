@@ -9,11 +9,11 @@
   },
   "router": {
     "widgets": {
-      "voice/card-list-a": {
-        "name": "jovi语音/card-list-a",
-        "description": "jovi语音左文右图列表模板A",
+      "voice/card-list": {
+        "name": "jovi语音/card-list",
+        "description": "jovi语音列表模板",
         "component": "index",
-        "path": "/voice/card-list-a",
+        "path": "/voice/card-list",
         "features": [
           {
             "name": "system.router"
@@ -47,11 +47,11 @@
           "vivo"
         ]
       },
-      "voice/card-list-b": {
-        "name": "jovi语音/card-list-b",
-        "description": "jovi语音左图右文列表模板B",
+      "voice/card-template": {
+        "name": "jovi语音/card-template",
+        "description": "jovi语音卡片模板",
         "component": "index",
-        "path": "/voice/card-list-b",
+        "path": "/voice/card-template",
         "features": [
           {
             "name": "system.router"
@@ -85,125 +85,11 @@
           "vivo"
         ]
       },
-      "voice/card-list-c": {
-        "name": "jovi语音/card-list-c",
-        "description": "左图右文",
+      "voice/component-text": {
+        "name": "jovi语音/component-text",
+        "description": "jovi语音文本组件",
         "component": "index",
-        "path": "/voice/card-list-c",
-        "features": [
-          {
-            "name": "system.router"
-          },
-          {
-            "name": "system.hostconnection"
-          },
-          {
-            "name": "system.fetch"
-          },
-          {
-            "name":"system.network"
-          },
-          {
-            "name":"system.storage"
-          }
-        ],
-        "params": {
-          "title": "noTitle",
-          "height": "20%",
-          "enableFold": "false",
-          "refreshDuration":3,
-          "refreshDurationInWifi":3,
-          "cardType": 5,
-          "distributeType": 2,
-          "service_id": "",
-          "param_keys": []
-        },
-        "minPlatformVersion": 1050,
-        "targetManufactorys": [
-          "vivo"
-        ]
-      },
-      "voice/card-list-d": {
-        "name": "jovi语音/card-list-d",
-        "description": "jovi语音文字列表模板D",
-        "component": "index",
-        "path": "/voice/card-list-d",
-        "features": [
-          {
-            "name": "system.router"
-          },
-          {
-            "name": "system.hostconnection"
-          },
-          {
-            "name": "system.fetch"
-          },
-          {
-            "name":"system.network"
-          },
-          {
-            "name":"system.storage"
-          }
-        ],
-        "params": {
-          "title": "noTitle",
-          "height": "20%",
-          "enableFold": "false",
-          "refreshDuration":3,
-          "refreshDurationInWifi":3,
-          "cardType": 5,
-          "distributeType": 2,
-          "service_id": "",
-          "param_keys": []
-        },
-        "minPlatformVersion": 1050,
-        "targetManufactorys": [
-          "vivo"
-        ]
-      },
-      "voice/card-template-a": {
-        "name": "jovi语音/card-template-a",
-        "description": "jovi语音纯文本卡片模板A",
-        "component": "index",
-        "path": "/voice/card-template-a",
-        "features": [
-          {
-            "name": "system.router"
-          },
-          {
-            "name": "system.hostconnection"
-          },
-          {
-            "name": "system.fetch"
-          },
-          {
-            "name":"system.network"
-          },
-          {
-            "name":"system.storage"
-          }
-        ],
-        "params": {
-          "title": "noTitle",
-          "height": "20%",
-          "enableFold": "false",
-          "refreshDuration":3,
-          "refreshDurationInWifi":3,
-          "cardType": 5,
-          "distributeType": 2,
-          "service_id": "",
-          "param_keys": []
-        },
-        "minPlatformVersion": 1050,
-        "targetManufactorys": [
-          "vivo"
-        ]
-      },
-      "voice/card-template-b": {
-        "name": "jovi语音/card-template-b",
-        "description": "jovi语音左图右文(播放器)卡片模板B",
-        "component": "index",
-        "path": "/voice/card-template-b",
+        "path": "/voice/component-text",
         "features": [
           {
             "name": "system.router"

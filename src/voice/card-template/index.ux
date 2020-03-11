@@ -1,0 +1,56 @@
+<import
+  name="card-template"
+  src="../../../components/voice/card-template/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <card-template
+      template-type="{{templateType}}"
+      template-data="{{templateData}}"
+      sign-name="{{signName}}"
+      sign-url="{{signUrl}}"
+      skip-link="{{skipLink}}"
+      img-resize-mode="{{imgResizeMode}}"
+      img-object-fit="{{imgObjectFit}}"
+      onclickmore="handleClickMore"
+    ></card-template>
+  </div>
+</template>
+
+<script>
+import router from "@system.router";
+
+export default {
+  data() {
+    return {
+      templateType: "A", // A-H
+      templateData: {},
+      signName: "来源名称",
+      signUrl: "",
+      skipLink: "https://www.quickapp.cn/",
+      imgResizeMode: "cover",
+      imgObjectFit: "cover"
+    };
+  },
+  handleClickMore() {
+    console.log(`点击查看详情 url: ${this.skipLink}`);
+
+    router.push({
+      uri: this.skipLink
+    });
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+  border-bottom-left-radius: ~"theme.borderBottomRadius";
+  border-bottom-right-radius: ~"theme.borderBottomRadius";
+  border-top-left-radius: ~"theme.borderTopRadius";
+  border-top-right-radius: ~"theme.borderTopRadius";
+  background-color: rgba(255, 255, 255, 0.85);
+}
+</style>
