@@ -1,0 +1,53 @@
+<template>
+  <div>
+    <div class="wrap" onclick="clickHandler">
+      <image
+        class="icon"
+        src="data:image/png;base64,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"
+      ></image>
+      <text class="placeholder">{{ placeholder }}</text>
+    </div>
+  </div>
+</template>
+<script>
+import router from "@system.router";
+
+export default {
+  props: {
+    placeholder: {
+      default: "搜索"
+    },
+    url: {
+      default: ""
+    }
+  },
+  clickHandler() {
+    if (!this.url) return;
+    router.push({
+      uri: this.url
+    });
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  align-self: center;
+  width: 624px;
+  height: 64px;
+  border-radius: 32px;
+  background-color: #f2f2f2;
+  align-items: center;
+
+  .icon {
+    height: 48px;
+    width: 48px;
+    margin: 8px 8px 8px 16px;
+  }
+
+  .placeholder {
+    font-size: 28px;
+    color: #cccccc;
+    line-height: 36px;
+  }
+}
+</style>
