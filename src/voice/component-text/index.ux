@@ -1,0 +1,34 @@
+<import
+  name="component-text"
+  src="../../../components/voice/component-text/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-text
+      text-type="{{textType}}"
+      text-data="{{textData}}"
+    ></component-text>
+  </div>
+</template>
+
+<script>
+import router from "@system.router";
+
+export default {
+  data() {
+    return {
+      textType: "A", // A-B
+      textData: {}
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+</style>

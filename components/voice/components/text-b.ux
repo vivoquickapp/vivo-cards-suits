@@ -1,0 +1,35 @@
+<template>
+  <div class="text-item">
+    <slot name="icon"></slot>
+    <text class="content">{{ content }}</text>
+    <slot name="button"></slot>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    content: {
+      default: "图标 + 文字 + 按钮"
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.text-item {
+  flex: 1;
+  padding: 48 32px;
+  .content {
+    flex: 1;
+    font-size: 32px;
+    color: #000;
+    line-height: 40px;
+    lines: 1;
+    text-overflow: ellipsis;
+  }
+}
+</style>

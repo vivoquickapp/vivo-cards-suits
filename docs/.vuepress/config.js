@@ -43,9 +43,31 @@ module.exports = {
         children: ["/guide/"]
       },
       {
-        title: "Jovi语音", // 必要的
-        collapsable: false, // 可选的, 默认值是 true,
-        children: ["/guide/voice/template-a"]
+        title: "Jovi语音",
+        collapsable: false,
+        children: [
+          "/guide/voice/list",
+          "/guide/voice/template",
+          "/guide/voice/list-a",
+          "/guide/voice/list-b",
+          "/guide/voice/list-c",
+          "/guide/voice/list-d",
+          "/guide/voice/list-e",
+          "/guide/voice/list-f",
+          "/guide/voice/list-g",
+          "/guide/voice/list-h",
+          "/guide/voice/list-i",
+          "/guide/voice/template-a",
+          "/guide/voice/template-b",
+          "/guide/voice/template-c",
+          "/guide/voice/template-d",
+          "/guide/voice/template-e",
+          "/guide/voice/template-f",
+          "/guide/voice/template-g",
+          "/guide/voice/template-h",
+          "/guide/voice/text-a",
+          "/guide/voice/text-b"
+        ]
       },
       {
         title: "智慧识屏",
@@ -68,7 +90,7 @@ module.exports = {
       {
         title: "Jovi主页",
         collapsable: false,
-        children: ["/guide/jovi/template-a"]
+        children: []
       },
       {
         title: "全局搜索",
