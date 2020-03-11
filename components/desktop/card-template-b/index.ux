@@ -1,0 +1,121 @@
+<import name="icons" src="../components/icons"></import>
+<import name="images" src="../components/images"></import>
+<import name="buttons" src="../components/buttons"></import>
+
+<template>
+  <div class="wrap">
+    <div class="top">
+      <div class="text">
+        <text class="title">{{ title }}</text>
+        <text class="content">{{ content }}</text>
+        <text class="info">{{ info }}</text>
+      </div>
+      <div class="cover" if="imageUrl && imageName">
+        <image class="image" src="{{imageUrl}}"></image>
+        <text class="name">{{ imageName }}</text>
+      </div>
+    </div>
+    <buttons buttons="{{buttons}}"></buttons>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    title: {
+      default: ""
+    },
+    content: {
+      default: ""
+    },
+    info: {
+      default: ""
+    },
+    imageUrl: {
+      default: ""
+    },
+    imageName: {
+      default: ""
+    },
+    buttons: {
+      default: [
+        {
+          text: "按钮",
+          url: ""
+        }
+      ]
+    }
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  width: 688px;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-bottom-left-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+  border-bottom-right-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+
+  .top {
+    padding: 28px 32px;
+
+    .text {
+      flex-direction: column;
+      padding-right: 12px;
+      width: 432px;
+      flex-shrink: 0;
+      justify-content: space-between;
+
+      .title {
+        font-size: 36px;
+        color: #000000;
+        font-weight: bold;
+        lines: 1;
+        text-overflow: ellipsis;
+        margin-bottom: 24px;
+      }
+
+      .content {
+        font-size: 28px;
+        color: #000000;
+        font-weight: bold;
+        lines: 4;
+        text-overflow: ellipsis;
+      }
+
+      .info {
+        font-size: 24px;
+        color: #787878;
+        lines: 2;
+        text-overflow: ellipsis;
+        margin-top: 16px;
+      }
+    }
+
+    .cover {
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4px;
+
+      .image {
+        width: 144px;
+        height: 224px;
+        object-fit: cover;
+        background-color: #d8d8d8;
+      }
+
+      .name {
+        font-size: 24px;
+        color: #f5c044;
+        text-align: center;
+        line-height: 20px;
+        lines: 1;
+        text-overflow: ellipsis;
+        margin-top: 22px;
+        width: 144px;
+      }
+    }
+  }
+}
+</style>
