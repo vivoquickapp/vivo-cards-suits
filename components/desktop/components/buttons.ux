@@ -1,0 +1,62 @@
+<template>
+  <div class="wrap">
+    <div class="buttons" for="{{buttons.slice(0, 4)}}">
+      <text
+        style="width:{{648/buttons.length}}px;"
+        class="button"
+        onclick="clickHandler($item.url)"
+        >{{ $item.text }}
+      </text>
+    </div>
+  </div>
+</template>
+<script>
+import router from "@system.router";
+
+export default {
+  props: {
+    buttons: {
+      default: [
+        {
+          url: "",
+          text: "功能按钮"
+        },
+        {
+          url: "",
+          text: "功能按钮"
+        }
+      ]
+    }
+  },
+  clickHandler(url) {
+    if (!url) return;
+    router.push({
+      uri: url
+    });
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  align-self: center;
+  width: 648px;
+  justify-content: space-between;
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+
+    .button {
+      margin-top: 26px;
+      margin-bottom: 26px;
+      lines: 1;
+      text-overflow: ellipsis;
+      font-size: 28px;
+      color: #456fff;
+      text-align: center;
+      line-height: 28px;
+    }
+  }
+}
+</style>
