@@ -44,7 +44,7 @@ module.exports = {
       },
       {
         title: "Jovi语音",
-        collapsable: false,
+        collapsable: true,
         children: [
           "/guide/voice/list",
           "/guide/voice/template",
@@ -71,7 +71,7 @@ module.exports = {
       },
       {
         title: "智慧识屏",
-        collapsable: false,
+        collapsable: true,
         children: [
           "/guide/screen/template-a",
           "/guide/screen/template-b",
@@ -84,17 +84,27 @@ module.exports = {
       },
       {
         title: "智慧桌面",
-        collapsable: false,
-        children: ["/guide/desktop/template-a"]
+        collapsable: true,
+        children: [
+          "/guide/desktop/template-a",
+          "/guide/desktop/template-b",
+          "/guide/desktop/template-c",
+          "/guide/desktop/template-d",
+          "/guide/desktop/component-buttons",
+          "/guide/desktop/component-icons",
+          "/guide/desktop/component-images",
+          "/guide/desktop/component-network",
+          "/guide/desktop/component-search"
+        ]
       },
       {
         title: "Jovi主页",
-        collapsable: false,
+        collapsable: true,
         children: []
       },
       {
         title: "全局搜索",
-        collapsable: false,
+        collapsable: true,
         children: ["/guide/search/template-a"]
       }
     ]
