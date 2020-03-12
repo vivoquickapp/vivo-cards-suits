@@ -1,4 +1,4 @@
-## 【组件】 模板组件 G
+## 【组件】 卡片模板组件 G
 
 ### 描述
 
@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-template-g.jpg" style="width:300px" alt="voice-template-g"/>
+  <img src="../../assets/voice-template-g-1.jpg" style="width:300px" alt="voice-template-g-1"/>
 </div>
 
 ### 使用方法

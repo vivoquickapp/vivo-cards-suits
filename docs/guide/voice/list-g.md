@@ -1,4 +1,4 @@
-## 【组件】 列表组件 G
+## 【组件】 列表模板组件 G
 
 ### 描述
 
@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-list-item-g.jpg" style="width:300px" alt="voice-list-item-g"/>
+  <img src="../../assets/voice-list-item-g-1.jpg" style="width:300px" alt="voice-list-item-g-1"/>
 </div>
 
 ### 使用方法

@@ -1,4 +1,4 @@
-## 【组件】 模板组件 H
+## 【组件】 卡片模板组件 H
 
 ### 描述
 
@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-template-h.jpg" style="width:300px" alt="voice-template-h"/>
+  <img src="../../assets/voice-template-h-1.jpg" style="width:300px" alt="voice-template-h-1"/>
 </div>
 
 ### 使用方法
