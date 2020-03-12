@@ -1,0 +1,34 @@
+<import
+  name="network"
+  src="../../../components/desktop/components/network"
+></import>
+<template>
+  <div class="wrap">
+    <network status="{{status}}" onretry="clickHandler"></network>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      status: "loading"
+    };
+  },
+  onInit() {
+    setTimeout(() => {
+      this.status = "error";
+    }, 2000);
+  },
+  clickHandler() {
+    this.status = "loading";
+    console.log(this.status);
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  background-color: #ffffff;
+  border-bottom-left-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+  border-bottom-right-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+}
+</style>

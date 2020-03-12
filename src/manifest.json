@@ -409,6 +409,47 @@
         "targetManufactorys": [
           "vivo"
         ]
+      },
+      "desktop/component-network": {
+        "name": "智慧桌面（负一屏）/component-network",
+        "description": "智慧桌面网络异常情况组件",
+        "component": "index",
+        "path": "/desktop/component-network",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": [
+            "poiListUrl",
+            "poiListData"
+          ]
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
       }
     }
   }
