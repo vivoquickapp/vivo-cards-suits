@@ -1,4 +1,4 @@
-## 【组件】 模板组件 C
+## 【组件】 卡片模板组件 C
 
 ### 描述
 
@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-template-c.jpg" style="width:300px" alt="voice-template-c"/>
+  <img src="../../assets/voice-template-c-1.jpg" style="width:300px" alt="voice-template-c-1"/>
 </div>
 
 ### 使用方法

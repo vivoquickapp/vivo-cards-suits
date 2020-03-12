@@ -1,4 +1,4 @@
-## 【组件】 列表组件 I
+## 【组件】 列表模板组件 I
 
 ### 描述
 
@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-list-item-i.jpg" style="width:300px" alt="voice-list-item-i"/>
+  <img src="../../assets/voice-list-item-i-1.jpg" style="width:300px" alt="voice-list-item-i-1"/>
 </div>
 
 ### 使用方法

@@ -1,4 +1,4 @@
-## 【组件】 列表组件 G
+## 【组件】 列表模板组件 H
 
 ### 描述
 
@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-list-item-g.jpg" style="width:300px" alt="voice-list-item-g"/>
+  <img src="../../assets/voice-list-item-h-1.jpg" style="width:300px" alt="voice-list-item-h-1"/>
 </div>
 
 ### 使用方法
@@ -17,7 +17,7 @@
 ```html
 <import
   name="list-item-g"
-  src="vivo-cards-suits/components/voice/components/list-item-g.ux"
+  src="vivo-cards-suits/components/voice/components/list-item-h.ux"
 ></import>
 ```
 
@@ -31,7 +31,7 @@
         class="list-item-wrap {{$idx!==0?'border-top':''}}"
         for="{{listData.slice(0,4)}}"
       >
-        <list-item-g
+        <list-item-h
           title="{{$item.title}}"
           gradeNumber="{{$item.gradeNumber}}"
           info1="{{$item.info1}}"
@@ -40,7 +40,7 @@
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
-        ></list-item-g>
+        ></list-item-h>
       </div>
     </div>
   </div>
