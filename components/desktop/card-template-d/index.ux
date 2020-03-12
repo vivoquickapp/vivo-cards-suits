@@ -1,0 +1,155 @@
+<import name="icons" src="../components/icons"></import>
+<import name="buttons" src="../components/buttons"></import>
+
+<template>
+  <div class="wrap">
+    <div class="tips" onclick="clickHandler">
+      <text class="text">{{ tips }}</text>
+      <image
+        class="icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAABYWlDQ1BrQ0dDb2xvclNwYWNlRGlzcGxheVAzAAAokWNgYFJJLCjIYWFgYMjNKykKcndSiIiMUmB/yMAOhLwMYgwKicnFBY4BAT5AJQwwGhV8u8bACKIv64LMOiU1tUm1XsDXYqbw1YuvRJsw1aMArpTU4mQg/QeIU5MLikoYGBhTgGzl8pICELsDyBYpAjoKyJ4DYqdD2BtA7CQI+whYTUiQM5B9A8hWSM5IBJrB+API1klCEk9HYkPtBQFul8zigpzESoUAYwKuJQOUpFaUgGjn/ILKosz0jBIFR2AopSp45iXr6SgYGRiaMzCAwhyi+nMgOCwZxc4gxJrvMzDY7v////9uhJjXfgaGjUCdXDsRYhoWDAyC3AwMJ3YWJBYlgoWYgZgpLY2B4dNyBgbeSAYG4QtAPdHFacZGYHlGHicGBtZ7//9/VmNgYJ/MwPB3wv//vxf9//93MVDzHQaGA3kAFSFl7jXH0fsAAAFFSURBVHgB7dcxigJREIRh0WRzPYE3ENbMYI9i7gW8j0cw2WwvYGQgHsBwM2PRGrBhKCuaRJn5B5p+XTDDe58mbzTiQQABBBBAAAEEEEAAAQQQQAABBBBAAAEEEECgvwILHe2k+ldt+nvM7if706v3Vm27f6qfbzpQgwVS67f+1vqqav+LQGoBNcuVCiRD8REkFwkzSAHFI5BcJMwgBRSPQHKRMIMUUDwCyUXCDFJA8QgkFwkzSAHFo7cijX03HziftadL2NePsknIBxXNdNqjym/+v8q+BiURDgtOQKkInJIIHZyAUhE4JRE6OAGlInBKInRwAkpF4JRE6OAElIrAKYnQp8q4PgSYinZacLcqjdAPBsTF05DWmm9PpL364G/lMnh55kqWLykBAggggAACCCCAAAIIIIAAAggggAACCCCAQJ8FHtqap/NECZrRAAAAAElFTkSuQmCC"
+      ></image>
+    </div>
+    <icons icons="{{icons}}" icon-type="{{iconType}}" class="icons"></icons>
+    <div class="content">
+      <div class="text">
+        <text class="title">{{ title }}</text>
+        <text class="info">{{ info }}</text>
+      </div>
+      <image class="cover" src="{{imageUrl}}"></image>
+    </div>
+    <buttons buttons="{{buttons}}"></buttons>
+  </div>
+</template>
+<script>
+import router from "@system.router";
+
+export default {
+  props: {
+    tips: {
+      default: ""
+    },
+    tipsUrl: {
+      default: ""
+    },
+    title: {
+      default: ""
+    },
+    info: {
+      default: ""
+    },
+    imageUrl: {
+      default: ""
+    },
+    iconType: {
+      default: "square"
+    },
+    icons: {
+      default: [
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        },
+        {
+          imageUrl: "",
+          text: "文字模板",
+          url: ""
+        }
+      ]
+    },
+    buttons: {
+      default: [
+        {
+          text: "按钮",
+          url: ""
+        }
+      ]
+    }
+  },
+  clickHandler(url) {
+    if (!url) return;
+    router.push({
+      uri: url
+    });
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  width: 688px;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-bottom-left-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+  border-bottom-right-radius: ~"theme.borderBottomRadius"; /* theme是动态主题变量，不要设置具体值*/
+
+  .tips {
+    margin: 32px 32px 0 32px;
+    justify-content: space-between;
+
+    .text {
+      font-size: 24px;
+      color: #000000;
+      line-height: 32px;
+      font-weight: bold;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .icons {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    align-self: center;
+  }
+
+  .content {
+    padding: 0 32px 22px 32px;
+
+    .text {
+      width: 432px;
+      margin-right: 32px;
+      flex-direction: column;
+
+      .title {
+        font-size: 28px;
+        color: #000000;
+        line-height: 36px;
+        font-weight: bold;
+        lines: 3;
+        text-overflow: ellipsis;
+      }
+
+      .info {
+        font-size: 20px;
+        color: #787878;
+        line-height: 32px;
+        lines: 1;
+        text-overflow: ellipsis;
+        margin-top: 14px;
+      }
+    }
+
+    .cover {
+      width: 160px;
+      height: 114px;
+      background-color: #f8f8f8;
+    }
+  }
+}
+</style>
