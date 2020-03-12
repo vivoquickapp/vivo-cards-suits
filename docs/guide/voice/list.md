@@ -75,12 +75,6 @@ jovi 语音列表卡片模板
 <style lang="less">
   .card {
     width: 100%;
-    flex-direction: column;
-    border-bottom-left-radius: ~"theme.borderBottomRadius";
-    border-bottom-right-radius: ~"theme.borderBottomRadius";
-    border-top-left-radius: ~"theme.borderTopRadius";
-    border-top-right-radius: ~"theme.borderTopRadius";
-    background-color: rgba(255, 255, 255, 0.85);
   }
 </style>
 ```
