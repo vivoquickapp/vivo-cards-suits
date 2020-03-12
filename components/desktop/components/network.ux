@@ -1,0 +1,64 @@
+<template>
+  <div class="wrap">
+    <div class="error" if="{{myStatus === 'error'}}">
+      <text class="tip">数据加载失败，</text>
+      <text class="retry" onclick="clickHandler">请点击重试</text>
+    </div>
+    <text class="loading" if="{{myStatus === 'loading'}}">正在加载中...</text>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    status: {
+      default: "loading" // loading error
+    }
+  },
+  data() {
+    return {
+      myStatus: this.status
+    };
+  },
+  onInit() {
+    this.$watch("status", "statusHandler");
+  },
+  statusHandler(e) {
+    this.myStatus = e;
+  },
+  clickHandler() {
+    this.myStatus = "loading";
+    this.$emit("retry");
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  height: 220px;
+  width: 688px;
+  justify-content: center;
+  align-items: center;
+
+  .error {
+    .tip {
+      font-size: 28px;
+      color: #000000;
+      line-height: 28px;
+      font-weight: bold;
+    }
+
+    .retry {
+      font-size: 28px;
+      color: #456fff;
+      line-height: 28px;
+      font-weight: bold;
+    }
+  }
+
+  .loading {
+    font-size: 28px;
+    color: #000000;
+    line-height: 28px;
+    font-weight: bold;
+  }
+}
+</style>
