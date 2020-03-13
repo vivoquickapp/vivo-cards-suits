@@ -19,8 +19,8 @@
 
 ```html
 <import
-  name="card-template-a"
-  src="vivo-cards-suits/components/search/card-template-a/button.ux"
+  name="component-a"
+  src="vivo-cards-suits/components/search/component-a/a.ux"
 ></import>
 ```
 
@@ -29,14 +29,14 @@
 ```html
 <template>
   <div class="card">
-    <card-template-a
+    <component-a
       img-url="{{imgUrl}}"
       img-type="{{imgType}}"
       info1="{{info1}}"
       info2="{{info2}}"
       info3="{{info3}}"
       button="{{button}}"
-    ></card-template-a>
+    ></component-a>
   </div>
 </template>
 

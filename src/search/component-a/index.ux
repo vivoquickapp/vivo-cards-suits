@@ -1,11 +1,11 @@
 <import
-  name="card-template-a"
-  src="../../../components/search/card-template-a/index.ux"
+  name="component-a"
+  src="../../../components/search/component-a/index.ux"
 ></import>
 
 <template>
   <div class="card">
-    <card-template-a
+    <component-a
       img-url="{{imgUrl}}"
       img-type="{{imgType}}"
       info1="{{info1}}"
@@ -15,7 +15,7 @@
       info2-lines="{{info2Lines}}"
       info3-lines="{{info3Lines}}"
       button="{{button}}"
-    ></card-template-a>
+    ></component-a>
   </div>
 </template>
 

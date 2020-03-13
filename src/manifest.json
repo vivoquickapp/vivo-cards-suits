@@ -451,11 +451,11 @@
           "vivo"
         ]
       },
-      "search/component-button": {
-        "name": "全局搜索/component-button",
-        "description": "全局搜索按钮组件",
+      "search/component-a": {
+        "name": "全局搜索/component-a",
+        "description": "全局搜索卡片A组件",
         "component": "index",
-        "path": "/search/component-button",
+        "path": "/search/component-a",
         "features": [
           {
             "name": "system.router"
@@ -489,11 +489,11 @@
           "vivo"
         ]
       },
-      "search/card-template-a": {
-        "name": "全局搜索/card-template-a",
-        "description": "全局搜索卡片模板A",
+      "search/component-button": {
+        "name": "全局搜索/component-button",
+        "description": "全局搜索卡片按钮组件",
         "component": "index",
-        "path": "/search/card-template-a",
+        "path": "/search/component-button",
         "features": [
           {
             "name": "system.router"

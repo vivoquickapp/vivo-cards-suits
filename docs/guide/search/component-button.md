@@ -27,7 +27,7 @@
 ```html
 <import
   name="text-a"
-  src="vivo-cards-suits/components/search/components/button.ux"
+  src="vivo-cards-suits/components/search/component-button/index.ux"
 ></import>
 ```
 
