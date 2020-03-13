@@ -9,8 +9,8 @@
       title="{{title}}"
       list-type="{{listType}}"
       list-data="{{listData}}"
-      info1Lines="{{info1Lines}}"
-      info2Lines="{{info2Lines}}"
+      info1-lines="{{info1Lines}}"
+      info2-lines="{{info2Lines}}"
       button="{{button}}"
       onclickbtn="handleClickBtn"
     ></component-b>
