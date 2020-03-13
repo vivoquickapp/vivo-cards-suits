@@ -1,0 +1,147 @@
+<import
+  name="component-a"
+  src="../../../components/search/component-a/index.ux"
+></import>
+<import
+  name="component-b"
+  src="../../../components/search/component-b/index.ux"
+></import>
+<import
+  name="component-c"
+  src="../../../components/search/component-c/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-a
+      img-url="{{dataA.imgUrl}}"
+      img-type="{{dataA.imgType}}"
+      info1="{{dataA.info1}}"
+      info2="{{dataA.info2}}"
+      info3="{{dataA.info3}}"
+      info1-lines="{{dataA.info1Lines}}"
+      info2-lines="{{dataA.info2Lines}}"
+      info3-lines="{{dataA.info3Lines}}"
+      button="{{dataA.button}}"
+      onclickbtn="handleClickBtn"
+    ></component-a>
+    <component-c
+      img-url="{{dataC.imgUrl}}"
+      info1="{{dataC.info1}}"
+      info2="{{dataC.info2}}"
+      info3="{{dataC.info3}}"
+      info1-lines="{{dataC.info1Lines}}"
+      info2-lines="{{dataC.info2Lines}}"
+      info3-lines="{{dataC.info3Lines}}"
+    ></component-c>
+    <component-b
+      title="{{dataB.title}}"
+      list-type="{{dataB.listType}}"
+      list-data="{{dataB.listData}}"
+      info1Lines="{{dataB.info1Lines}}"
+      info2Lines="{{dataB.info2Lines}}"
+      button="{{dataB.button}}"
+      onclickbtn="handleClickBtn"
+    ></component-b>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      dataA: {
+        imgUrl: "imgUrl",
+        imgType: "B", // A B
+        info1: "文字模板文字模板",
+        info2:
+          "文字模板文字模板文字模板文字模板文字模板文字模板板文字模板文字模板板文字模板文字模板文字",
+        info3: "文字模板文字模板",
+        info1Lines: 2,
+        info2Lines: 3,
+        info3Lines: 1,
+        button: "按钮"
+      },
+      dataB: {
+        title: "",
+        listType: "B", // A B C D
+        listData: [
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          },
+          {
+            imgUrl: "imgUrl",
+            info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+            info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+          }
+        ],
+        info1Lines: 2,
+        info2Lines: 1,
+        button: ""
+      },
+      dataC: {
+        imgUrl: "",
+        info1: "",
+        info2:
+          "文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字模板文字",
+        info3: "",
+        info1Lines: 2,
+        info2Lines: 3,
+        info3Lines: 1
+      }
+    };
+  },
+  handleClickBtn() {
+    console.log("点击按钮");
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  flex-direction: column;
+  width: 100%;
+}
+</style>
