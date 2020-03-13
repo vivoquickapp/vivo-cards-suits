@@ -1,0 +1,260 @@
+<template>
+  <div class="wrap">
+    <text class="title" show="{{!!title}}">{{ title }}</text>
+    <list
+      class="content-list list-{{listType}}"
+      style="height: {{listHeight}}px"
+    >
+      <list-item
+        class="content-list-item {{$idx==0?'margin-first':'margin-item'}} {{$idx+1==listData.length?'margin-last':''}}"
+        type="list-item"
+        for="{{listData.slice(0,10)}}"
+      >
+        <image class="image" src="{{$item.imgUrl}}" show="{{!!isImg}}"></image>
+        <text
+          class="info1 {{isImg?'margin-top-16':''}}"
+          style="lines: {{info1Lines}}; height: {{32*info1Lines}}px;"
+          show="{{!!isInfo1}}"
+          >{{ $item.info1 }}</text
+        >
+        <text
+          class="info2"
+          style="lines: {{info2Lines}}; height: {{30*info2Lines}}px;"
+          show="{{!!isInfo2}}"
+          >{{ $item.info2 }}</text
+        >
+        <text
+          class="button"
+          show="{{!!button}}"
+          onclick="handleClickBtn($idx)"
+          >{{ button }}</text
+        >
+      </list-item>
+    </list>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    title: {
+      default: ""
+    },
+    listType: {
+      default: "A"
+    },
+    listData: {
+      default: []
+    },
+    info1Lines: {
+      default: 2
+    },
+    info2Lines: {
+      default: 1
+    },
+    button: {
+      default: ""
+    }
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    isImg() {
+      let isImg = this.listData.some(item => {
+        return !!item.imgUrl;
+      });
+
+      return isImg;
+    },
+    isInfo1() {
+      let isInfo1 = this.listData.some(item => {
+        return !!item.info1;
+      });
+
+      return isInfo1;
+    },
+    isInfo2() {
+      let isInfo2 = this.listData.some(item => {
+        return !!item.info2;
+      });
+
+      return isInfo2;
+    },
+    listHeight() {
+      let height = 0;
+
+      if (this.isImg) {
+        switch (this.listType) {
+          case "A":
+            height += 104;
+            break;
+          case "B":
+            height += 128;
+            break;
+          case "C":
+            height += 240;
+            break;
+          case "D":
+            height += 150;
+            break;
+        }
+      }
+      if (this.isInfo1) {
+        height += this.info1Lines * 32 + 16;
+      }
+      if (this.isInfo2) {
+        height += this.info2Lines * 30 + 8;
+      }
+      if (!!this.button) {
+        height += 48 + 16;
+      }
+
+      return height;
+    }
+  },
+  handleClickBtn(index) {
+    this.$emit("clickbtn", { index });
+  }
+};
+</script>
+
+<style lang="less">
+.margin-top-16 {
+  margin-top: 16px;
+}
+
+.wrap {
+  flex-direction: column;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 28px 0;
+  .title {
+    font-size: 30px;
+    color: #000;
+    line-height: 36px;
+    lines: 1;
+    text-overflow: ellipsis;
+    margin-bottom: 16px;
+    padding: 0 40px;
+  }
+  .content-list {
+    flex: 1;
+    flex-direction: row;
+    .content-list-item {
+      flex-direction: column;
+      height: 100%;
+      .image {
+        border-radius: 12px;
+        background-color: #fec89a;
+      }
+    }
+
+    .info1 {
+      font-size: 26px;
+      color: #000;
+      line-height: 32px;
+      text-overflow: ellipsis;
+    }
+    .info2 {
+      font-size: 24px;
+      color: #b2b2b2;
+      line-height: 30px;
+      text-overflow: ellipsis;
+      margin-top: 6px;
+    }
+    .button {
+      width: 96px;
+      height: 48px;
+      font-size: 24px;
+      color: #2a72ff;
+      text-align: center;
+      background-color: #f8f8f8;
+      border-radius: 26px;
+      margin-top: 16px;
+    }
+  }
+  .list-A {
+    .margin-first {
+      margin-left: 26px;
+    }
+    .margin-item {
+      margin-left: 32px;
+    }
+    .margin-last {
+      margin-right: 32px;
+    }
+    .content-list-item {
+      width: 132px;
+    }
+    .image {
+      width: 104px;
+      height: 104px;
+      align-self: center;
+    }
+    .info1 {
+      text-align: center;
+    }
+    .info2 {
+      text-align: center;
+    }
+    .button {
+      align-self: center;
+    }
+  }
+  .list-B {
+    .margin-first {
+      margin-left: 40px;
+    }
+    .margin-item {
+      margin-left: 20px;
+    }
+    .margin-last {
+      margin-right: 40px;
+    }
+    .content-list-item {
+      width: 200px;
+    }
+    .image {
+      width: 200px;
+      height: 124px;
+    }
+  }
+  .list-C {
+    .margin-first {
+      margin-left: 40px;
+    }
+    .margin-item {
+      margin-left: 20px;
+    }
+    .margin-last {
+      margin-right: 40px;
+    }
+    .content-list-item {
+      width: 240px;
+    }
+    .image {
+      width: 240px;
+      height: 240px;
+    }
+  }
+  .list-D {
+    .margin-first {
+      margin-left: 40px;
+    }
+    .margin-item {
+      margin-left: 20px;
+    }
+    .margin-last {
+      margin-right: 40px;
+    }
+    .content-list-item {
+      width: 240px;
+    }
+    .image {
+      width: 240px;
+      height: 150px;
+    }
+  }
+}
+</style>

@@ -107,6 +107,7 @@ module.exports = {
         collapsable: true,
         children: [
           "/guide/search/component-a",
+          "/guide/search/component-b",
           "/guide/search/component-button"
         ]
       }

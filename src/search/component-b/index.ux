@@ -1,0 +1,93 @@
+<import
+  name="component-b"
+  src="../../../components/search/component-b/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-b
+      title="{{title}}"
+      list-type="{{listType}}"
+      list-data="{{listData}}"
+      info1Lines="{{info1Lines}}"
+      info2Lines="{{info2Lines}}"
+      button="{{button}}"
+      onclickbtn="handleClickBtn"
+    ></component-b>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      title: "标题",
+      listType: "A", // A B C D
+      listData: [
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        },
+        {
+          imgUrl: "imgUrl",
+          info1: "文字模板文字模板文字模板文字模板文字模板文字模板",
+          info2: "文字模板文字模板文字模板文字模板文字模板文字模板"
+        }
+      ],
+      info1Lines: 2,
+      info2Lines: 1,
+      button: "按钮"
+    };
+  },
+  handleClickBtn(e) {
+    console.log(`点击按钮，index: ${e.detail.index}`);
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+}
+</style>
