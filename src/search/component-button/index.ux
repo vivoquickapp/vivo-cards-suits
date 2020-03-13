@@ -1,6 +1,6 @@
 <import
   name="component-button"
-  src="../../../components/search/components/button.ux"
+  src="../../../components/search/component-button/index.ux"
 ></import>
 
 <template>
