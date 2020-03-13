@@ -7,12 +7,18 @@
       <text class="info1" style="lines: {{info1Lines}}" show="{{!!info1}}">{{
         info1
       }}</text>
-      <text class="info2" style="lines: {{info2Lines}}" show="{{!!info2}}">{{
-        info2
-      }}</text>
-      <text class="info3" style="lines: {{info3Lines}}" show="{{!!info3}}">{{
-        info3
-      }}</text>
+      <text
+        class="info2 {{!!info1?'margin-top-8':''}}"
+        style="lines: {{info2Lines}}"
+        show="{{!!info2}}"
+        >{{ info2 }}</text
+      >
+      <text
+        class="info3 {{!!info1 || !!info2?'margin-top-16':''}}"
+        style="lines: {{info3Lines}}"
+        show="{{!!info3}}"
+        >{{ info3 }}</text
+      >
     </div>
     <text class="button" show="{{!!button}}" onclick="handleClickBtn">{{
       button
@@ -61,6 +67,13 @@ export default {
 </script>
 
 <style lang="less">
+.margin-top-8 {
+  margin-top: 8px;
+}
+.margin-top-16 {
+  margin-top: 16px;
+}
+
 .wrap {
   width: 100%;
   background-color: #f2f2f2;
@@ -97,14 +110,12 @@ export default {
       font-size: 26px;
       color: #b2b2b2;
       line-height: 32px;
-      margin-top: 8px;
       text-overflow: ellipsis;
     }
     .info3 {
       font-size: 24px;
       color: #b2b2b2;
       line-height: 30px;
-      margin-top: 16px;
       text-overflow: ellipsis;
     }
   }

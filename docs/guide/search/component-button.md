@@ -2,22 +2,22 @@
 
 ### 描述
 
-全局搜索卡片按钮组件
+全局搜索按钮组件
 
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/search-button-10.jpg" style="width:300px" alt="search-button-10"/>
+  <img src="../../assets/search-component-button-10.jpg" style="width:300px" alt="search-component-button-10"/>
 </div>
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/search-button-1.jpg" style="width:300px" alt="search-button-1"/>
-  <img src="../../assets/search-button-2.jpg" style="width:300px" alt="search-button-2"/>
-  <img src="../../assets/search-button-3.jpg" style="width:300px" alt="search-button-3"/>
+  <img src="../../assets/search-component-button-1.jpg" style="width:300px" alt="search-component-button-1"/>
+  <img src="../../assets/search-component-button-2.jpg" style="width:300px" alt="search-component-button-2"/>
+  <img src="../../assets/search-component-button-3.jpg" style="width:300px" alt="search-component-button-3"/>
 </div>
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/search-button-4.jpg" style="width:300px" alt="search-button-4"/>
-  <img src="../../assets/search-button-5.jpg" style="width:300px" alt="search-button-5"/>
-  <img src="../../assets/search-button-6.jpg" style="width:300px" alt="search-button-6"/>
+  <img src="../../assets/search-component-button-4.jpg" style="width:300px" alt="search-component-button-4"/>
+  <img src="../../assets/search-component-button-5.jpg" style="width:300px" alt="search-component-button-5"/>
+  <img src="../../assets/search-component-button-6.jpg" style="width:300px" alt="search-component-button-6"/>
 </div>
 
 ### 使用方法
@@ -26,7 +26,7 @@
 
 ```html
 <import
-  name="text-a"
+  name="component-button"
   src="vivo-cards-suits/components/search/component-button/index.ux"
 ></import>
 ```
