@@ -527,6 +527,44 @@
           "vivo"
         ]
       },
+      "search/component-c": {
+        "name": "全局搜索/component-c",
+        "description": "全局搜索组件C",
+        "component": "index",
+        "path": "/search/component-c",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": []
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
+      },
       "search/component-button": {
         "name": "全局搜索/component-button",
         "description": "全局搜索按钮组件",
