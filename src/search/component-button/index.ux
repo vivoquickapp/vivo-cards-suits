@@ -1,0 +1,45 @@
+<import
+  name="component-button"
+  src="../../../components/search/components/button.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-button
+      layout="{{layout}}"
+      button-list="{{buttonList}}"
+      onclicked="handleClickBtn"
+    ></component-button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      layout: "row", // row, column
+      buttonList: [
+        "按钮1",
+        "按钮2",
+        "按钮3",
+        "按钮4",
+        "按钮5",
+        "按钮6",
+        "按钮7",
+        "按钮8",
+        "按钮8",
+        "按钮10"
+      ]
+    };
+  },
+  handleClickBtn(e) {
+    console.log(`点击按钮, index: ${e.detail.index} text: ${e.detail.text}`);
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+}
+</style>
