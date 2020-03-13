@@ -1,0 +1,99 @@
+<template>
+  <div class="wrap">
+    <div class="info-wrap">
+      <text class="info1" style="lines: {{info1Lines}}" show="{{!!info1}}">{{
+        info1
+      }}</text>
+      <text
+        class="info2 {{!!info1?'margin-top-8':''}}"
+        style="lines: {{info2Lines}}"
+        show="{{!!info2}}"
+        >{{ info2 }}</text
+      >
+      <text
+        class="info3 {{!!info1 || !!info2?'margin-top-16':''}}"
+        style="lines: {{info3Lines}}"
+        show="{{!!info3}}"
+        >{{ info3 }}</text
+      >
+    </div>
+    <image class="image" src="{{imgUrl}}" show="{{!!imgUrl}}"></image>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    imgUrl: {
+      default: ""
+    },
+    info1: {
+      default: ""
+    },
+    info2: {
+      default: ""
+    },
+    info3: {
+      default: ""
+    },
+    info1Lines: {
+      default: 2
+    },
+    info2Lines: {
+      default: 3
+    },
+    info3Lines: {
+      default: 1
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.margin-top-8 {
+  margin-top: 8px;
+}
+.margin-top-16 {
+  margin-top: 16px;
+}
+
+.wrap {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 28px 40px;
+  .info-wrap {
+    flex: 1;
+    flex-direction: column;
+    align-self: center;
+    .info1 {
+      font-size: 30px;
+      color: #000;
+      line-height: 36px;
+      text-overflow: ellipsis;
+    }
+    .info2 {
+      font-size: 26px;
+      color: #b2b2b2;
+      line-height: 32px;
+      text-overflow: ellipsis;
+    }
+    .info3 {
+      font-size: 24px;
+      color: #b2b2b2;
+      line-height: 30px;
+      text-overflow: ellipsis;
+    }
+  }
+  .image {
+    align-self: center;
+    width: 200px;
+    height: 124px;
+    border-radius: 12px;
+    background-color: #fec89a;
+    margin-left: 32px;
+  }
+}
+</style>

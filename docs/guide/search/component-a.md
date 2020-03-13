@@ -35,9 +35,9 @@
       info1="{{info1}}"
       info2="{{info2}}"
       info3="{{info3}}"
-      info1Lines="{{info1Lines}}"
-      info2Lines="{{info2Lines}}"
-      info3Lines="{{info3Lines}}"
+      info1-lines="{{info1Lines}}"
+      info2-lines="{{info2Lines}}"
+      info3-lines="{{info3Lines}}"
       button="{{button}}"
       onclickbtn="handleClickBtn"
     ></component-a>
@@ -45,8 +45,6 @@
 </template>
 
 <script>
-  import router from "@system.router";
-
   export default {
     data() {
       return {
