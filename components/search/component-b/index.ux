@@ -18,13 +18,13 @@
           >{{ $item.info1 }}</text
         >
         <text
-          class="info2"
+          class="info2 {{isImg || isInfo1?'margin-top-8':''}}"
           style="lines: {{info2Lines}}; height: {{30*info2Lines}}px;"
           show="{{!!isInfo2}}"
           >{{ $item.info2 }}</text
         >
         <text
-          class="button"
+          class="button {{isImg || isInfo1 || isInfo2?'margin-top-16':''}}"
           show="{{!!button}}"
           onclick="handleClickBtn($idx)"
           >{{ button }}</text
@@ -123,6 +123,9 @@ export default {
 .margin-top-16 {
   margin-top: 16px;
 }
+.margin-top-8 {
+  margin-top: 8px;
+}
 
 .wrap {
   flex-direction: column;
@@ -161,7 +164,6 @@ export default {
       color: #b2b2b2;
       line-height: 30px;
       text-overflow: ellipsis;
-      margin-top: 6px;
     }
     .button {
       width: 96px;
@@ -171,7 +173,6 @@ export default {
       text-align: center;
       background-color: #f8f8f8;
       border-radius: 26px;
-      margin-top: 16px;
     }
   }
   .list-A {

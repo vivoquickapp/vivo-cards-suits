@@ -15,6 +15,7 @@
       info2-lines="{{info2Lines}}"
       info3-lines="{{info3Lines}}"
       button="{{button}}"
+      onclickbtn="handleClickBtn"
     ></component-a>
   </div>
 </template>
@@ -35,6 +36,9 @@ export default {
       info3Lines: 1,
       button: "按钮"
     };
+  },
+  handleClickBtn() {
+    console.log("点击按钮");
   }
 };
 </script>

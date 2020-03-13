@@ -453,7 +453,7 @@
       },
       "search/component-a": {
         "name": "全局搜索/component-a",
-        "description": "全局搜索卡片A组件",
+        "description": "全局搜索组件A",
         "component": "index",
         "path": "/search/component-a",
         "features": [
@@ -491,7 +491,7 @@
       },
       "search/component-b": {
         "name": "全局搜索/component-b",
-        "description": "全局搜索卡片B组件",
+        "description": "全局搜索组件B",
         "component": "index",
         "path": "/search/component-b",
         "features": [
@@ -529,7 +529,7 @@
       },
       "search/component-button": {
         "name": "全局搜索/component-button",
-        "description": "全局搜索卡片按钮组件",
+        "description": "全局搜索按钮组件",
         "component": "index",
         "path": "/search/component-button",
         "features": [
