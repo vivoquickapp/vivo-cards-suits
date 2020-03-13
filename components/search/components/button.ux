@@ -100,7 +100,7 @@ export default {
 
 .button-wrap {
   width: 100%;
-  background-color: #fff;
+  background-color: #f2f2f2;
   .button-row {
     flex-direction: row;
     width: 100%;

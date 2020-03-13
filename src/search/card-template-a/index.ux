@@ -1,0 +1,46 @@
+<import
+  name="card-template-a"
+  src="../../../components/search/card-template-a/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <card-template-a
+      img-url="{{imgUrl}}"
+      img-type="{{imgType}}"
+      info1="{{info1}}"
+      info2="{{info2}}"
+      info3="{{info3}}"
+      info1-lines="{{info1Lines}}"
+      info2-lines="{{info2Lines}}"
+      info3-lines="{{info3Lines}}"
+      button="{{button}}"
+    ></card-template-a>
+  </div>
+</template>
+
+<script>
+import router from "@system.router";
+
+export default {
+  data() {
+    return {
+      imgUrl: "imgUrl",
+      imgType: "A", // A B
+      info1: "文字模板文字模板",
+      info2: "文字模板文字模板文字模板文字模板文字模板文字模板",
+      info3: "文字模板文字模板",
+      info1Lines: 2,
+      info2Lines: 3,
+      info3Lines: 1,
+      button: "按钮"
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+}
+</style>

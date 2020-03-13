@@ -105,7 +105,7 @@ module.exports = {
       {
         title: "全局搜索",
         collapsable: true,
-        children: ["/guide/search/button"]
+        children: ["/guide/search/template-a", "/guide/search/button"]
       }
     ]
   }
