@@ -1,0 +1,44 @@
+<import
+  name="component-entrance"
+  src="../../../components/jovi/component-entrance/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-entrance list-data="{{listData}}"></component-entrance>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      listData: [
+        {
+          imgUrl: "imgUrl",
+          name: "功能名称"
+        },
+        {
+          imgUrl: "imgUrl",
+          name: "功能名称"
+        },
+        {
+          imgUrl: "imgUrl",
+          name: "功能名称"
+        },
+        {
+          imgUrl: "imgUrl",
+          name: "功能名称"
+        }
+      ]
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>

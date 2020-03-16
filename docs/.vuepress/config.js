@@ -103,6 +103,7 @@ module.exports = {
         children: [
           "/guide/jovi/component-tabs",
           "/guide/jovi/component-sign",
+          "/guide/jovi/component-entrance",
           "/guide/jovi/component-picture-a",
           "/guide/jovi/component-buttons",
           "/guide/jovi/component-status",

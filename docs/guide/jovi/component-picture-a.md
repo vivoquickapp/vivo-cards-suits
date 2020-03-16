@@ -79,5 +79,5 @@ jovi 主页 图文组件 A
 | imgType          | String | A      | 图片类型, 可选值: A, B, C           |
 | listData         | Array  | -      | 列表数据，最大长度 3                |
 | listData.imgUrl  | String | -      | 图片地址，支持 base64，不传则不显示 |
-| listData.title   | String | -      | 标题文字，不传则不显示              |
-| listData.content | String | -      | 内容文字，不传则不显示              |
+| listData.title   | String | -      | 标题文字，小于 6 个字，不传则不显示 |
+| listData.content | String | -      | 内容文字，小于 7 个字，不传则不显示 |
