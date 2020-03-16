@@ -1,0 +1,45 @@
+<import
+  name="component-sign"
+  src="../../../components/jovi/component-sign/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-sign
+      sign-name="{{signName}}"
+      sign-url="{{signUrl}}"
+      skip-name="{{skipName}}"
+      skip-link="{{skipLink}}"
+      onclickmore="handleClickMore"
+    ></component-sign>
+  </div>
+</template>
+
+<script>
+import router from "@system.router";
+
+export default {
+  data() {
+    return {
+      signName: "服务商名称",
+      signUrl: "",
+      skipName: "更多服务",
+      skipLink: "https://www.quickapp.cn/"
+    };
+  },
+  handleClickMore() {
+    console.log(`点击查看更多 url: ${this.skipLink}`);
+
+    router.push({
+      uri: this.skipLink
+    });
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>
