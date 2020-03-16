@@ -100,7 +100,11 @@ module.exports = {
       {
         title: "Jovi主页",
         collapsable: true,
-        children: ["/guide/jovi/component-tabs", "/guide/jovi/component-sign"]
+        children: [
+          "/guide/jovi/component-tabs",
+          "/guide/jovi/component-sign",
+          "/guide/jovi/component-picture-a"
+        ]
       },
       {
         title: "全局搜索",

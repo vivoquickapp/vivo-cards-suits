@@ -1,0 +1,47 @@
+<import
+  name="component-picture-a"
+  src="../../../components/jovi/component-picture-a/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-picture-a
+      img-type="{{imgType}}"
+      list-data="{{listData}}"
+    ></component-picture-a>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      imgType: "A",
+      listData: [
+        {
+          imgUrl: "imgUrl",
+          title: "标题文字",
+          content: "内容信息"
+        },
+        {
+          imgUrl: "imgUrl",
+          title: "标题文字",
+          content: "内容信息"
+        },
+        {
+          imgUrl: "imgUrl",
+          title: "标题文字",
+          content: "内容信息"
+        }
+      ]
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>
