@@ -1,0 +1,123 @@
+<template>
+  <div class="tabs-wrap">
+    <list id="tabs" class="tabs">
+      <list-item
+        class="tab-wrap"
+        style="width: {{listItemWidth}}px;"
+        type="tab"
+        for="{{tabs}}"
+      >
+        <text
+          class="tab {{$idx===current?'color-current':'color-default'}}"
+          onclick="handleClickTab($idx)"
+          >{{ $item }}</text
+        >
+      </list-item>
+    </list>
+    <div class="add-wrap" show="{{add}}" onclick="handleClickAdd">
+      <image
+        class="add"
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTIgMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+5ZCI5bm25b2i54q2PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9Iumhtemdoi0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0i55S75p2/IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDgzLjAwMDAwMCwgLTQ4NC4wMDAwMDApIiBmaWxsPSIjMDAwMDAwIj4KICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC00NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTgzLjAwMDAwMCwgNDAxLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Iue8lue7hC045aSN5Yi2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNi4wMDAwMDAsIDgzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yOTEsLTcuMDQ0ODE0ZS0xNiBMMjkxLDQuOTk5IEwyOTYsNSBMMjk2LDcgTDI5MSw2Ljk5OSBMMjkxLDEyIEwyODksMTIgTDI4OSw2Ljk5OSBMMjg0LDcgTDI4NCw1IEwyODksNC45OTkgTDI4OSwtMS4wNzE4NzU0NGUtMTUgTDI5MSwtNy4wNDQ4MTRlLTE2IFoiIGlkPSLlkIjlubblvaLnirYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+"
+      ></image>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    tabs: {
+      default: []
+    },
+    current: {
+      default: 0
+    },
+    tabAlign: {
+      default: "left" // left center
+    },
+    add: {
+      default: false
+    }
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    listItemWidth() {
+      let listItemWidth = 0;
+
+      if (this.add) {
+        if (this.tabAlign == "center") {
+          listItemWidth = this.tabs.length <= 5 ? 540 / this.tabs.length : 108;
+        } else {
+          listItemWidth = 108;
+        }
+      } else {
+        if (this.tabAlign == "center") {
+          listItemWidth = this.tabs.length <= 5 ? 590 / this.tabs.length : 118;
+        } else {
+          listItemWidth = 118;
+        }
+      }
+
+      return listItemWidth;
+    }
+  },
+  scrollTo(index) {
+    this.$element("tabs").scrollTo({
+      index: index > 2 ? index - 2 : 0,
+      smooth: true
+    });
+  },
+  handleClickTab(index) {
+    this.scrollTo(index);
+    this.$emit("clicktab", { index });
+  },
+  handleClickAdd() {
+    this.$emit("clickadd");
+  }
+};
+</script>
+
+<style lang="less">
+.color-default {
+  color: #333;
+}
+.color-current {
+  color: #456fff;
+  border-bottom: 4px solid #456fff;
+}
+
+.tabs-wrap {
+  width: 100%;
+  height: 68px;
+  padding: 0 32px;
+  background-color: #fff;
+  .tabs {
+    flex: 1;
+    flex-direction: row;
+    .tab-wrap {
+      justify-content: center;
+      align-items: flex-start;
+      .tab {
+        padding: 6px 0 6px;
+        font-size: 24px;
+        line-height: 34px;
+        lines: 1;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .add-wrap {
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin-left: 8px;
+    .add {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+</style>
