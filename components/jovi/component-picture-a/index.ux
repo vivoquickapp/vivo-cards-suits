@@ -1,0 +1,83 @@
+<template>
+  <div class="list">
+    <div
+      class="list-item {{$idx!==0?'margin-left-14':''}}"
+      for="{{listData.slice(0,3)}}"
+    >
+      <image
+        class="image image-{{imgType}}"
+        src="{{$item.imgUrl}}"
+        show="{{!!$item.imgUrl}}"
+      ></image>
+      <text class="title" show="{{!!$item.title}}">{{ $item.title }}</text>
+      <text class="content" show="{{!!$item.content}}">{{
+        $item.content
+      }}</text>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    imgType: {
+      default: "A"
+    },
+    listData: {
+      default: []
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.margin-left-14 {
+  margin-left: 14px;
+}
+
+.list {
+  flex: 1;
+  padding: 8px 32px;
+  background-color: #fff;
+  .list-item {
+    width: 188px;
+    flex-direction: column;
+    .image-A {
+      width: 188px;
+      height: 140px;
+    }
+    .image-B {
+      width: 188px;
+      height: 188px;
+    }
+    .image-C {
+      width: 188px;
+      height: 248px;
+    }
+    .image {
+      background-color: #e6e9ed;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .title {
+      flex: 1;
+      font-size: 28px;
+      color: #333;
+      line-height: 38px;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+    .content {
+      flex: 1;
+      font-size: 24px;
+      color: #999;
+      line-height: 34px;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+  }
+}
+</style>
