@@ -1,0 +1,25 @@
+<import
+  name="component-line"
+  src="../../../components/jovi/component-line/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-line></component-line>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>

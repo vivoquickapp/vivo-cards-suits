@@ -1,0 +1,28 @@
+<template>
+  <div class="wrap">
+    <text class="line"></text>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.wrap {
+  flex: 1;
+  height: 32px;
+  padding: 0 32px;
+  background-color: #fff;
+  align-items: center;
+  .line {
+    flex: 1;
+    height: 2px;
+    background-color: #e7e7e7;
+  }
+}
+</style>
