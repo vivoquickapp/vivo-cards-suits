@@ -754,6 +754,44 @@
         "targetManufactorys": [
           "vivo"
         ]
+      },
+      "jovi/card-sample-travel": {
+        "name": "Jovi/card-sample-travel",
+        "description": "Jovi卡片示例",
+        "component": "index",
+        "path": "/jovi/card-sample-travel",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": []
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
       }
     }
   }

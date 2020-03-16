@@ -1,0 +1,64 @@
+<import name="travel" src="../../../components/jovi/components/travel"></import>
+<import name="status" src="../../../components/jovi/components/status"></import>
+<import
+  name="buttons"
+  src="../../../components/jovi/components/buttons"
+></import>
+<template>
+  <div class="wrap">
+    <status type="success" title="计划" info="驾车去机场"></status>
+    <travel
+      start-time="12:30"
+      end-time="13:48"
+      icon="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+      status-l="深圳北"
+      status-r="广州南"
+      content-data="{{contentData}}"
+      info="数据由高铁管家提供"
+    ></travel>
+    <buttons buttons="{{buttons}}" ontap="tapHandler"></buttons>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      contentData: [
+        {
+          title: "乘客",
+          content: "罗丹"
+        },
+        {
+          title: "座位",
+          content: "7车8B"
+        }
+      ],
+      buttons: [
+        {
+          url: "",
+          text: "功能按钮1"
+        },
+        {
+          url: "",
+          text: "功能按钮2"
+        },
+        {
+          url: "",
+          text: "功能按钮3"
+        }
+      ]
+    };
+  },
+  tapHandler(e) {
+    console.log(e.detail.index);
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  background-color: #ffffff;
+  border-bottom-left-radius: ~"theme.borderBottomRadius";
+  border-bottom-right-radius: ~"theme.borderBottomRadius";
+  flex-direction: column;
+}
+</style>

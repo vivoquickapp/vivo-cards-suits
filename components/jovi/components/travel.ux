@@ -1,0 +1,140 @@
+<template>
+  <div class="wrap">
+    <div class="plus">
+      <text>{{ plus }}</text>
+    </div>
+    <div class="times">
+      <text class="time">{{ startTime }}</text>
+      <image src="{{icon}}" class="icon"></image>
+      <text class="time">{{ endTime }}</text>
+    </div>
+    <div class="location">
+      <text class="status">{{ statusL }}</text>
+      <text class="status">{{ statusR }}</text>
+    </div>
+    <div class="content-wrap">
+      <div class="item" for="{{contentData}}">
+        <text class="title">{{ $item.title }}</text>
+        <text class="content">{{ $item.content }}</text>
+      </div>
+    </div>
+    <text class="info">{{ info }}</text>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    plus: {
+      default: ""
+    },
+    startTime: {
+      default: ""
+    },
+    endTime: {
+      default: ""
+    },
+    icon: {
+      default: ""
+    },
+    statusR: {
+      default: ""
+    },
+    statusL: {
+      default: ""
+    },
+    contentData: {
+      default: [
+        {
+          title: "",
+          content: ""
+        }
+      ]
+    },
+    info: {
+      default: ""
+    }
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  align-self: center;
+  width: 656px;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 32px;
+
+  .plus {
+    align-self: flex-end;
+    font-size: 24px;
+    color: #333333;
+  }
+
+  .times {
+    margin-top: 8px;
+    justify-content: space-between;
+    align-items: center;
+
+    .time {
+      font-size: 52px;
+      color: #333333;
+      line-height: 72px;
+      font-weight: bold;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+
+    .icon {
+      width: 80px;
+      height: 40px;
+      margin: 0 32px;
+      object-fit: contain;
+    }
+  }
+
+  .location {
+    justify-content: space-between;
+    height: 30px;
+
+    .status {
+      font-size: 24px;
+      color: #cccccc;
+      line-height: 34px;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .content-wrap {
+    justify-content: space-between;
+
+    .item {
+      .title {
+        font-size: 24px;
+        color: #999999;
+        line-height: 34px;
+        margin-right: 6px;
+        lines: 1;
+        text-overflow: ellipsis;
+      }
+
+      .content {
+        font-size: 24px;
+        color: #333333;
+        line-height: 34px;
+        lines: 1;
+        text-overflow: ellipsis;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .info {
+    font-size: 20px;
+    color: #cccccc;
+    margin: 20px 0 8px 0;
+    lines: 1;
+    text-overflow: ellipsis;
+  }
+}
+</style>

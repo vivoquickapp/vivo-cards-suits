@@ -1,0 +1,55 @@
+<template>
+  <div class="wrap">
+    <text class="status" style="color: {{calculateColor}};">{{ title }}</text>
+    <text class="info">{{ info }}</text>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    title: {
+      default: ""
+    },
+    info: {
+      default: ""
+    },
+    type: {
+      default: "success" // 'error' 'warning' 'success' 'cancel'
+    }
+  },
+  computed: {
+    calculateColor() {
+      switch (this.type) {
+        case "error":
+          return "#F55353";
+        case "warning":
+          return "#FF7500";
+        case "success":
+          return "#38C793";
+        case "cancel":
+          return "#999999";
+        default:
+          return this.type;
+      }
+    }
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  align-self: center;
+  width: 656px;
+  padding: 0 32px;
+
+  .status {
+    font-size: 24px;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
+  .info {
+    font-size: 24px;
+    color: #666666;
+  }
+}
+</style>
