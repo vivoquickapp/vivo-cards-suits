@@ -1,0 +1,91 @@
+<template>
+  <div class="wrap" style="justify-content: {{calcButtonStyle}};">
+    <div class="buttons" for="{{buttons.slice(0, 4)}}">
+      <text
+        style="width: {{calcButtonWidth}}"
+        class="button"
+        onclick="clickHandler($item.url, $idx)"
+        >{{ $item.text }}
+      </text>
+    </div>
+  </div>
+</template>
+<script>
+import router from "@system.router";
+
+export default {
+  props: {
+    buttons: {
+      default: [
+        {
+          url: "",
+          text: "功能按钮"
+        }
+      ]
+    }
+  },
+  computed: {
+    calcButtonWidth() {
+      switch (this.buttons.length) {
+        case 1:
+          return "220px";
+        case 2:
+          return "220px";
+        case 3:
+          return "180px";
+        case 4:
+          return "128px";
+        default:
+          return "";
+      }
+    },
+    calcButtonStyle() {
+      switch (this.buttons.length) {
+        case 1:
+          return "space-around";
+        case 2:
+          return "space-around";
+        case 3:
+          return "space-between";
+        case 4:
+          return "space-between";
+        default:
+          return "space-around";
+      }
+    }
+  },
+  clickHandler(url, index) {
+    this.$emit("tap", { index });
+    if (!url) return;
+    router.push({
+      uri: url
+    });
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  align-self: center;
+  width: 656px;
+  padding: 24px 32px;
+  justify-content: space-around;
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+
+    .button {
+      lines: 1;
+      text-overflow: ellipsis;
+      font-size: 24px;
+      color: #456fff;
+      text-align: center;
+      line-height: 40px;
+      border: 0.8px solid #456fff;
+      border-radius: 28px;
+      height: 56px;
+      font-weight: bold;
+    }
+  }
+}
+</style>
