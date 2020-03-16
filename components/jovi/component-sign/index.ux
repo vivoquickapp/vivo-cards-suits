@@ -1,0 +1,76 @@
+<import name="my-image" src="../../common/image.ux"></import>
+
+<template>
+  <div class="sign">
+    <div class="sign-icon">
+      <my-image
+        width="36"
+        height="36"
+        src="{{signUrl}}"
+        alt="data:image/png;base64,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"
+      ></my-image>
+    </div>
+    <text class="sign-name">{{ signName }}</text>
+    <div class="btn-more" show="{{!!skipLink}}" onclick="handleClickMore">
+      <text class="btn-more-text">{{ skipName }}</text>
+      <image
+        class="btn-more-icon"
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNnB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDYgOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNjAgKDg4MTAzKSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT7ov5vlhaXnrq3lpLQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgogICAgICAgIDxwb2x5bGluZSBpZD0iUmVjdGFuZ2xl5aSH5Lu9LTE3IiBzdHJva2U9IiNCMkIyQjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuODI4NDI3LCA0LjAwMDAwMCkgcm90YXRlKC0xMzUuMDAwMDAwKSB0cmFuc2xhdGUoLTEuODI4NDI3LCAtNC4wMDAwMDApICIgcG9pbnRzPSIzLjgyODQyNzEyIDYgLTAuMTcxNTcyODc1IDYgLTAuMTcxNTcyODc1IDIiPjwvcG9seWxpbmU+CiAgICA8L2c+Cjwvc3ZnPg=="
+      ></image>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    signName: {
+      default: "服务商名称"
+    },
+    signUrl: {
+      default: ""
+    },
+    skipName: {
+      default: "更多服务"
+    },
+    skipLink: {
+      default: ""
+    }
+  },
+  handleClickMore() {
+    this.$emit("clickmore");
+  }
+};
+</script>
+
+<style lang="less">
+.sign {
+  flex: 1;
+  padding: 10px 32px;
+  opacity: 0.6;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #eff4ff 100%);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  &-icon {
+    margin-right: 12px;
+  }
+  &-name {
+    flex: 1;
+    font-size: 20px;
+    color: #b2b2b2;
+  }
+  .btn-more {
+    &-text {
+      font-size: 20px;
+      color: #b2b2b2;
+    }
+    &-icon {
+      align-self: center;
+      width: 12px;
+      height: 12px;
+      margin-left: 8.4px;
+      margin-top: 2px;
+    }
+  }
+}
+</style>
