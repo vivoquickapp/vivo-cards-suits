@@ -1,0 +1,61 @@
+<template>
+  <div class="list">
+    <div class="list-item" for="{{listData.slice(0,4)}}">
+      <image
+        class="image"
+        src="{{$item.imgUrl}}"
+        show="{{!!$item.imgUrl}}"
+      ></image>
+      <text
+        class="name {{!!imgUrl?'margin-top-12':''}}"
+        show="{{!!$item.name}}"
+        >{{ $item.name }}</text
+      >
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    listData: {
+      default: []
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.margin-top-12 {
+  margin-top: 12px;
+}
+
+.list {
+  flex: 1;
+  padding: 8px 32px;
+  background-color: #fff;
+  .list-item {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    .image {
+      width: 80px;
+      height: 80px;
+      background-color: #e6e9ed;
+      border-radius: 12px;
+    }
+    .name {
+      flex: 1;
+      font-size: 24px;
+      color: #333;
+      line-height: 34px;
+      text-align: center;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+  }
+}
+</style>
