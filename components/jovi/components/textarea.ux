@@ -1,0 +1,27 @@
+<template>
+  <div class="wrap">
+    <text class="text" style="lines: {{lines}};">{{ text }}</text>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    text: {
+      default: ""
+    },
+    lines: {
+      default: 5
+    }
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  padding: 8px 32px;
+  .text {
+    font-size: 28px;
+    color: #333333;
+    text-overflow: ellipsis;
+  }
+}
+</style>

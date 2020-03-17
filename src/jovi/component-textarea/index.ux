@@ -1,0 +1,32 @@
+<import
+  name="v-textarea"
+  src="../../../components/jovi/components/textarea"
+></import>
+
+<template>
+  <div class="card">
+    <v-textarea lines="7" text="{{text}}"></v-textarea>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      text: `  vivo为一个专注于智能手机领域的手机品牌。
+        vivo和追求乐趣、充满活力、年轻时尚的群体一起打造拥有卓越外观、专业级音质、极致影像、愉悦体验的智能产品，并将敢于追求极致、持续创造惊喜作为vivo的坚定追求。
+
+        愉悦体验的智能产品，并将敢于追求极致、持续创造惊喜作为vivo的坚定追求`
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  background-color: #ffffff;
+  border-bottom-left-radius: ~"theme.borderBottomRadius";
+  border-bottom-right-radius: ~"theme.borderBottomRadius";
+  flex-direction: column;
+}
+</style>
