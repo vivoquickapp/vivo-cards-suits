@@ -1,0 +1,96 @@
+<template>
+  <div class="wrap">
+    <div class="info-wrap">
+      <div class="info-list">
+        <div
+          class="info-list-item {{$idx!==0?'margin-top-8':''}}"
+          for="{{infoList}}"
+        >
+          <text class="key">{{ $item.key }}</text>
+          <text class="value {{$item.strong?'font-size-28':''}}">{{
+            $item.value
+          }}</text>
+        </div>
+      </div>
+      <text class="info">{{ info }}</text>
+    </div>
+    <image class="image" src="{{imgUrl}}" show="{{!!imgUrl}}"></image>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    infoList: {
+      default: []
+    },
+    info: {
+      default: ""
+    },
+    imgUrl: {
+      default: ""
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.margin-top-8 {
+  margin-top: 8px;
+}
+.font-size-28 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.wrap {
+  flex: 1;
+  padding: 8px 32px;
+  background-color: #fff;
+  .info-wrap {
+    flex: 1;
+    flex-direction: column;
+    .info-list {
+      flex: 1;
+      flex-direction: column;
+      &-item {
+        flex: 1;
+        .key {
+          width: 96px;
+          font-size: 24px;
+          color: #999;
+          line-height: 30px;
+          margin-right: 36px;
+          lines: 1;
+          text-overflow: ellipsis;
+        }
+        .value {
+          flex: 1;
+          font-size: 24px;
+          color: #333;
+          line-height: 30px;
+          lines: 1;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .info {
+      font-size: 20px;
+      color: #333;
+      line-height: 40px;
+      margin-top: 20px;
+    }
+  }
+  .image {
+    width: 112px;
+    height: 112px;
+    background-color: #e6e9ed;
+    border-radius: 12px;
+    margin-top: 4px;
+    margin-left: 32px;
+  }
+}
+</style>
