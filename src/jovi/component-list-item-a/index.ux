@@ -6,10 +6,12 @@
 <template>
   <div class="card">
     <component-list-item-a
+      img-url="{{imgUrl}}"
       info1="{{info1}}"
       info2="{{info2}}"
       info-data="{{infoData}}"
       right-data="{{rightData}}"
+      onclickbtn="handleClickBtn"
     ></component-list-item-a>
   </div>
 </template>
@@ -18,6 +20,7 @@
 export default {
   data() {
     return {
+      imgUrl: "imgUrl",
       info1: "主要字段",
       info2: "辅助文字内容1",
       infoData: {
@@ -33,10 +36,10 @@ export default {
       //   icon: 'iconUrl',
       //   text: '文字内容',
       // },
-      rightData: {
-        type: "A",
-        imgUrl: "imgUrl"
-      }
+      // rightData: {
+      //   type: "A",
+      //   imgUrl: "imgUrl"
+      // }
       // rightData: {
       //   type: 'B',
       //   text: '文字字段'
@@ -49,7 +52,14 @@ export default {
       //   type: 'D',
       //   text: '文字按钮'
       // }
+      rightData: {
+        type: "E",
+        text: "按钮"
+      }
     };
+  },
+  handleClickBtn() {
+    console.log("点击按钮");
   }
 };
 </script>

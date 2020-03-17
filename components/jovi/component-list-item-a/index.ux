@@ -2,6 +2,9 @@
 
 <template>
   <div class="wrap">
+    <div class="left-wrap" show="{{!!imgUrl}}">
+      <image class="image" src="{{imgUrl}}"></image>
+    </div>
     <div class="info-wrap">
       <text class="info1">{{ info1 }}</text>
       <text class="info2" show="{{!!info2}}">{{ info2 }}</text>
@@ -40,7 +43,11 @@
         <text>{{ rightData.text }}</text>
       </div>
       <!-- 跳转链接 -->
-      <div class="right-C" if="{{rightData.type==='C'}}">
+      <div
+        class="right-C"
+        if="{{rightData.type==='C'}}"
+        onclick="handleClickBtn"
+      >
         <text>{{ rightData.text }}</text>
         <image
           class="icon"
@@ -48,7 +55,19 @@
         ></image>
       </div>
       <!-- 文字跳转 -->
-      <div class="right-D" if="{{rightData.type==='D'}}">
+      <div
+        class="right-D"
+        if="{{rightData.type==='D'}}"
+        onclick="handleClickBtn"
+      >
+        <text>{{ rightData.text }}</text>
+      </div>
+      <!-- 按钮 -->
+      <div
+        class="right-E"
+        if="{{rightData.type==='E'}}"
+        onclick="handleClickBtn"
+      >
         <text>{{ rightData.text }}</text>
       </div>
     </div>
@@ -58,6 +77,9 @@
 <script>
 export default {
   props: {
+    imgUrl: {
+      default: ""
+    },
     info1: {
       default: ""
     },
@@ -73,6 +95,9 @@ export default {
   },
   data() {
     return {};
+  },
+  handleClickBtn() {
+    this.$emit("clickbtn");
   }
 };
 </script>
@@ -82,6 +107,16 @@ export default {
   flex: 1;
   padding: 8px 32px;
   background-color: #fff;
+  .left-wrap {
+    margin-right: 32px;
+    .image {
+      width: 112px;
+      height: 112px;
+      background-color: #e6e9ed;
+      border-radius: 12px;
+      align-self: center;
+    }
+  }
   .info-wrap {
     flex: 1;
     flex-direction: column;
@@ -162,6 +197,17 @@ export default {
         font-size: 24px;
         color: #456fff;
         line-height: 40px;
+      }
+    }
+    .right-E {
+      text {
+        width: 104px;
+        height: 44px;
+        text-align: center;
+        font-size: 24px;
+        color: #456fff;
+        border: 2px solid #456fff;
+        border-radius: 22px;
       }
     }
   }

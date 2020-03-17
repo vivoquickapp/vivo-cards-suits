@@ -8,6 +8,8 @@
     <component-picture-a
       img-type="{{imgType}}"
       list-data="{{listData}}"
+      button="{{button}}"
+      onclick="handleClickBtn"
     ></component-picture-a>
   </div>
 </template>
@@ -33,8 +35,12 @@ export default {
           title: "标题文字",
           content: "内容信息"
         }
-      ]
+      ],
+      button: "按钮"
     };
+  },
+  handleClickBtn(e) {
+    console.log(`点击按钮 index: ${e.detail.index}`);
   }
 };
 </script>
