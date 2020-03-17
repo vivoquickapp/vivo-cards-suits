@@ -1,0 +1,62 @@
+<import
+  name="component-list-item-a"
+  src="../../../components/jovi/component-list-item-a/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-list-item-a
+      info1="{{info1}}"
+      info2="{{info2}}"
+      info-data="{{infoData}}"
+      right-data="{{rightData}}"
+    ></component-list-item-a>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      info1: "主要字段",
+      info2: "辅助文字内容1",
+      infoData: {
+        type: "A",
+        text: "辅助文字内容2"
+      },
+      // infoData: {
+      //   type: 'B',
+      //   grade: 4
+      // },
+      // infoData: {
+      //   type: 'C',
+      //   icon: 'iconUrl',
+      //   text: '文字内容',
+      // },
+      rightData: {
+        type: "A",
+        imgUrl: "imgUrl"
+      }
+      // rightData: {
+      //   type: 'B',
+      //   text: '文字字段'
+      // },
+      // rightData: {
+      //   type: 'C',
+      //   text: '查看详情'
+      // },
+      // rightData: {
+      //   type: 'D',
+      //   text: '文字按钮'
+      // }
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>
