@@ -1,0 +1,126 @@
+<template>
+  <div class="wrap">
+    <image class="icon" if="{{icon}}" src="{{icon}}"></image>
+    <text class="title" if="{{!icon}}">{{ title }}</text>
+    <text class="title-normal" if="{{icon}}">{{ title }}</text>
+    <text
+      class="status"
+      style="color:{{calculateStyle}};background-color: {{calculateBgColor}};"
+      >{{ status }}</text
+    >
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    icon: {
+      default: ""
+    },
+    title: {
+      default: "卡片标题"
+    },
+    status: {
+      default: "成功状态"
+    },
+    statusType: {
+      default: "success" // 'error' 'warning' 'cancel' 'success'
+    }
+  },
+  computed: {
+    calculateStyle() {
+      switch (this.statusType) {
+        case "error":
+          return "#F55353";
+        case "warning":
+          return "#FF7500";
+        case "success":
+          return "#38C793";
+        case "cancel":
+          return "#999999";
+        default:
+          return this.statusType;
+      }
+    },
+    calculateBgColor() {
+      switch (this.statusType) {
+        case "error":
+          return this.convertHex("#F55353");
+        case "warning":
+          return this.convertHex("#FF7500");
+        case "success":
+          return this.convertHex("#38C793");
+        case "cancel":
+          return this.convertHex("#999999");
+        default:
+          return this.convertHex(this.statusType);
+      }
+    }
+  },
+  convertHex(hexColor = "#38C793", opacity = 0.1) {
+    let color = hexColor.toLowerCase();
+    //十六进制颜色值的正则表达式
+    const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+    // 如果是16进制颜色
+    if (color && reg.test(color)) {
+      if (color.length === 4) {
+        let sColorNew = "#";
+        for (let i = 1; i < 4; i += 1) {
+          sColorNew += color.slice(i, i + 1).concat(color.slice(i, i + 1));
+        }
+        color = sColorNew;
+      }
+      //处理六位的颜色值
+      let sColorChange = [];
+      for (let i = 1; i < 7; i += 2) {
+        sColorChange.push(parseInt("0x" + color.slice(i, i + 2)));
+      }
+      return "rgba(" + sColorChange.join(",") + "," + opacity + ")";
+    }
+    return color;
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  height: 76px;
+  align-items: center;
+  align-content: center;
+  border-top-left-radius: ~"theme.borderBottomRadius";
+  border-top-right-radius: ~"theme.borderBottomRadius";
+
+  .icon {
+    height: 36px;
+    width: 36px;
+    border-radius: 9px;
+    background-color: #b5b5b5;
+    margin: 20px 16px 20px 24px;
+  }
+
+  .title {
+    color: #000000;
+    font-size: 28px;
+    border-left: 8px solid #456fff;
+    padding-left: 24px;
+    margin: 24px 16px 24px 0;
+    font-weight: bold;
+    lines: 1;
+    text-overflow: ellipsis;
+  }
+
+  .title-normal {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    lines: 1;
+    text-overflow: ellipsis;
+    margin-right: 16px;
+  }
+
+  .status {
+    height: 28px;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 0 8px;
+  }
+}
+</style>

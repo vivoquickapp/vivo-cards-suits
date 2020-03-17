@@ -1,0 +1,42 @@
+<import name="header" src="../../../components/jovi/components/header"></import>
+<import
+  name="buttons"
+  src="../../../components/jovi/components/buttons"
+></import>
+<template>
+  <div class="wrap">
+    <header
+      icon="{{icon}}"
+      title="电影榜单101"
+      status="最近热门"
+      status-type="error"
+    ></header>
+    <buttons buttons="{{buttons}}" ontap="tapHandler"></buttons>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      icon:
+        "https://statres.quickapp.cn/quickapp/icon/201911/fc3f343a/55892ef474922a4996bf2b7fe759e983.png",
+      buttons: [
+        {
+          url: "",
+          text: "切换头部样式"
+        }
+      ]
+    };
+  },
+  tapHandler(e) {
+    this.icon = "";
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  background-color: #ffffff;
+  border-radius: ~"theme.borderBottomRadius";
+  flex-direction: column;
+}
+</style>

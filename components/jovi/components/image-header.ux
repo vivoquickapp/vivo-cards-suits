@@ -37,7 +37,6 @@ export default {
 <style lang="less">
 .wrap {
   .image {
-    background: chartreuse;
     height: 320px;
     width: 656px;
     border-top-left-radius: ~"theme.borderBottomRadius";

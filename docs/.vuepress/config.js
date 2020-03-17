@@ -109,7 +109,8 @@ module.exports = {
           "/guide/jovi/component-buttons",
           "/guide/jovi/component-status",
           "/guide/jovi/component-travel",
-          "/guide/jovi/component-image-header"
+          "/guide/jovi/component-image-header",
+          "/guide/jovi/component-header"
         ]
       },
       {
