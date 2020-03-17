@@ -1,0 +1,47 @@
+<import
+  name="component-list-item-b"
+  src="../../../components/jovi/component-list-item-b/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-list-item-b
+      info-list="{{infoList}}"
+      info="{{info}}"
+      img-url="{{imgUrl}}"
+    ></component-list-item-b>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      infoList: [
+        {
+          key: "主要字段",
+          value: "重点突出内容字段",
+          strong: true
+        },
+        {
+          key: "主要字段",
+          value: "内容字段"
+        },
+        {
+          key: "主要字段",
+          value: "内容字段"
+        }
+      ],
+      info: "次要的辅助字段",
+      imgUrl: "imgUrl"
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>

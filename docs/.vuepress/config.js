@@ -107,6 +107,8 @@ module.exports = {
           "/guide/jovi/component-entrance",
           "/guide/jovi/component-picture-a",
           "/guide/jovi/component-list-item-a",
+          "/guide/jovi/component-list-item-b",
+          "/guide/jovi/component-list-item-c",
           "/guide/jovi/component-buttons",
           "/guide/jovi/component-status",
           "/guide/jovi/component-travel",

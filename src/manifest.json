@@ -351,6 +351,82 @@
           "vivo"
         ]
       },
+      "jovi/component-list-item-b": {
+        "name": "jovi主页/component-list-item-b",
+        "description": "jovi主页列表组件B",
+        "component": "index",
+        "path": "/jovi/component-list-item-b",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": []
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
+      },
+      "jovi/component-list-item-c": {
+        "name": "jovi主页/component-list-item-c",
+        "description": "jovi主页列表组件C",
+        "component": "index",
+        "path": "/jovi/component-list-item-c",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": []
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
+      },
       "screen/card-template-a": {
         "name": "智慧识屏/card-template-a",
         "description": "智慧识屏卡片图文模板A",

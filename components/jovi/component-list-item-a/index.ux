@@ -147,7 +147,7 @@ export default {
       }
       .info-C {
         .icon {
-          width: 24;
+          width: 24px;
           height: 24px;
           background-color: #e6e9ed;
           margin-right: 8px;

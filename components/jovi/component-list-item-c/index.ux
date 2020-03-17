@@ -1,0 +1,106 @@
+<template>
+  <div class="wrap">
+    <div class="info-wrap">
+      <div class="time-wrap">
+        <div class="icon-wrap">
+          <image
+            class="icon"
+            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNjAgKDg4MTAzKSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT7ml7bpl7Q8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cGF0aCBkPSJNNCwwIEM2LjIwOTEzOSwwIDgsMS43OTA4NjEgOCw0IEM4LDYuMjA5MTM5IDYuMjA5MTM5LDggNCw4IEMxLjc5MDg2MSw4IDAsNi4yMDkxMzkgMCw0IEMwLDEuNzkwODYxIDEuNzkwODYxLDAgNCwwIFogTTQuNSwyIEwzLjUsMiBMMy41LDQuOTA2MjUgTDYsNC45MDYyNSBMNiwzLjkwNjI1IEw0LjUsMy45MDYyNSBMNC41LDIgWiIgaWQ9IuaXtumXtCIgZmlsbD0iIzY2NjY2NiI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4="
+          ></image>
+        </div>
+
+        <text class="time">{{ time }}</text>
+      </div>
+      <div class="address-wrap">
+        <div class="icon-wrap">
+          <image
+            class="icon"
+            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iOHB4IiBoZWlnaHQ9IjEwcHgiIHZpZXdCb3g9IjAgMCA4IDEwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MCAoODgxMDMpIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPuWcsOeCuTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLlnLDngrkiIGZpbGw9IiM2NjY2NjYiPgogICAgICAgICAgICA8ZyBpZD0i6YCa55So57uE5Lu2L+Wwj2ljb24v5Zyw54K5Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJpY29uIj4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMS4yMDA0NzA3Niw2LjQ2MjY2MTA5IEMwLjQ1OTY0OTgyNyw1Ljc3ODQxNDEgMCw0LjgyNDc3MDg4IDAsMy43Njk5NDUxOSBDMCwxLjY4Nzg2MTk1IDEuNzkwODYxLDAgNCwwIEM2LjIwOTEzOSwwIDgsMS42ODc4NjE5NSA4LDMuNzY5OTQ1MTkgQzgsNC44MjQ3NzA4OCA3LjU0MDM1MDE3LDUuNzc4NDE0MSA2Ljc5OTUyOTI0LDYuNDYyNjYxMDkgTDQsOS4yNjMxNTc4OSBMMS4yMDA0NzA3Niw2LjQ2MjY2MTA5IEwxLjIwMDQ3MDc2LDYuNDYyNjYxMDkgWiBNMi42MzAxOTkxNSw1LjE0MzQxMzA2IEw0LDMuOTMxNjUwMjggTDUuMzY5ODAwODUsNS4xNDM0MTMwNiBDNS43NTc3NDA3MSw0Ljc5OTYwMTYgNiw0LjMxMTQzNzYgNiwzLjc2OTk0NTE5IEM2LDIuNzI4OTAzNTcgNS4xMDQ1Njk1LDEuODg0OTcyNiA0LDEuODg0OTcyNiBDMi44OTU0MzA1LDEuODg0OTcyNiAyLDIuNzI4OTAzNTcgMiwzLjc2OTk0NTE5IEMyLDQuMzExNDM3NiAyLjI0MjI1OTI5LDQuNzk5NjAxNiAyLjYzMDE5OTE1LDUuMTQzNDEzMDYgWiIgaWQ9IuW9oueKtiI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="
+          ></image>
+        </div>
+
+        <text class="address">{{ address }}</text>
+      </div>
+      <text class="info1">{{ info1 }}</text>
+      <text class="info2">{{ info2 }}</text>
+    </div>
+    <image class="image" src="{{imgUrl}}" show="{{!!imgUrl}}"></image>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    time: {
+      default: ""
+    },
+    address: {
+      default: ""
+    },
+    info1: {
+      default: ""
+    },
+    info2: {
+      default: ""
+    },
+    imgUrl: {
+      default: ""
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.wrap {
+  flex: 1;
+  padding: 8px 32px;
+  background-color: #fff;
+  .info-wrap {
+    flex: 1;
+    flex-direction: column;
+    .address-wrap {
+      margin-top: 8px;
+    }
+    .icon-wrap {
+      width: 32px;
+      .icon {
+        height: 16px;
+        resize-mode: contain;
+        align-self: center;
+      }
+    }
+
+    .value {
+      flex: 1;
+      font-size: 24px;
+      color: #666;
+      line-height: 30px;
+    }
+    .info1 {
+      flex: 1;
+      font-size: 24px;
+      color: #999;
+      line-height: 30px;
+      margin-top: 8px;
+    }
+    .info2 {
+      flex: 1;
+      font-size: 20px;
+      color: #333;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+  }
+  .image {
+    width: 112px;
+    height: 112px;
+    background-color: #e6e9ed;
+    border-radius: 12px;
+    margin-top: 4px;
+    margin-left: 32px;
+  }
+}
+</style>
