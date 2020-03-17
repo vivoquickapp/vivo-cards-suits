@@ -73,7 +73,7 @@
 | startTime    | string | -      | 开始时间                            |
 | endTime      | string | -      | 到达时间                            |
 | icon         | string | -      | 图片地址，支持 base64，不传则不显示 |
-| status-l     | object | -      | 左边地点/状态文本                   |
+| status-l     | string | -      | 左边地点/状态文本                   |
 | status-r     | string | '按钮' | 右边地点/状态文本                   |
 | info         | string | '按钮' | 底部数据来源文本                    |
 | contentData  | array  | -      | 辅助信息文本数组                    |

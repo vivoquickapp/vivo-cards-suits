@@ -1,0 +1,95 @@
+<template>
+  <div class="wrap">
+    <stack>
+      <image class="image" src="{{imageUrl}}"></image>
+      <div class="mask">
+        <text class="title">{{ title }}</text>
+        <text class="main">{{ content }}</text>
+        <div class="tags">
+          <text class="tag" for="tags">{{ $item }}</text>
+        </div>
+        <text class="info">{{ info }}</text>
+      </div>
+    </stack>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    imageUrl: {
+      default: ""
+    },
+    title: {
+      default: "卡片标题"
+    },
+    content: {
+      default: "内容标题"
+    },
+    tags: {
+      default: []
+    },
+    info: {
+      default: ""
+    }
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  .image {
+    background: chartreuse;
+    height: 320px;
+    width: 656px;
+    border-top-left-radius: ~"theme.borderBottomRadius";
+    border-top-right-radius: ~"theme.borderBottomRadius";
+  }
+  .mask {
+    height: 320px;
+    width: 656px;
+    flex-direction: column;
+    border-top-left-radius: ~"theme.borderBottomRadius";
+    border-top-right-radius: ~"theme.borderBottomRadius";
+    background: linear-gradient(90deg, "#303C93", rgba(0, 0, 0, 0));
+    .title {
+      color: #ffffff;
+      border-left: 8px solid #ffffff;
+      height: 28px;
+      padding-left: 24px;
+      margin: 32px 32px 36px 0;
+      font-weight: bold;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+    .main {
+      height: 36px;
+      font-size: 36px;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 0 36px;
+      lines: 1;
+      text-overflow: ellipsis;
+    }
+    .tags {
+      padding: 96px 32px 20px 32px;
+      .tag {
+        font-size: 24px;
+        color: #ffffff;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        padding: 0 8px;
+        margin-right: 16px;
+      }
+    }
+    .info {
+      height: 20px;
+      font-size: 20px;
+      color: #ffffff;
+      padding: 0 32px;
+      lines: 1;
+      text-overflow: ellipsis;
+      opacity: 0.6;
+    }
+  }
+}
+</style>

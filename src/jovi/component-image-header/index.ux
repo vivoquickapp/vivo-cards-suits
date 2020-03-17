@@ -1,0 +1,49 @@
+<import
+  name="image-header"
+  src="../../../components/jovi/components/image-header"
+></import>
+<import
+  name="buttons"
+  src="../../../components/jovi/components/buttons"
+></import>
+<template>
+  <div class="wrap">
+    <image-header
+      image-url="https://img9.doubanio.com/view/movie_gallery_frame_hot_rec/normal/public/9e8bb8f6ebf4ed1.jpg"
+      title="电影推荐"
+      content="西部世界"
+      tags="{{['经典美剧','最近更新']}}"
+      info="来源于豆瓣电影"
+    ></image-header>
+    <buttons buttons="{{buttons}}"></buttons>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      buttons: [
+        {
+          url: "",
+          text: "查看详情"
+        },
+        {
+          url: "",
+          text: "马上观看"
+        },
+        {
+          url: "",
+          text: "我要评论"
+        }
+      ]
+    };
+  }
+};
+</script>
+<style lang="less">
+.wrap {
+  background-color: #ffffff;
+  border-radius: ~"theme.borderBottomRadius";
+  flex-direction: column;
+}
+</style>

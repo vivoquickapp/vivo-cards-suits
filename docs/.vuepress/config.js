@@ -108,7 +108,8 @@ module.exports = {
           "/guide/jovi/component-picture-a",
           "/guide/jovi/component-buttons",
           "/guide/jovi/component-status",
-          "/guide/jovi/component-travel"
+          "/guide/jovi/component-travel",
+          "/guide/jovi/component-image-header"
         ]
       },
       {
