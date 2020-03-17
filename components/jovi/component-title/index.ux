@@ -1,0 +1,40 @@
+<template>
+  <div class="wrap">
+    <text class="title">{{ title }}</text>
+    <text class="subtitle" show="{{!!subtitle}}">{{ subtitle }}</text>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    title: {
+      default: ""
+    },
+    subtitle: {
+      default: ""
+    }
+  }
+};
+</script>
+
+<style lang="less">
+.wrap {
+  flex: 1;
+  flex-direction: column;
+  padding: 8px 32px;
+  background-color: #fff;
+  .title {
+    font-size: 36px;
+    color: #000;
+    line-height: 44px;
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: 24px;
+    color: #999;
+    line-height: 32px;
+    margin-top: 8px;
+  }
+}
+</style>
