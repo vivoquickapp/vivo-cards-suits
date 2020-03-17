@@ -1,0 +1,169 @@
+<import name="my-rating" src="../../common/rating.ux"></import>
+
+<template>
+  <div class="wrap">
+    <div class="info-wrap">
+      <text class="info1">{{ info1 }}</text>
+      <text class="info2" show="{{!!info2}}">{{ info2 }}</text>
+      <div class="info-wrap" show="{{!!infoData && !!infoData.type}}">
+        <!-- 文字 -->
+        <div class="info-A" if="{{infoData.type==='A'}}">
+          <text>{{ infoData.text }}</text>
+        </div>
+        <!-- 评分 -->
+        <div class="info-B" if="{{infoData.type==='B'}}">
+          <my-rating
+            class="grade-rating"
+            gap="4.5"
+            numstars="5"
+            rating="{{grade}}"
+            stepsize="1"
+            indicator="{{true}}"
+            default-img="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI5cHgiIHZpZXdCb3g9IjAgMCAxMCA5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MCAoODgxMDMpIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPuaYn+W9oiBjb3B5IDU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSLmmJ/lvaItY29weS01IiBmaWxsPSIjRDhEOEQ4IiBwb2ludHM9IjQuOTE2NjY2NjcgNy41IDIuMDc1NzA0NjEgOS4wNDUwODQ5NyAyLjYxODI4MDA5IDUuNzcyNTQyNDkgMC4zMTk4OTM1MDUgMy40NTQ5MTUwMyAzLjQ5NjE4NTY0IDIuOTc3NDU3NTEgNC45MTY2NjY2NyAwIDYuMzM3MTQ3NjkgMi45Nzc0NTc1MSA5LjUxMzQzOTgzIDMuNDU0OTE1MDMgNy4yMTUwNTMyNSA1Ljc3MjU0MjQ5IDcuNzU3NjI4NzIgOS4wNDUwODQ5NyI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4="
+            current-img="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI5cHgiIHZpZXdCb3g9IjAgMCAxMCA5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MCAoODgxMDMpIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPuaYn+W9oiBjb3B5IDY8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSLmmJ/lvaItY29weS02IiBmaWxsPSIjRjVBNjIzIiBwb2ludHM9IjQuODMzMzMzMzMgNy41IDEuOTkyMzcxMjggOS4wNDUwODQ5NyAyLjUzNDk0Njc1IDUuNzcyNTQyNDkgMC4yMzY1NjAxNzEgMy40NTQ5MTUwMyAzLjQxMjg1MjMxIDIuOTc3NDU3NTEgNC44MzMzMzMzMyAwIDYuMjUzODE0MzYgMi45Nzc0NTc1MSA5LjQzMDEwNjUgMy40NTQ5MTUwMyA3LjEzMTcxOTkxIDUuNzcyNTQyNDkgNy42NzQyOTUzOSA5LjA0NTA4NDk3Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg=="
+          ></my-rating>
+        </div>
+        <!-- icon+文字 -->
+        <div class="info-C" if="{{infoData.type==='C'}}">
+          <image class="icon" src="{{infoData.icon}}"></image>
+          <text>{{ infoData.text }}</text>
+        </div>
+      </div>
+    </div>
+    <div class="right-wrap" show="{{!!rightData && !!rightData.type}}">
+      <!-- 图片 -->
+      <div class="right-A" if="{{rightData.type==='A'}}">
+        <image class="image" src="{{rightData.imgUrl}}"></image>
+      </div>
+      <!-- 文字 -->
+      <div class="right-B" if="{{rightData.type==='B'}}">
+        <text>{{ rightData.text }}</text>
+      </div>
+      <!-- 跳转链接 -->
+      <div class="right-C" if="{{rightData.type==='C'}}">
+        <text>{{ rightData.text }}</text>
+        <image
+          class="icon"
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNXB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDUgOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNjAgKDg4MTAzKSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5SZWN0YW5nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICAgICAgPHBvbHlsaW5lIGlkPSJSZWN0YW5nbGXlpIfku70tMTciIHN0cm9rZT0iI0IyQjJCMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS4wMDAwMDAsIDQuMDAwMDAwKSByb3RhdGUoLTEzNS4wMDAwMDApIHRyYW5zbGF0ZSgtMS4wMDAwMDAsIC00LjAwMDAwMCkgIiBwb2ludHM9IjMgNiAtMSA2IC0xIDIiPjwvcG9seWxpbmU+CiAgICA8L2c+Cjwvc3ZnPg=="
+        ></image>
+      </div>
+      <!-- 文字跳转 -->
+      <div class="right-D" if="{{rightData.type==='D'}}">
+        <text>{{ rightData.text }}</text>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    info1: {
+      default: ""
+    },
+    info2: {
+      default: ""
+    },
+    infoData: {
+      default: {}
+    },
+    rightData: {
+      default: {}
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.wrap {
+  flex: 1;
+  padding: 8px 32px;
+  background-color: #fff;
+  .info-wrap {
+    flex: 1;
+    flex-direction: column;
+    .info1 {
+      font-size: 32px;
+      color: #333;
+      line-height: 32px;
+    }
+    .info2 {
+      font-size: 24px;
+      color: #999;
+      line-height: 24px;
+      margin-top: 16px;
+    }
+    .info-wrap {
+      margin-top: 16px;
+      .info-A {
+        text {
+          font-size: 24px;
+          color: #999;
+          line-height: 24px;
+        }
+      }
+      .info-B {
+        .grade-rating {
+          height: 24px;
+        }
+      }
+      .info-C {
+        .icon {
+          width: 24;
+          height: 24px;
+          background-color: #e6e9ed;
+          margin-right: 8px;
+        }
+        text {
+          font-size: 24px;
+          color: #999;
+          line-height: 24px;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+  .right-wrap {
+    margin-left: 34px;
+    align-self: center;
+    .right-A {
+      .image {
+        width: 112px;
+        height: 112px;
+        border-radius: 12px;
+        background-color: #e6e9ed;
+      }
+    }
+    .right-B {
+      text {
+        font-size: 24px;
+        color: #333;
+        line-height: 40px;
+      }
+    }
+    .right-C {
+      text {
+        font-size: 24px;
+        color: #b2b2b2;
+        line-height: 34px;
+      }
+      .icon {
+        align-self: center;
+        height: 16px;
+        margin-top: 4px;
+        margin-left: 8px;
+      }
+    }
+    .right-D {
+      text {
+        font-size: 24px;
+        color: #456fff;
+        line-height: 40px;
+      }
+    }
+  }
+}
+</style>
