@@ -2,6 +2,7 @@
   <div class="rating-wrap" onclick="handleClickRating">
     <image
       class="star-grey"
+      style="margin-left: {{$idx!==0?gap:0}}px"
       src="{{this[$item]}}"
       onclick="handleClickRating($idx)"
       for="{{ratingArr}}"
@@ -35,6 +36,9 @@ export default {
     },
     indicator: {
       default: false
+    },
+    gap: {
+      default: 0
     }
   },
   data() {
