@@ -1,0 +1,33 @@
+<import
+  name="component-title"
+  src="../../../components/jovi/component-title/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-title
+      title="{{title}}"
+      subtitle="{{subtitle}}"
+    ></component-title>
+  </div>
+</template>
+
+<script>
+import router from "@system.router";
+
+export default {
+  data() {
+    return {
+      title: "主标题内容",
+      subtitle: "副标题内容"
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>
