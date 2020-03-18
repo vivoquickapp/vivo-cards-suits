@@ -351,6 +351,44 @@
           "vivo"
         ]
       },
+      "jovi/component-picture-c": {
+        "name": "jovi主页/component-picture-c",
+        "description": "jovi主页单图片组件",
+        "component": "index",
+        "path": "/jovi/component-picture-c",
+        "features": [
+          {
+            "name": "system.router"
+          },
+          {
+            "name": "system.hostconnection"
+          },
+          {
+            "name": "system.fetch"
+          },
+          {
+            "name":"system.network"
+          },
+          {
+            "name":"system.storage"
+          }
+        ],
+        "params": {
+          "title": "noTitle",
+          "height": "20%",
+          "enableFold": "false",
+          "refreshDuration":3,
+          "refreshDurationInWifi":3,
+          "cardType": 5,
+          "distributeType": 2,
+          "service_id": "",
+          "param_keys": []
+        },
+        "minPlatformVersion": 1050,
+        "targetManufactorys": [
+          "vivo"
+        ]
+      },
       "jovi/component-list-item-a": {
         "name": "jovi主页/component-list-item-a",
         "description": "jovi主页列表组件A",
