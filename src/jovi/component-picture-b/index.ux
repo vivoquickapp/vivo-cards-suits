@@ -1,0 +1,27 @@
+<import
+  name="component-picture-b"
+  src="../../../components/jovi/component-picture-b/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-picture-b img-list="{{imgList}}"></component-picture-b>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      imgList: ["imgUrl", "imgUrl", "imgUrl"]
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>
