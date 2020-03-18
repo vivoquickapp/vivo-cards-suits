@@ -1,0 +1,40 @@
+<template>
+  <div class="wrap">
+    <image
+      class="image {{$idx!==0?'margin-left-16':''}}"
+      for="{{imgList}}"
+      src="{{$item}}"
+    ></image>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    imgList: {
+      default: []
+    }
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+.margin-left-16 {
+  margin-left: 16px;
+}
+
+.wrap {
+  flex: 1;
+  padding: 8px 32px;
+  background-color: #fff;
+  .image {
+    flex: 1;
+    height: 188px;
+    background-color: #e6e9ed;
+    border-radius: 12px;
+  }
+}
+</style>
