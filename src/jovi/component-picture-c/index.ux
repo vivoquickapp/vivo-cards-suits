@@ -1,0 +1,37 @@
+<import
+  name="component-picture-c"
+  src="../../../components/jovi/component-picture-c/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-picture-c
+      width="{{width}}"
+      height="{{height}}"
+      src="{{imgUrl}}"
+      resize-mode="{{imgResizeMode}}"
+      object-fit="{{imgObjectFit}}"
+    ></component-picture-c>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      width: "100%",
+      height: "500px",
+      imgUrl: "imgUrl",
+      imgResizeMode: "cover",
+      imgObjectFit: "cover"
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>
