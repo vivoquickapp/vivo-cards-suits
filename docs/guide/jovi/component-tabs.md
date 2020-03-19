@@ -105,7 +105,7 @@ jovi 主页 标签栏组件
 | -------- | ------- | ------ | ----------------------------------------------------------------------------------- |
 | tabs     | Array   | -      | 标签栏数据，标签数量超过 5 个可横向滚动                                             |
 | current  | Number  | -      | 选中的标签下标                                                                      |
-| tabAlign | String  | left   | 标签对齐方式，可选值: left, center; 当设置 center 时, tab 数量小于 5 时会自适应居中 |
+| tabAlign | String  | left   | 标签对齐方式，可选值：left, center；当设置 center 时，tab 数量小于 5 时会自适应居中 |
 | add      | Boolean | false  | 是否显示添加按钮                                                                    |
 
 #### 组件事件

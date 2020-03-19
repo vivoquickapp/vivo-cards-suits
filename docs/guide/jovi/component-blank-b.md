@@ -2,7 +2,7 @@
 
 ### 描述
 
-jovi 主页 空白组件 B, 可展示 jovi 主页和负一屏卡片的空白状态
+jovi 主页 空白组件 B，可展示 jovi 主页和负一屏卡片的空白状态
 
 ### 使用效果
 
@@ -48,7 +48,7 @@ jovi 主页 空白组件 B, 可展示 jovi 主页和负一屏卡片的空白状�
   export default {
     data() {
       return {
-        status: "jovi", // jovi screen
+        status: "jovi"，// jovi screen
         imgUrl: "imgUrl",
         info1: "这是空白状态的说明字段",
         info2: "这是状态的说明",
@@ -81,15 +81,15 @@ jovi 主页 空白组件 B, 可展示 jovi 主页和负一屏卡片的空白状�
 
 #### 组件属性
 
-| 属性      | 类型   | 默认值 | 说明                                                          |
-| --------- | ------ | ------ | ------------------------------------------------------------- |
-| status    | String | jovi   | 空白页面状态, jovi: jovi 主页空白状态, screen: 负一屏空白状态 |
-| imgUrl    | String | -      | 图片链接, 支持 base64                                         |
-| info1     | String | -      | 空白状态的说明字段, 不传则不显示                              |
-| info2     | String | -      | 状态说明, 不传则不显示                                        |
-| auth      | String | -      | 授权的说明字段, 不传则不显示                                  |
-| agreement | String | -      | 协议内容, 不传则不显示                                        |
-| button    | String | -      | 按钮名称, 不传则不显示                                        |
+| 属性      | 类型   | 默认值 | 说明                                                                      |
+| --------- | ------ | ------ | ------------------------------------------------------------------------- |
+| status    | String | jovi   | 空白页面状态，可选值：jovi（jovi 主页空白状态），screen（负一屏空白状态） |
+| imgUrl    | String | -      | 图片链接，支持 base64                                                     |
+| info1     | String | -      | 空白状态的说明字段，不传则不显示                                          |
+| info2     | String | -      | 状态说明，不传则不显示                                                    |
+| auth      | String | -      | 授权的说明字段，不传则不显示                                              |
+| agreement | String | -      | 协议内容，不传则不显示                                                    |
+| button    | String | -      | 按钮名称，不传则不显示                                                    |
 
 #### 组件事件
 

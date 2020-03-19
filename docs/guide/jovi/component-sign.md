@@ -75,7 +75,7 @@ jovi 主页 卡片附属内容区组件
 | signName | String | 服务商名称 | 服务商名称                         |
 | signUrl  | String | -          | 服务商 logo                        |
 | skipName | String | 更多服务   | 服务名称                           |
-| skipLink | String | -          | 跳转链接, 链接为空则不显示服务名称 |
+| skipLink | String | -          | 跳转链接，链接为空则不显示服务名称 |
 
 #### 组件事件
 

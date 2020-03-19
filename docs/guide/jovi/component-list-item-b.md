@@ -78,4 +78,4 @@ jovi 主页 列表组件 B
 | infoList[].key    | String | -      | 主要字段                            |
 | infoList[].value  | String | -      | 辅助的说明字段                      |
 | infoList[].strong | String | -      | 是否加粗显示                        |
-| rightData.imgUrl  | String | -      | 图标地址, 支持 base64, 不填则不显示 |
+| rightData.imgUrl  | String | -      | 图标地址，支持 base64，不填则不显示 |

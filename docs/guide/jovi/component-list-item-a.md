@@ -111,19 +111,19 @@ jovi 主页 列表组件 A
 
 #### 组件属性
 
-| 属性             | 类型   | 默认值 | 说明                                                                                     |
-| ---------------- | ------ | ------ | ---------------------------------------------------------------------------------------- |
-| imgUrl           | String | -      | 图标地址, 支持 base64, 不传则不显示                                                      |
-| info1            | String | -      | 主要字段                                                                                 |
-| info2            | String | -      | 辅助文字内容 1, 不传则不显示                                                             |
-| infoData         | Object | -      | 辅助内容数据对象                                                                         |
-| infoData.type    | String | -      | 辅助内容类型, 可选值: A, B, C; A: 文字 B: 评分星级 C: icon+文字                          |
-| infoData.text    | String | -      | 文字                                                                                     |
-| infoData.icon    | String | -      | 图标地址, 支持 base64                                                                    |
-| rightData        | Object | -      | 右侧内容数据对象, 不传则不显示                                                           |
-| rightData.type   | String | -      | 右侧内容类型, 可选值: A, B, C, D, E; A: 图片 B: 文字字段 C: 查看详情 D: 文字按钮 E: 按钮 |
-| rightData.imgUrl | String | -      | 图标地址, 支持 base64                                                                    |
-| rightData.text   | String | -      | 文字                                                                                     |
+| 属性             | 类型   | 默认值 | 说明                                                                                    |
+| ---------------- | ------ | ------ | --------------------------------------------------------------------------------------- |
+| imgUrl           | String | -      | 图标地址，支持 base64，不传则不显示                                                     |
+| info1            | String | -      | 主要字段                                                                                |
+| info2            | String | -      | 辅助文字内容 1，不传则不显示                                                            |
+| infoData         | Object | -      | 辅助内容数据对象                                                                        |
+| infoData.type    | String | -      | 辅助内容类型，可选值: A（文字），B（评分星级），C（icon+文字 ）                         |
+| infoData.text    | String | -      | 文字                                                                                    |
+| infoData.icon    | String | -      | 图标地址，支持 base64                                                                   |
+| rightData        | Object | -      | 右侧内容数据对象，不传则不显示                                                          |
+| rightData.type   | String | -      | 右侧内容类型，可选值: A（图片），B（文字字段），C（查看详情），D（文字按钮），E（按钮） |
+| rightData.imgUrl | String | -      | 图标地址，支持 base64                                                                   |
+| rightData.text   | String | -      | 文字                                                                                    |
 
 #### 组件事件
 
