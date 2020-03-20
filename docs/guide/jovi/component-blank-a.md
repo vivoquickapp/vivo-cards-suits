@@ -9,6 +9,7 @@ jovi 主页 空白组件 A, 可展示网络错误状态和内容为空状态时�
 <div style="text-align: center;margin: 40px;">
   <img src="../../assets/jovi-blank-a-1.jpg" style="width:300px" alt="jovi-blank-a-1"/>
   <img src="../../assets/jovi-blank-a-2.jpg" style="width:300px" alt="jovi-blank-a-2"/>
+  <img src="../../assets/jovi-blank-a-3.jpg" style="width:300px" alt="jovi-blank-a-3"/>
 </div>
 
 ### 使用方法
