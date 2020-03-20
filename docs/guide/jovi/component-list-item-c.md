@@ -66,6 +66,6 @@ jovi 主页 列表组件 C
 | ---------------- | ------ | ------ | ----------------------------------- |
 | time             | String | -      | 时间                                |
 | address          | String | -      | 地址                                |
-| info1            | String | -      | 主字段, 辅助的说明字段              |
+| info1            | String | -      | 主字段，辅助的说明字段              |
 | info2            | String | -      | 次要的辅助字段                      |
-| rightData.imgUrl | String | -      | 图标地址, 支持 base64, 不填则不显示 |
+| rightData.imgUrl | String | -      | 图标地址，支持 base64，不填则不显示 |

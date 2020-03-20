@@ -1,0 +1,53 @@
+<import
+  name="component-blank-b"
+  src="../../../components/jovi/component-blank-b/index.ux"
+></import>
+
+<template>
+  <div class="card">
+    <component-blank-b
+      status="{{status}}"
+      img-url="{{imgUrl}}"
+      info1="{{info1}}"
+      info2="{{info2}}"
+      auth="{{auth}}"
+      agreement="{{agreement}}"
+      button="{{button}}"
+      onchangeauth="handleChangeAuth"
+      onclickagreement="handleClickAgreement "
+      onclickbtn="handleClickBtn"
+    ></component-blank-b>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      status: "jovi", // jovi screen
+      imgUrl: "imgUrl",
+      info1: "这是空白状态的说明字段",
+      info2: "这是状态的说明",
+      auth: "授权的说明字段",
+      agreement: "协议内容",
+      button: "按钮"
+    };
+  },
+  handleChangeAuth(e) {
+    console.log(`当前选中状态: ${e.detail.checked}`);
+  },
+  handleClickAgreement() {
+    console.log("点击协议内容");
+  },
+  handleClickBtn() {
+    console.log("点击按钮");
+  }
+};
+</script>
+
+<style lang="less">
+.card {
+  width: 100%;
+  flex-direction: column;
+}
+</style>

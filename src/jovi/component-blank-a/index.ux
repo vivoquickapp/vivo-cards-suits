@@ -19,8 +19,8 @@ export default {
   data() {
     return {
       status: "blank", // blank network
-      content: "内容为空状态的说明",
-      button: "按钮"
+      content: "内容为空状态的说明"
+      // button: "按钮"
     };
   },
   handleClickBtn() {

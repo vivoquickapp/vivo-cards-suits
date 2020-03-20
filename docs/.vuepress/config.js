@@ -112,6 +112,7 @@ module.exports = {
           "/guide/jovi/component-list-item-b",
           "/guide/jovi/component-list-item-c",
           "/guide/jovi/component-blank-a",
+          "/guide/jovi/component-blank-b",
           "/guide/jovi/component-buttons",
           "/guide/jovi/component-status",
           "/guide/jovi/component-travel",

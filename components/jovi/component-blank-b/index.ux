@@ -1,0 +1,207 @@
+<template>
+  <div class="wrap wrap-{{status}}">
+    <div class="image-wrap">
+      <image class="image" src="{{imgUrl}}"></image>
+      <div class="info-wrap">
+        <text class="info1" show="{{!!info1}}">{{ info1 }}</text>
+        <text class="info2" show="{{!!info2}}">{{ info2 }}</text>
+      </div>
+    </div>
+    <div class="auth-wrap" show="{{!!auth || !!agreement}}">
+      <stack class="checkbox" onclick="handleChangeAuth">
+        <image
+          class="checked"
+          show="{{checked}}"
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+5Zu+5qCHIC8g5YWs5YWx5o6n5Lu2IC8g6YCJ5LitPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IjEyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDEuMDAwMDAwLCAtMTMxNS4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9IuWbvuaghy0vLeWFrOWFseaOp+S7ti0vLemAieS4rSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAuMDAwMDAwLCAxMzE0LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9ImNoZWNrYm94X2NoZWNrZWQiPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSLliIflm77ljLrln58iIHg9IjAiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik05LDEuNSBDMTMuMTQyMTM1NiwxLjUgMTYuNSw0Ljg1Nzg2NDM4IDE2LjUsOSBDMTYuNSwxMy4xNDIxMzU2IDEzLjE0MjEzNTYsMTYuNSA5LDE2LjUgQzQuODU3ODY0MzgsMTYuNSAxLjUsMTMuMTQyMTM1NiAxLjUsOSBDMS41LDQuODU3ODY0MzggNC44NTc4NjQzOCwxLjUgOSwxLjUgWiBNOSwyLjUgQzUuNDEwMTQ5MTMsMi41IDIuNSw1LjQxMDE0OTEzIDIuNSw5IEMyLjUsMTIuNTg5ODUwOSA1LjQxMDE0OTEzLDE1LjUgOSwxNS41IEMxMi41ODk4NTA5LDE1LjUgMTUuNSwxMi41ODk4NTA5IDE1LjUsOSBDMTUuNSw1LjQxMDE0OTEzIDEyLjU4OTg1MDksMi41IDksMi41IFogTTExLjg0MDY3MDcsNi4zNjk0NzYxNyBDMTIuMDI3ODE2Myw2LjE2NjQyMTY5IDEyLjM0NDEzNiw2LjE1MzUyNTA0IDEyLjU0NzE5MDUsNi4zNDA2NzA2OSBDMTIuNzUwMjQ1LDYuNTI3ODE2MzMgMTIuNzYzMTQxNiw2Ljg0NDEzNjAzIDEyLjU3NTk5Niw3LjA0NzE5MDUgTDEyLjU3NTk5Niw3LjA0NzE5MDUgTDguMDEwMzAyMDEsMTIuMDAxMDAzNyBMNS40NTAwMTI5LDkuNjA0OTA1NTIgQzUuMjQ4MzkyODgsOS40MTYyMTUzNiA1LjIzNzkxMTE2LDkuMDk5ODA2NDQgNS40MjY2MDEzMiw4Ljg5ODE4NjQyIEM1LjYxNTI5MTQ5LDguNjk2NTY2NCA1LjkzMTcwMDQxLDguNjg2MDg0NjggNi4xMzMzMjA0Myw4Ljg3NDc3NDg0IEw2LjEzMzMyMDQzLDguODc0Nzc0ODQgTDcuOTU3ODg0MTMsMTAuNTgyMzI5NiBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiM0NTZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+"
+        ></image>
+        <image
+          class="default"
+          show="{{!checked}}"
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+T3ZhbDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSIxMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI0MC4wMDAwMDAsIC0xMzE1LjAwMDAwMCkiIHN0cm9rZT0iIzk3OTc5NyI+CiAgICAgICAgICAgIDxnIGlkPSLkuLvkv6Hmga8iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4NC4wMDAwMDAsIDExMTguMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTcuMDAwMDAwLCAxOTguMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjciIGN5PSI3IiByPSI3Ij48L2NpcmNsZT4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+"
+        ></image>
+      </stack>
+      <text class="auth" show="{{!!auth}}">{{ auth }}</text>
+      <text
+        class="agreement"
+        show="{{!!agreement}}"
+        onclick="handleClickAgreement"
+        >《{{ agreement }}》</text
+      >
+    </div>
+    <text class="btn" show="{{!!button}}" onclick="handleClickBtn">{{
+      button
+    }}</text>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    status: {
+      default: ""
+    },
+    imgUrl: {
+      default: ""
+    },
+    info1: {
+      default: ""
+    },
+    info2: {
+      default: ""
+    },
+    auth: {
+      default: ""
+    },
+    agreement: {
+      default: ""
+    },
+    button: {
+      default: ""
+    }
+  },
+  data() {
+    return {
+      checked: false
+    };
+  },
+  handleChangeAuth() {
+    this.checked = !this.checked;
+    this.$emit("changeauth", { checked: this.checked });
+  },
+  handleClickAgreement() {
+    this.$emit("clickagreement");
+  },
+  handleClickBtn() {
+    this.$emti("clickbtn");
+  }
+};
+</script>
+
+<style lang="less">
+.wrap {
+  flex: 1;
+  flex-direction: column;
+  background-color: #fff;
+  .btn {
+    align-self: center;
+    width: 220px;
+    height: 56px;
+    border: 2px solid #456fff;
+    border-radius: 32px;
+    font-size: 24px;
+    color: #456fff;
+    text-align: center;
+  }
+}
+
+.wrap-jovi {
+  padding: 32px 0 24px;
+  .image-wrap {
+    flex-direction: column;
+    align-items: center;
+    .image {
+      width: 224px;
+      height: 224px;
+      border-radius: 8px;
+      resize-mode: contain;
+      background-color: #e7e7e7;
+    }
+    .info-wrap {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      .text {
+        font-size: 32px;
+        color: #666;
+        line-height: 32px;
+        text-align: center;
+      }
+      .info2 {
+        margin-top: 12px;
+      }
+    }
+  }
+  .auth-wrap {
+    justify-content: center;
+    margin-top: 44px;
+    .checkbox {
+      align-self: center;
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      margin-top: 3px;
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .auth {
+      font-size: 28px;
+      color: #aaaaaa;
+      line-height: 28px;
+    }
+    .agreement {
+      font-size: 24px;
+      color: #456fff;
+      line-height: 24px;
+    }
+  }
+  .btn {
+    margin-top: 80px;
+  }
+}
+.wrap-screen {
+  padding: 40px 40px 24px;
+  .image-wrap {
+    .image {
+      width: 140px;
+      height: 140px;
+      border-radius: 8px;
+      resize-mode: contain;
+      background-color: #e7e7e7;
+    }
+    .info-wrap {
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 32px;
+      .text {
+        flex: 1;
+        font-size: 32px;
+        color: #666;
+        line-height: 32px;
+      }
+      .info2 {
+        margin-top: 14px;
+      }
+    }
+  }
+  .auth-wrap {
+    margin-top: 28px;
+    .checkbox {
+      align-self: center;
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      margin-top: 3px;
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .auth {
+      font-size: 28px;
+      color: #aaaaaa;
+      line-height: 28px;
+    }
+    .agreement {
+      font-size: 24px;
+      color: #456fff;
+      line-height: 24px;
+    }
+  }
+  .btn {
+    margin-top: 64px;
+  }
+}
+</style>

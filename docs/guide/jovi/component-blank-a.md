@@ -9,6 +9,7 @@ jovi 主页 空白组件 A, 可展示网络错误状态和内容为空状态时�
 <div style="text-align: center;margin: 40px;">
   <img src="../../assets/jovi-blank-a-1.jpg" style="width:300px" alt="jovi-blank-a-1"/>
   <img src="../../assets/jovi-blank-a-2.jpg" style="width:300px" alt="jovi-blank-a-2"/>
+  <img src="../../assets/jovi-blank-a-3.jpg" style="width:300px" alt="jovi-blank-a-3"/>
 </div>
 
 ### 使用方法
@@ -63,11 +64,11 @@ jovi 主页 空白组件 A, 可展示网络错误状态和内容为空状态时�
 
 #### 组件属性
 
-| 属性    | 类型   | 默认值 | 说明                                                     |
-| ------- | ------ | ------ | -------------------------------------------------------- |
-| status  | String | blank  | 图片内容状态, blank: 内容为空图片, network: 网络错误图片 |
-| content | String | -      | 说明内容                                                 |
-| button  | String | -      | 按钮名称, 不传则不显示                                   |
+| 属性    | 类型   | 默认值 | 说明                                                                 |
+| ------- | ------ | ------ | -------------------------------------------------------------------- |
+| status  | String | blank  | 图片内容状态，可选值：blank（内容为空图片），network（网络错误图片） |
+| content | String | -      | 说明内容                                                             |
+| button  | String | -      | 按钮名称，不传则不显示                                               |
 
 #### 组件事件
 
