@@ -4,16 +4,6 @@
 需要注意的是，本套组件 UI 采用 720 的基准宽度开发，所以你的项目需要修改一下 manifest.json 中的 designWidth 为 720 方可达到最佳显示效果。
 :::
 
-### 脚手架
-
-由于组件的开发有较多规范，我们封装了一个脚手架项目供开发者快速开始，帮助开发者省略掉细节规范的配置。
-
-### 快速预览
-
-使用[vivo 快应用调试器](https://statres.quickapp.cn/quickapp/quickapp/201806/file/quickapp_debugger.apk)扫码快速预览组件库效果：
-
-![qrcode](https://github.com/vivoquickapp/apex-ui-docs/blob/master/docs/assets/qrcode.png?raw=true)
-
 ### 使用组件库
 
 #### 手动安装
