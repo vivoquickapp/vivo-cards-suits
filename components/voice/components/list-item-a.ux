@@ -9,8 +9,9 @@
       </div>
       <div class="image-wrap">
         <my-image
-          width="142"
-          height="108"
+          width="{{imgType=='A'?'144':'128'}}"
+          height="{{imgType=='A'?'108':'128'}}"
+          border-radius="8"
           resize-mode="{{imgResizeMode}}"
           object-fit="{{imgObjectFit}}"
           src="{{imgUrl}}"
@@ -30,6 +31,9 @@ export default {
     content: {
       default:
         "文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。文字内容，行数尽量控制在2-3行。"
+    },
+    imgType: {
+      default: "A" // A: 144*108 B: 128*128
     },
     imgUrl: {
       default: ""

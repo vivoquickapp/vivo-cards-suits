@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-template-f-1.jpg" style="width:300px" alt="voice-template-f-1"/>
+  <img src="../../assets/voice-template-f.png" style="width:300px" alt="voice-template-f-1"/>
 </div>
 
 ### 使用方法
@@ -29,6 +29,7 @@
     <template-f
       title="{{title}}"
       params="{{params}}"
+      img-type="{{imgType}}"
       img-url="{{imgUrl}}"
       img-resize-mode="{{imgResizeMode}}"
       img-object-fit="{{imgObjectFit}}"
@@ -52,6 +53,7 @@
           },
           { key: "参数", value: "参数信息参数信息参数信息参数信息参数信息" }
         ],
+        imgType: "A", // A: 144*108 B: 128*128
         imgUrl: "",
         imgResizeMode: "cover",
         imgObjectFit: "cover"
@@ -76,6 +78,7 @@
 | ------------- | ------ | ------- | ------------------------------------------------------ |
 | title         | String | -       | 标题                                                   |
 | params        | Array  | -       | 参数数据                                               |
+| imgType       | String | A       | 图片的尺寸类型，A: 144\*108 B: 128\*128                |
 | imgUrl        | String | -       | 图片地址，支持 base64                                  |
 | imgResizeMode | String | 'cover' | 图片的缩放类型：cover，contain，stretch，center        |
 | imgObjectFit  | String | 'cover' | 图片的缩放类型：contain，cover，fill，none，scale-down |

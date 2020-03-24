@@ -5,8 +5,9 @@
     <div class="title-wrap">
       <div class="image-wrap">
         <my-image
-          width="128"
-          height="128"
+          width="{{imgType==='A'?'144':'128'}}"
+          height="{{imgType==='A'?'108':'128'}}"
+          border-radius="8"
           resize-mode="{{imgResizeMode}}"
           object-fit="{{imgObjectFit}}"
           src="{{imgUrl}}"
@@ -66,6 +67,9 @@ export default {
         },
         { key: "参数", value: "参数信息参数信息参数信息参数信息参数信息" }
       ]
+    },
+    imgType: {
+      default: "B" // A: 144*108 B: 128*128
     },
     imgUrl: {
       default: ""

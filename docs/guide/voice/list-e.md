@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-list-item-e-1.jpg" style="width:300px" alt="voice-list-item-e-1"/>
+  <img src="../../assets/voice-list-item-e.png" style="width:300px" alt="voice-list-item-e-1"/>
 </div>
 
 ### 使用方法
@@ -36,6 +36,7 @@
           info1Lines="{{$item.info1Lines}}"
           info1="{{$item.info1}}"
           info2="{{$item.info2}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -88,6 +89,7 @@
             imgUrl: ""
           }
         ],
+        imgType: "B", // A: 144*108 B: 128*128
         imgResizeMode: "cover",
         imgObjectFit: "cover"
       };
@@ -120,6 +122,7 @@
 | title         | String | -       | 标题                                                   |
 | info1Lines    | Number | 1       | 标签文字行数，可选值：1，2                             |
 | info1         | String | -       | 浏览点赞数量，                                         |
+| imgType       | String | B       | 图片的尺寸类型，A: 144\*108 B: 128\*128                |
 | imgUrl        | String | -       | 图片地址，支持 base64                                  |
 | imgResizeMode | String | 'cover' | 图片的缩放类型：cover，contain，stretch，center        |
 | imgObjectFit  | String | 'cover' | 图片的缩放类型：contain，cover，fill，none，scale-down |

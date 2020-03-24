@@ -7,7 +7,7 @@
 ### 使用效果
 
 <div style="text-align: center;margin: 40px;">
-  <img src="../../assets/voice-template-a-1.jpg" style="width:300px" alt="voice-template-a-1"/>
+  <img src="../../assets/voice-template-a.png" style="width:300px" alt="voice-template-a-1"/>
 </div>
 
 ### 使用方法
