@@ -2,14 +2,14 @@
   <stack class="image-wrap" style="width: {{width}}px;height: {{height}}px;">
     <image
       class="image"
-      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}};"
+      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}}; border-radius: {{borderRadius}}px;"
       src="{{src}}"
       oncomplete="oncomplete"
       onerror="onerror"
     ></image>
     <image
       class="default"
-      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}};"
+      style="resize-mode: {{resizeMode}}; object-fit: {{objectFit}}; border-radius: {{borderRadius}}px;"
       src="{{alt}}"
       show="{{!isImageComplete}}"
     ></image>
@@ -19,6 +19,9 @@
 <script>
 export default {
   props: {
+    borderRadius: {
+      default: "0"
+    },
     width: {
       default: ""
     },

@@ -20,6 +20,7 @@
           if="{{listType==='A'}}"
           title="{{$item.title}}"
           content="{{$item.content}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -29,6 +30,7 @@
           title="{{$item.title}}"
           content="{{$item.content}}"
           tips="{{$item.tips}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -38,6 +40,7 @@
           title="{{$item.title}}"
           content="{{$item.content}}"
           record="{{$item.record}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -46,6 +49,7 @@
           if="{{listType==='D'}}"
           title="{{$item.title}}"
           params="{{$item.params}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -56,6 +60,7 @@
           info1-lines="{{$item.info1Lines}}"
           info1="{{$item.info1}}"
           info2="{{$item.info2}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -65,6 +70,7 @@
           title="{{$item.title}}"
           content="{{$item.content}}"
           record="{{$item.record}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -74,6 +80,7 @@
           title="{{$item.title}}"
           gradeNumber="{{$item.gradeNumber}}"
           info1="{{$item.content}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -85,6 +92,7 @@
           info1="{{$item.info1}}"
           info2Icon="{{$item.info2Icon}}"
           info2="{{$item.info2}}"
+          img-type="{{imgType}}"
           img-url="{{$item.imgUrl}}"
           img-resize-mode="{{imgResizeMode}}"
           img-object-fit="{{imgObjectFit}}"
@@ -126,6 +134,9 @@ export default {
     },
     skipLink: {
       default: ""
+    },
+    imgType: {
+      default: "A" // A: 144*108 B: 128*128
     },
     imgResizeMode: {
       default: "cover"

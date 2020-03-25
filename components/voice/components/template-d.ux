@@ -5,8 +5,9 @@
     <div class="title-wrap">
       <div class="image-wrap">
         <my-image
-          width="128"
-          height="128"
+          width="{{imgType==='A'?'144':'128'}}"
+          height="{{imgType==='A'?'108':'128'}}"
+          border-radius="8"
           resize-mode="{{imgResizeMode}}"
           object-fit="{{imgObjectFit}}"
           src="{{imgUrl}}"
@@ -30,6 +31,9 @@ export default {
     content: {
       default:
         "卡片内容，卡片内容无限折行，不超过最大卡片高度，内容行数2行以上。"
+    },
+    imgType: {
+      default: "B" // A: 144*108 B: 128*128
     },
     imgUrl: {
       default: ""

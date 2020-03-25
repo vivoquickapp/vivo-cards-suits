@@ -28,6 +28,7 @@
       if="{{templateType==='D'}}"
       title="{{templateData.title}}"
       content="{{templateData.content}}"
+      img-type="{{imgType}}"
       img-url="{{templateData.imgUrl}}"
       img-resize-mode="{{imgResizeMode}}"
       img-object-fit="{{imgObjectFit}}"
@@ -37,6 +38,7 @@
       title="{{templateData.title}}"
       info1="{{templateData.info1}}"
       info2="{{templateData.info2}}"
+      img-type="{{imgType}}"
       img-url="{{templateData.imgUrl}}"
       img-resize-mode="{{imgResizeMode}}"
       img-object-fit="{{imgObjectFit}}"
@@ -45,6 +47,7 @@
       if="{{templateType==='F'}}"
       title="{{templateData.title}}"
       params="{{templateData.params}}"
+      img-type="{{imgType}}"
       img-url="{{templateData.imgUrl}}"
       img-resize-mode="{{imgResizeMode}}"
       img-object-fit="{{imgObjectFit}}"
@@ -54,6 +57,7 @@
       title="{{templateData.title}}"
       content="{{templateData.content}}"
       params="{{templateData.params}}"
+      img-type="{{imgType}}"
       img-url="{{templateData.imgUrl}}"
       img-resize-mode="{{imgResizeMode}}"
       img-object-fit="{{imgObjectFit}}"
@@ -62,6 +66,7 @@
       if="{{templateType==='H'}}"
       song="{{templateData.song}}"
       singer="{{templateData.singer}}"
+      img-type="{{imgType}}"
       img-url="{{templateData.imgUrl}}"
       img-resize-mode="{{imgResizeMode}}"
       img-object-fit="{{imgObjectFit}}"
@@ -99,6 +104,9 @@ export default {
     },
     skipLink: {
       default: ""
+    },
+    imgType: {
+      default: "A" // A: 144*108 B: 128*128
     },
     imgResizeMode: {
       default: "cover"

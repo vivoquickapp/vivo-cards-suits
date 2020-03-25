@@ -4,8 +4,9 @@
   <div class="list-item">
     <div class="image-wrap">
       <my-image
-        width="128"
-        height="128"
+        width="{{imgType==='A'?'144':'128'}}"
+        height="{{imgType==='A'?'108':'128'}}"
+        border-radius="8"
         resize-mode="{{imgResizeMode}}"
         object-fit="{{imgObjectFit}}"
         src="{{imgUrl}}"
@@ -37,6 +38,9 @@ export default {
     },
     info2: {
       default: "辅助文字"
+    },
+    imgType: {
+      default: "B" // A: 144*108 B: 128*128
     },
     imgUrl: {
       default: ""

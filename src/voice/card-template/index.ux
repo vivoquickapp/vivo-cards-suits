@@ -11,6 +11,7 @@
       sign-name="{{signName}}"
       sign-url="{{signUrl}}"
       skip-link="{{skipLink}}"
+      img-type="{{imgType}}"
       img-resize-mode="{{imgResizeMode}}"
       img-object-fit="{{imgObjectFit}}"
       onclickmore="handleClickMore"
@@ -28,7 +29,9 @@ export default {
       templateData: {},
       signName: "来源名称",
       signUrl: "",
+      skipName: "查看详情",
       skipLink: "https://www.quickapp.cn/",
+      imgType: "B", // A: 144*108 B: 128*128
       imgResizeMode: "cover",
       imgObjectFit: "cover"
     };
