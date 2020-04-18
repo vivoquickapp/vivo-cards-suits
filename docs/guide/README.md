@@ -41,4 +41,4 @@ yarn add vivo-cards-suits # 使用yarn
 
 也可以加微信与我们取得联系。
 
-![技术弟](https://github.com/vivoquickapp/apex-ui-docs/blob/master/docs/assets/vivobro.jpg?raw=true)
+![技术弟](../assets/vivobro.jpg)
